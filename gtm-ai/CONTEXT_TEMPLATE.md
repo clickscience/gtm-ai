@@ -130,4 +130,4 @@
 - All `{{variables}}` in skills map to the fields above
 - If a skill needs a variable not defined here, Claude will ask before proceeding
 - Update this file quarterly or when any of the above materially changes
-- See `VARIABLES_REFERENCE.md` for a complete list of every variable used across all 86 skills
+- See `VARIABLES_REFERENCE.md` for a complete list of every variable used across all 85 skills

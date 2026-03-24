@@ -99,7 +99,7 @@ gtm-ai/
     │   └── SKILL.md
     ├── agents-md-generator/
     │   └── SKILL.md
-    └── [86 skill folders total]
+    └── [85 skill folders total]
 ```
 
 ---
