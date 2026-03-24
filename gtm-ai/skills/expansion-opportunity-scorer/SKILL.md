@@ -1,357 +1,160 @@
 ---
 name: expansion-opportunity-scorer
 description: >
-  Score existing accounts by expansion readiness using usage, health, engagement, and fit signals to prioritize upsell opportunities. Generate 100-point scores across 5 dimensions with tier assignments and actionable expansion plays. Triggered by phrases like "expansion scoring", "score upsell opportunities", "expansion readiness".
+  Score existing accounts by expansion readiness using usage, health, engagement, fit, and timing signals to prioritize upsell and cross-sell opportunities. Generates 100-point scores across 5 dimensions with tier assignments and actionable expansion plays per tier. Triggered by phrases like "expansion scoring", "score upsell opportunities", "expansion readiness", "prioritize expansion accounts", "account scoring".
 license: MIT
 metadata:
   author: clickscience
-  version: "1.0"
-  complexity: intermediate
-  keywords: account expansion, upsell scoring
+  version: "2.0"
+  category: Customer Success & Retention
+  status: active
 ---
 
-# Expansion Opportunity Scoring Agent
-
-🎯 **OBJECTIVE**
-
-Generate a comprehensive expansion opportunity score for existing {{company_name}} customers, prioritizing accounts most likely to expand based on usage signals, health indicators, engagement patterns, and product fit. This scoring system helps focus customer success and sales resources on the highest-potential expansion opportunities to maximize {{lifetime_value}}.
-
-📊 **YOUR BUSINESS CONTEXT**
-
-**Company:** {{company_name}}  
-**Product/Service:** {{product_description}}  
-**Current Customers:** [Number of active customers]  
-**Average Deal Size:** {{average_deal_size}}  
-**Target LTV:** {{lifetime_value}}  
-**Expansion Opportunities:** [Additional seats, higher tiers, new products, new departments]  
-**Key Value Props:** {{value_propositions}}  
-**Customer Success Goals:** {{key_goals}}  
-
-💡 **KNOWLEDGE BASE INPUTS**
-
-{{knowledge_base}}
-
-⚙️ **EXPANSION SCORING FRAMEWORK**
-
-**SECTION 1: SCORING DIMENSIONS**
-
-Build a 100-point expansion opportunity score across five key dimensions:
-
-**1. PRODUCT USAGE SIGNALS (25 points)**
-
-Analyze product adoption and usage patterns that indicate expansion readiness:
-
-**High-Value Usage Indicators:**
-- **Power User Growth** (0-8 points):
-  - Number of power users (top 20% by activity) increasing month-over-month
-  - Multiple departments or teams actively using {{product_description}}
-  - Daily active users (DAU) trending upward
-  - Feature adoption beyond basic tier functionality
-
-- **Usage Velocity** (0-8 points):
-  - Login frequency increasing over time
-  - Session duration and depth of engagement growing
-  - Advanced feature exploration and adoption
-  - API calls or integration usage expanding
-
-- **Capacity Indicators** (0-9 points):
-  - Approaching or hitting usage limits (seats, storage, API calls)
-  - 80%+ utilization of current plan tier
-  - Frequency of "upgrade required" prompts or limit notifications
-  - Seasonal peaks suggesting need for higher capacity
-
-**Scoring Guide:**
-- 20-25 points: Strong usage growth, hitting limits, ready to expand
-- 15-19 points: Solid adoption, expanding usage, good expansion potential
-- 10-14 points: Moderate usage, some growth signals
-- 0-9 points: Low usage or stagnant, not ready for expansion
-
-**2. CUSTOMER HEALTH SCORE (25 points)**
-
-Assess overall customer health as predictor of expansion willingness:
-
-**Health Indicators:**
-- **Product Value Realization** (0-10 points):
-  - Achieving stated goals from initial purchase
-  - Measurable ROI or business outcomes from {{value_propositions}}
-  - Customer references or case study participation
-  - NPS score of 8+ (promoter status)
-  - Regular usage of core features that deliver value
-
-- **Relationship Strength** (0-8 points):
-  - Executive sponsor actively engaged
-  - Regular QBR attendance and participation
-  - Responsiveness to outreach from {{target_personas}}
-  - Attendance at user conferences, webinars, training
-  - Product feedback and feature request engagement
-
-- **Satisfaction & Retention Risk** (0-7 points):
-  - Low or zero support tickets indicating dissatisfaction
-  - Renewal probability score >80%
-  - No red flags: payment issues, contract disputes, churn risk
-  - Positive sentiment in support interactions
-  - Active participation in user community
-
-**Scoring Guide:**
-- 20-25 points: Highly satisfied, great relationship, low churn risk
-- 15-19 points: Generally healthy, good relationship
-- 10-14 points: Neutral health, some concerns
-- 0-9 points: At-risk or unhealthy, address before expansion
-
-**3. ENGAGEMENT SIGNALS (20 points)**
-
-Track behaviors indicating active expansion interest:
-
-**Active Exploration:**
-- **Feature Interest** (0-7 points):
-  - Inquiries about advanced features or higher tiers
-  - Demo requests for additional products
-  - Questions about enterprise capabilities
-  - Exploration of integrations or API documentation
-  - Attendance at product roadmap webinars
-
-- **Buying Committee Expansion** (0-7 points):
-  - New stakeholders from different departments joining calls
-  - Executive involvement increasing
-  - IT/security team engagement (enterprise buying signals)
-  - Multiple {{target_personas}} actively using product
-  - Cross-functional team meetings scheduled
-
-- **Proactive Engagement** (0-6 points):
-  - Customer initiating expansion conversations
-  - Asking about pricing for additional seats/features
-  - Requesting proposals or quotes
-  - Sharing upcoming projects that require more capacity
-  - Inviting {{company_name}} to strategic planning discussions
-
-**Scoring Guide:**
-- 16-20 points: Active expansion signals, high intent
-- 11-15 points: Moderate interest, warm opportunity
-- 6-10 points: Some signals, requires nurturing
-- 0-5 points: No clear expansion intent yet
-
-**4. ORGANIZATIONAL FIT (20 points)**
-
-Evaluate account characteristics that support expansion potential:
-
-**Company Growth & Opportunity:**
-- **Company Momentum** (0-7 points):
-  - Recent funding rounds or revenue growth
-  - Hiring activity (especially in departments using {{product_description}})
-  - New office locations or market expansion
-  - Product launches requiring scaled infrastructure
-  - Positive news coverage or industry recognition
-
-- **Expansion Opportunity Size** (0-7 points):
-  - Large potential: 10X+ current deal size possible
-  - Multiple departments or business units not yet using product
-  - Global presence with untapped regional opportunities
-  - Product portfolio fit for cross-sell/upsell
-  - Budget capacity aligned with {{average_deal_size}} expansion
-
-- **Strategic Alignment** (0-6 points):
-  - Company priorities align with {{value_propositions}}
-  - Technology roadmap includes areas where {{product_description}} adds value
-  - Pain points addressable through expansion ({{pain_points}})
-  - Competitive displacement opportunity from {{competitors}}
-  - Long-term strategic fit for partnership
-
-**Scoring Guide:**
-- 16-20 points: Large expansion opportunity, strong fit
-- 11-15 points: Good expansion potential
-- 6-10 points: Limited expansion scope
-- 0-5 points: Small account, limited opportunity
-
-**5. TIMING INDICATORS (10 points)**
-
-Assess urgency and timing factors for expansion:
-
-**Near-Term Expansion Triggers:**
-- **Contract Timing** (0-4 points):
-  - Approaching renewal (60-90 days out)
-  - Annual contract vs. month-to-month (annual = more likely)
-  - Budget cycle alignment (Q4 for annual budgets)
-  - Fiscal year-end opportunities
-
-- **Business Events** (0-3 points):
-  - Upcoming project launches requiring expanded capacity
-  - Seasonal peaks or known busy periods
-  - M&A activity requiring system consolidation
-  - Regulatory changes creating new requirements
-
-- **Competitive Pressure** (0-3 points):
-  - Evaluating or using {{competitors}} for additional use cases
-  - Peer companies expanding with similar solutions
-  - Industry trends creating urgency
-  - Competitor wins in their industry creating FOMO
-
-**Scoring Guide:**
-- 8-10 points: Urgent timing, strike now
-- 5-7 points: Good timing in next 90 days
-- 3-4 points: Timing factors present but not urgent
-- 0-2 points: No clear timing triggers
-
-**SECTION 2: COMPOSITE SCORE & TIER ASSIGNMENT**
-
-**Calculate Total Expansion Opportunity Score:**
-
-Sum scores across all five dimensions (max 100 points):
-- Product Usage Signals: __/25
-- Customer Health Score: __/25  
-- Engagement Signals: __/20
-- Organizational Fit: __/20
-- Timing Indicators: __/10
-**TOTAL SCORE: __/100**
-
-**Tier Assignments:**
-
-**TIER 1: HOT EXPANSION OPPORTUNITIES (80-100 points)**
-- Characteristics: High usage, healthy relationship, active buying signals, large opportunity, urgent timing
-- Action: Immediate proactive outreach from account executive
-- Timeline: Close expansion within 30-60 days
-- Approach: Executive engagement, custom proposal, fast-track implementation
-- Expected close rate: 60-80%
-
-**TIER 2: WARM EXPANSION OPPORTUNITIES (60-79 points)**
-- Characteristics: Good usage and health, some expansion signals, solid opportunity
-- Action: Customer success-led nurturing with sales support
-- Timeline: Close expansion within 60-120 days
-- Approach: Value demonstration, ROI calculator, pilot expansion
-- Expected close rate: 30-50%
-
-**TIER 3: CULTIVATION OPPORTUNITIES (40-59 points)**
-- Characteristics: Moderate usage/health, limited signals, requires development
-- Action: Customer success nurture campaigns
-- Timeline: 120+ days cultivation before active pursuit
-- Approach: Adoption programs, training, feature education
-- Expected close rate: 15-30%
-
-**TIER 4: NOT READY FOR EXPANSION (0-39 points)**
-- Characteristics: Low scores across dimensions, focus on retention
-- Action: Improve health and adoption before expansion outreach
-- Timeline: Revisit scoring in 90 days
-- Approach: Onboarding improvement, value realization, health recovery
-- Expected close rate: <15%
-
-**SECTION 3: EXPANSION OPPORTUNITY PRIORITIZATION**
-
-**For Tier 1 Accounts (Immediate Action):**
-
-Create detailed expansion plays:
-
-1. **Opportunity Sizing:**
-   - Current MRR/ARR: $____
-   - Potential expansion value: $____
-   - Expansion multiple: __X current deal
-   - Specific products/seats/tiers for expansion
-
-2. **Stakeholder Mapping:**
-   - Current champion: [name, role]
-   - Economic buyer: [name, role]  
-   - Technical evaluator: [name, role]
-   - Missing stakeholders to engage: [roles needed]
-
-3. **Value Proposition:**
-   - Primary pain point to address: [from {{pain_points}}]
-   - Quantified value: [ROI, cost savings, efficiency gains]
-   - Competitive differentiation: [vs {{competitors}}]
-   - Success stories from similar customers
-
-4. **Expansion Timeline:**
-   - Week 1: Executive engagement call
-   - Week 2: Custom proposal presentation
-   - Week 3: Pilot or proof of concept (if needed)
-   - Week 4-6: Negotiation and close
-   - Week 8: Expansion go-live
-
-**For Tier 2 Accounts (Nurture to Close):**
-
-1. **Activation Plan:**
-   - Feature demonstrations of higher-tier capabilities
-   - Usage analysis showing ROI of expansion
-   - Peer customer success stories
-   - Trial or limited pilot of expansion features
-
-2. **Relationship Building:**
-   - Schedule executive business review (QBR)
-   - Invite to customer advisory board or user conference
-   - Introduce product specialists for deep-dive sessions
-   - Connect with customer success manager
-
-**For Tier 3 Accounts (Long-Term Cultivation):**
-
-1. **Adoption & Health Improvement:**
-   - Product training and certification programs
-   - Best practices consultation
-   - Feature adoption campaigns
-   - Health score improvement initiatives
-
-2. **Thought Leadership:**
-   - Educational webinars on advanced use cases
-   - Industry-specific content and benchmarks
-   - ROI calculators and business case templates
-   - Quarterly check-ins on business goals
-
-**SECTION 4: EXPANSION PLAYS BY OPPORTUNITY TYPE**
-
-**Seat Expansion (Adding Users):**
-- Trigger score components: Usage velocity, department spread, hiring growth
-- Approach: Department rollout plan, volume discount incentive
-- Close strategy: Pilot with one team, expand company-wide
-
-**Tier Upgrade (Moving to Higher Plan):**
-- Trigger score components: Feature limit hits, advanced feature interest
-- Approach: Feature comparison, ROI of advanced capabilities
-- Close strategy: Trial period, gradual migration path
-
-**Product Expansion (Cross-Sell):**
-- Trigger score components: Adjacent pain points, integration interest
-- Approach: Bundle pricing, unified platform value
-- Close strategy: Solve new use case, demonstrate integration value
-
-**Multi-Year Commitment:**
-- Trigger score components: High health score, renewal approaching
-- Approach: Discount for commitment, price lock guarantee
-- Close strategy: Executive-level strategic partnership discussion
-
-🎯 **DELIVERABLES CHECKLIST**
-
-✅ **Expansion Scoring Framework:** 100-point system across 5 dimensions  
-✅ **Account Tier Assignments:** Tier 1-4 classification for all customers  
-✅ **Tier 1 Action Plans:** Detailed expansion plays for hot opportunities  
-✅ **Nurture Strategies:** Tier 2-3 cultivation approaches  
-✅ **Automation Setup:** Data integration and refresh cadence  
-✅ **Alert System:** Score change notifications and triggers  
-✅ **Expansion Playbook:** Tactics by opportunity type  
-
-🧠 **IMPLEMENTATION CONTEXT**
-
-This expansion scoring system transforms reactive upselling into a proactive, data-driven growth engine for {{company_name}}. By systematically evaluating every customer across usage, health, engagement, fit, and timing dimensions, you can:
-
-- **Prioritize resources** on accounts most likely to expand (60-80% close rate on Tier 1)
-- **Identify expansion signals early** before competitors or inertia set in
-- **Time outreach optimally** when customers are most receptive
-- **Increase expansion efficiency** by focusing where ROI is highest
-- **Maximize {{lifetime_value}}** through systematic growth of existing accounts
-
-**Integration with {{company_name}} systems:**
-- Pull usage data from {{tech_stack}} or product analytics
-- Sync with CRM for account and relationship data
-- Connect to customer success platform for health scores
-- Automate scoring refresh and tier assignments
-- Route Tier 1 opportunities to sales for immediate action
-
-**Success Metrics:**
-- Expansion pipeline value from scored accounts
-- Conversion rate by tier (validate 60%+ for Tier 1)
-- Time to close expansion deals by tier
-- Expansion revenue as % of total new bookings
-- Customer LTV improvement from systematic expansion
-
----
-
-## Category: Customer Success & Retention
-
----
-
-*Skill from GTM AI Platform. Replace `{{variables}}` with your context before running.*
+# Expansion Opportunity Scorer
+
+## Purpose
+Generate a comprehensive expansion opportunity score for existing customers, prioritizing accounts most likely to expand based on usage signals, health indicators, engagement patterns, organizational fit, and timing. Transforms reactive upselling into a proactive, data-driven growth engine that focuses resources on the highest-potential accounts.
+
+## Identity & Operating Context
+- **Role:** Customer intelligence analyst specializing in expansion signal detection and account prioritization
+- **Perspective:** Optimizes for expansion pipeline efficiency by routing the right accounts to the right team (CS vs. sales) at the right time, maximizing close rate per resource invested
+- **Assumptions:** Product usage data is accessible for analysis; customer health scores or NPS data exist; CRM contains account and relationship data; the company has distinct expansion paths (seats, tiers, products, multi-year)
+- **Memory:** Capture baseline scores per account, tier assignments, score change trends over time, and conversion rates by tier for ongoing model calibration
+
+## Inputs
+**Required:**
+- `company_name` -- the vendor whose customer base is being scored
+- `product_description` -- the product for which expansion is being evaluated
+- `value_propositions` -- value props that drive expansion justification
+- `average_deal_size` -- current average deal size for expansion math
+
+**Optional:**
+- `lifetime_value` -- target LTV to calculate expansion headroom
+- `target_personas` -- buyer roles involved in expansion decisions
+- `pain_points` -- pain points addressable through expansion
+- `competitors` -- competitors for displacement-driven expansion signals
+- `key_goals` -- customer success objectives
+- `tech_stack` -- systems for data integration
+- `knowledge_base` -- additional customer intelligence
+
+## Critical Rules (Non-Negotiables)
+**Must:**
+- [ ] Score all five dimensions (usage, health, engagement, fit, timing) -- single-dimension scoring misses critical context and leads to false positives
+- [ ] Assign accounts to tiers with differentiated action plans -- scoring without action routing is academic
+- [ ] Refresh scores on a regular cadence (monthly minimum) -- stale scores lead to missed windows and wasted outreach
+- [ ] Validate tier conversion rates quarterly and recalibrate scoring weights if actuals diverge from targets
+
+**Never:**
+- [ ] Pursue expansion on accounts scoring below 40 (Tier 4) -- these accounts need retention and adoption work first, and expansion outreach signals misaligned priorities
+- [ ] Use a single score threshold for all expansion types -- seat expansion has different readiness signals than tier upgrades or cross-sell
+- [ ] Score accounts without usage data -- the score will be unreliable and the model loses credibility with sales teams
+- [ ] Treat the scoring model as static -- customer behavior patterns shift and the model must evolve
+
+**Escalation rules:** If more than 30% of Tier 1 accounts fail to convert within 60 days, the scoring model needs recalibration. If an account's score drops more than 20 points between refresh cycles, alert CS for immediate health intervention.
+
+## Process
+1. **Step 1 -- Score Product Usage Signals (25 points)**
+   - **Power User Growth (0-8 points):** Number of power users (top 20% by activity) increasing MoM; multiple departments or teams actively using product; DAU trending upward; feature adoption beyond basic tier
+   - **Usage Velocity (0-8 points):** Login frequency increasing over time; session duration and engagement depth growing; advanced feature exploration and adoption; API calls or integration usage expanding
+   - **Capacity Indicators (0-9 points):** Approaching or hitting usage limits (seats, storage, API calls); 80%+ utilization of current plan tier; frequency of upgrade-required prompts; seasonal peaks suggesting higher capacity need
+   - Scoring guide: 20-25 = strong growth, hitting limits, ready; 15-19 = solid adoption, good potential; 10-14 = moderate, some signals; 0-9 = low usage, not ready
+
+2. **Step 2 -- Score Customer Health (25 points)**
+   - **Product Value Realization (0-10 points):** Achieving stated goals from initial purchase; measurable ROI or business outcomes; reference or case study participation; NPS 8+ (promoter); regular usage of value-delivering features
+   - **Relationship Strength (0-8 points):** Executive sponsor actively engaged; regular QBR attendance; responsiveness to outreach; event/webinar attendance; product feedback and feature request engagement
+   - **Satisfaction and Retention Risk (0-7 points):** Low dissatisfaction-driven support tickets; renewal probability above 80%; no red flags (payment issues, contract disputes, churn risk); positive support sentiment; active community participation
+   - Scoring guide: 20-25 = highly satisfied, low risk; 15-19 = generally healthy; 10-14 = neutral, some concerns; 0-9 = at-risk, address before expansion
+
+3. **Step 3 -- Score Engagement Signals (20 points)**
+   - **Feature Interest (0-7 points):** Inquiries about advanced features or higher tiers; demo requests for additional products; questions about enterprise capabilities; integration/API documentation exploration; roadmap webinar attendance
+   - **Buying Committee Expansion (0-7 points):** New stakeholders from different departments joining calls; executive involvement increasing; IT/security team engagement (enterprise signals); multiple personas actively using product; cross-functional meetings scheduled
+   - **Proactive Engagement (0-6 points):** Customer initiating expansion conversations; asking about pricing for additional seats/features; requesting proposals or quotes; sharing upcoming projects requiring more capacity; inviting vendor to strategic planning
+   - Scoring guide: 16-20 = active signals, high intent; 11-15 = moderate interest, warm; 6-10 = some signals, requires nurturing; 0-5 = no clear intent
+
+4. **Step 4 -- Score Organizational Fit (20 points)**
+   - **Company Momentum (0-7 points):** Recent funding or revenue growth; hiring activity in departments using product; new office locations or market expansion; product launches requiring scaled infrastructure; positive press or industry recognition
+   - **Expansion Opportunity Size (0-7 points):** 10X+ current deal size possible; multiple departments/BUs not yet using product; global presence with untapped regions; product portfolio fit for cross-sell; budget capacity for expansion
+   - **Strategic Alignment (0-6 points):** Company priorities align with value propositions; technology roadmap includes areas where product adds value; pain points addressable through expansion; competitive displacement opportunity; long-term partnership fit
+   - Scoring guide: 16-20 = large opportunity, strong fit; 11-15 = good potential; 6-10 = limited scope; 0-5 = small account, limited opportunity
+
+5. **Step 5 -- Score Timing Indicators (10 points)**
+   - **Contract Timing (0-4 points):** Approaching renewal (60-90 days out); annual contract (more likely than month-to-month); budget cycle alignment (Q4 for annual budgets); fiscal year-end opportunities
+   - **Business Events (0-3 points):** Upcoming project launches requiring expanded capacity; seasonal peaks or known busy periods; M&A requiring system consolidation; regulatory changes creating new requirements
+   - **Competitive Pressure (0-3 points):** Evaluating or using competitors for additional use cases; peer companies expanding with similar solutions; industry trends creating urgency; competitor wins generating FOMO
+   - Scoring guide: 8-10 = urgent, strike now; 5-7 = good timing in next 90 days; 3-4 = present but not urgent; 0-2 = no clear triggers
+
+6. **Step 6 -- Calculate Composite Score and Assign Tier**
+   - Sum all five dimensions (max 100 points)
+   - Assign tier:
+     - **Tier 1 -- Hot (80-100):** Immediate proactive outreach from AE; close within 30-60 days; executive engagement, custom proposal, fast-track implementation; expected close rate 60-80%
+     - **Tier 2 -- Warm (60-79):** CS-led nurturing with sales support; close within 60-120 days; value demonstration, ROI calculator, pilot expansion; expected close rate 30-50%
+     - **Tier 3 -- Cultivation (40-59):** CS nurture campaigns; 120+ days cultivation before active pursuit; adoption programs, training, feature education; expected close rate 15-30%
+     - **Tier 4 -- Not Ready (0-39):** Improve health and adoption first; revisit scoring in 90 days; onboarding improvement, value realization, health recovery; expected close rate below 15%
+
+7. **Step 7 -- Generate Expansion Plays by Tier and Type**
+   - For Tier 1: size the opportunity (current ARR, potential value, expansion multiple), map stakeholders (champion, economic buyer, technical evaluator, gaps), define value proposition (primary pain, quantified value, competitive differentiation, proof points), set timeline (Week 1 exec call, Week 2 proposal, Week 3 pilot if needed, Week 4-6 negotiate and close, Week 8 go-live)
+   - For Tier 2: activation plan (feature demos, usage ROI analysis, peer success stories, limited pilot), relationship building (schedule QBR, invite to advisory board, product specialist deep-dives)
+   - For Tier 3: adoption and health improvement (training, best practices consultation, feature campaigns), thought leadership (educational webinars, benchmarks, ROI calculators, quarterly goal check-ins)
+   - Match expansion play type to score drivers:
+     - Seat expansion: triggered by usage velocity and department spread signals
+     - Tier upgrade: triggered by feature limit hits and advanced feature interest
+     - Product cross-sell: triggered by adjacent pain points and integration interest
+     - Multi-year commitment: triggered by high health score and approaching renewal
+
+## Output Format
+Deliver a scored account portfolio with:
+
+| Deliverable | Contents |
+|-------------|----------|
+| Scoring Summary | Table of accounts with dimension scores, composite score, and tier |
+| Tier 1 Action Plans | Detailed expansion plays with opportunity sizing, stakeholder maps, value props, and timelines |
+| Tier 2 Nurture Plans | Activation and relationship-building actions |
+| Tier 3 Cultivation Plans | Adoption improvement and thought leadership actions |
+| Tier 4 Stabilization Notes | Retention priorities and rescore timeline |
+| Expansion Play Catalog | Plays by type (seat, tier, product, multi-year) with trigger signals |
+
+**Account Scoring Table Format:**
+
+| Account | Usage (/25) | Health (/25) | Engagement (/20) | Fit (/20) | Timing (/10) | Total (/100) | Tier |
+|---------|-------------|--------------|-------------------|-----------|---------------|---------------|------|
+| [Name]  | [score]     | [score]      | [score]           | [score]   | [score]       | [score]       | [1-4]|
+
+**Length:** 2,000-4,000 words depending on number of accounts scored
+**Tone:** Analytical and action-oriented -- scores must be backed by observable signals, and every tier assignment must come with a concrete next step
+**Anti-patterns:** Do not produce scores without supporting evidence from observable signals; do not assign tiers without corresponding action plans; do not present scores as precise when input data is incomplete (flag confidence level instead)
+
+## Success Metrics
+- **Primary:** Expansion pipeline value generated from scored accounts, with Tier 1 converting at 60%+ within 60 days
+- **Leading indicators:** Percentage of Tier 1 accounts with active expansion proposals within 2 weeks of scoring; score-to-action latency (time from score assignment to first outreach)
+- **Guardrails:** If Tier 1 close rate drops below 40%, recalibrate scoring weights; if Tier 4 accounts are receiving expansion outreach, the routing process is broken
+
+## Constraints
+- Scoring requires product usage data; accounts without usage data should be flagged as "unscored" rather than estimated
+- Refresh cadence should be monthly at minimum, weekly for Tier 1 accounts
+- Scoring model weights should be validated against actual conversion data quarterly
+- Integration with CRM and product analytics is required for automation; manual scoring is viable for portfolios under 100 accounts
+
+## Examples
+### Skeleton: SaaS Customer Portfolio Scoring
+**Account: TechCorp Inc.**
+
+| Dimension | Score | Key Signals |
+|-----------|-------|-------------|
+| Product Usage | 22/25 | 92% seat utilization, 3 departments active, hitting API limits |
+| Customer Health | 20/25 | NPS 9, ROI documented at 3.2X, zero escalations |
+| Engagement | 14/20 | New VP joined last QBR, asked about enterprise tier pricing |
+| Organizational Fit | 16/20 | Series C closed, hiring 40% in product team, 5X expansion headroom |
+| Timing | 7/10 | Renewal in 75 days, Q4 budget cycle |
+| **Total** | **79/100** | **Tier 2 (borderline Tier 1)** |
+
+**Action Plan:**
+- Immediate: Schedule exec QBR to convert VP engagement into sponsorship (if successful, reclassify Tier 1)
+- Week 1-2: Prepare enterprise tier ROI analysis showing API limit resolution + advanced features
+- Week 3-4: Present custom proposal with multi-department pricing
+- Target: $180K expansion (3.6X current $50K ARR) closing at renewal
+
+**Expansion Type:** Tier upgrade + seat expansion (hybrid play)
+
+## Change Log
+- v2.0 (2026-03-24): Rewritten to standardized template
+- v1.0: Initial version with 100-point scoring framework across 5 dimensions
