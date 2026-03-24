@@ -8,6 +8,8 @@ metadata:
   version: "2.0"
   category: sales
   status: active
+  prerequisites:
+    - competitive-battlecard
 ---
 
 # Sales Enablement Content Kit

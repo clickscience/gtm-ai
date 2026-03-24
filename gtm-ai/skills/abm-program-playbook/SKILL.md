@@ -8,6 +8,8 @@ metadata:
   version: "2.0"
   category: abm
   status: active
+  prerequisites:
+    - icp-definition-refinement
 ---
 
 # ABM Program Playbook

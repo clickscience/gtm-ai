@@ -8,6 +8,8 @@ metadata:
   version: "2.0"
   category: Sales Strategy
   status: active
+  prerequisites:
+    - icp-definition-refinement
 ---
 
 # Account Whitespace Analyzer

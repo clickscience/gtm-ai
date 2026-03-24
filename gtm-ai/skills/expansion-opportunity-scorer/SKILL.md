@@ -8,6 +8,8 @@ metadata:
   version: "2.0"
   category: Customer Success & Retention
   status: active
+  prerequisites:
+    - icp-definition-refinement
 ---
 
 # Expansion Opportunity Scorer

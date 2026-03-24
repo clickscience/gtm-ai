@@ -8,6 +8,9 @@ metadata:
   version: "2.0"
   category: sales
   status: active
+  prerequisites:
+    - sales-playbook
+    - competitive-battlecard
 ---
 
 # Sales Enablement & Content Strategy Playbook
