@@ -1,272 +1,227 @@
 ---
 name: icp-definition-refinement
 description: >
-  Create detailed ideal customer profiles with firmographics, technographics, behavioral patterns, and scoring models. Triggered by phrases like "define ICP", "refine ideal customer profile", "ICP criteria".
+  Create detailed ideal customer profiles with firmographics, technographics, behavioral patterns, scoring models, buyer personas, and persona-specific GTM strategies. Triggered by phrases like "define ICP", "refine ideal customer profile", "ICP criteria", "buyer persona development", "ICP and persona".
 license: MIT
 metadata:
   author: clickscience
-  version: "1.0"
-  complexity: intermediate
-  keywords: ICP, ideal customer profile, target customer
+  version: "2.0"
+  category: Market Strategy
+  status: active
 ---
 
 # ICP Definition & Refinement
 
-🎯 **OBJECTIVE**
-Create a comprehensive Ideal Customer Profile (ICP) framework for {{company_name}} that enables precise targeting, efficient resource allocation, and higher conversion rates by identifying and prioritizing accounts that perfectly match your solution's value proposition.
+## Purpose
+Create a comprehensive Ideal Customer Profile framework with detailed buyer personas that enables precise targeting, efficient resource allocation, and higher conversion rates. This skill produces firmographic, technographic, and behavioral criteria with a quantitative scoring model, plus fully developed buyer personas with pain point analysis, buying process maps, and persona-specific messaging -- turning abstract "who do we sell to" questions into operational targeting playbooks.
 
-📊 **YOUR BUSINESS CONTEXT**
-**Company Foundation:**
-• {{company_name}} - {{stage}} company in {{industry}}
-• Product: {{product_description}}
-• Team Size: {{team_size}} | Revenue: {{annual_revenue}}
-• Geographic Markets: {{geographic_markets}}
+## Identity & Operating Context
+- **Role:** Senior Market Strategist specializing in B2B segmentation, account scoring, and buyer psychology with experience across startup through enterprise GTM motions
+- **Perspective:** Optimize for targeting precision that maximizes LTV:CAC ratio -- it is better to narrowly target high-fit accounts than to broadly pursue marginal ones
+- **Assumptions:** The company has at least 6 months of sales data or strong hypotheses about best-fit customers; the product has a defined value proposition; there is a sales or growth team that will operationalize the ICP
+- **Memory:** Capture ICP tier definitions, top 3 firmographic filters, scoring model weights, persona names and titles, and negative ICP characteristics for use in downstream skills (campaigns, content, battlecards)
 
-**Current Go-to-Market:**
-• Target Personas: {{target_personas}}
-• Distribution Model: {{distribution_model}}
-• Pricing: {{product_pricing_model}} (Avg Deal: {{average_deal_size}})
-• Sales Cycle: {{sales_cycle_length}}
-• Key Metrics: CAC {{customer_acquisition_cost}} | LTV {{lifetime_value}}
+## Inputs
+**Required:**
+- `company_name` -- the company defining its ICP
+- `product_description` -- what the company sells
+- `industry` -- primary market vertical
+- `target_personas` -- current understanding of buyer roles
+- `pain_points` -- customer problems the product addresses
+- `value_propositions` -- core value statements
 
-**Strategic Context:**
-• Goals: {{key_goals}}
-• Pain Points: {{pain_points}}
-• Value Props: {{value_propositions}}
-• Competitors: {{competitors}}
+**Optional:**
+- `stage` -- company maturity, default: growth
+- `team_size` -- headcount, used to calibrate resource recommendations
+- `annual_revenue` -- current revenue baseline
+- `geographic_markets` -- target regions, default: domestic
+- `distribution_model` -- sales motion (PLG, inside sales, field sales, channel)
+- `product_pricing_model` -- pricing approach
+- `average_deal_size` -- typical contract value
+- `sales_cycle_length` -- average time from first touch to close
+- `customer_acquisition_cost` -- current CAC
+- `lifetime_value` -- current LTV
+- `competitors` -- key competitive alternatives
+- `unique_differentiators` -- what sets the product apart
+- `primary_channels` -- current marketing channels
+- `budget_range` -- marketing budget
+- `monthly_marketing_budget` -- monthly spend
+- `tech_stack` -- technology integration requirements
+- `brand_voice` -- tone and style for messaging outputs
+- `knowledge_base` -- uploaded CRM exports, win/loss analyses, customer interviews, market research
+- `key_goals` -- strategic objectives
 
-💡 **KNOWLEDGE BASE CONTEXT**
-{{knowledge_base}}
+## Critical Rules (Non-Negotiables)
+**Must:**
+- [ ] Define negative ICP characteristics (who NOT to target) -- disqualification criteria prevent wasted sales cycles and improve win rates
+- [ ] Tier accounts into at least 3 priority levels -- flat lists produce flat results; tiering focuses scarce resources
+- [ ] Include a quantitative scoring model with explicit weights -- subjective "gut feel" targeting does not scale and cannot be audited
+- [ ] Create full buyer personas (not just firmographics) -- companies do not buy products, people do; persona-level detail drives messaging and channel decisions
+- [ ] Map the buying committee structure -- deals stall when you engage the wrong stakeholders
+- [ ] Build in a validation and refinement cadence -- ICPs degrade as markets shift; quarterly review prevents drift
 
-⚙️ **COMPREHENSIVE OUTPUT STRUCTURE**
+**Never:**
+- [ ] Define ICP based solely on company demographics without behavioral signals -- firmographics alone miss intent and timing
+- [ ] Create personas without connecting them to specific messaging and channel recommendations -- personas that sit in a document unused are waste
+- [ ] Use a single monolithic score without sub-components -- opaque scores cannot be debugged when they produce poor results
+- [ ] Skip the "ability to pay" analysis -- targeting companies that cannot afford the solution wastes pipeline
 
-**SECTION 1: FIRMOGRAPHIC CRITERIA**
+**Escalation rules:** If CRM data shows fewer than 20 closed-won deals, flag that the ICP is hypothesis-driven and must be validated within 90 days. If LTV:CAC ratio is below 2:1, recommend pausing ICP expansion and focusing on retention of existing best-fit segments.
 
-Define the organizational characteristics that indicate strong product fit:
+## Process
+1. **Step 1 -- Firmographic Criteria**
+   - Define company size bands (SMB 1-50, Mid-Market 51-500, Enterprise 500+) and recommend focus tiers based on {{stage}}, {{average_deal_size}}, and {{team_size}} capacity
+   - Identify primary industry verticals aligned to {{industry}} expertise and {{product_description}} fit
+   - Map vertical-specific pain points that {{value_propositions}} address; note competitive intensity by vertical (where {{competitors}} are strong vs. weak)
+   - Rank priority markets from {{geographic_markets}} by opportunity size, go-to-market complexity, and regulatory considerations
+   - Define revenue and funding signals: annual revenue ranges that can afford {{average_deal_size}}, funding stage implications, growth trajectory indicators
+   - Establish department budget ranges for the solution category
 
-**Company Size Bands:**
-- Analyze your current {{annual_revenue}} and {{average_deal_size}} to determine optimal customer size
-- Small Business (1-50 employees): Resource constraints, price sensitivity, simpler needs
-- Mid-Market (51-500 employees): Growth mode, establishing processes, balance of sophistication and agility
-- Enterprise (500+ employees): Complex requirements, longer sales cycles, higher contract values
-- Recommended focus tiers based on your {{stage}} and capacity
+2. **Step 2 -- Technographic Profile**
+   - Map technology stack indicators: core platforms aligned to {{tech_stack}} integration requirements, complementary tools, competing solutions in use
+   - Assess digital maturity dimensions: marketing automation sophistication, data infrastructure, API capability, analytics adoption, CDP maturity
+   - Define must-have vs. nice-to-have integrations for {{product_description}} to deliver value
+   - Identify common tech stacks in {{industry}} that predict easy deployment
+   - Note cloud adoption maturity signals (on-prem, hybrid, cloud-native)
 
-**Industry Verticals:**
-- Primary industries aligned to {{industry}} expertise and {{product_description}} fit
-- Vertical-specific pain points that {{value_propositions}} address directly
-- Regulatory considerations, compliance requirements, industry maturity
-- Competitive intensity by vertical (where are {{competitors}} strong/weak?)
-- Industry growth trends and digital transformation adoption rates
+3. **Step 3 -- Behavioral Patterns & Intent Signals**
+   - Define digital behavior signals: website visitor patterns, content consumption, event participation, social engagement, email responsiveness
+   - Map intent data indicators: third-party intent topics related to {{pain_points}}, surge patterns, competitor research behavior, solution category research intensity
+   - Identify timing signals: fiscal year planning cycles, renewal windows, seasonal patterns
+   - Catalog change catalysts that create urgency: funding events, leadership changes, M&A, regulatory deadlines, competitive threats, growth inflection points
+   - Assess pain intensity levels: critical (must solve now) vs. important (solve this quarter) vs. nice-to-have (future consideration)
 
-**Geographic Segmentation:**
-- Priority markets from {{geographic_markets}} ranked by opportunity size
-- Regional differences in pain points, buying behavior, competitive landscape
-- Localization requirements, language support, currency considerations
-- Go-to-market complexity by region (direct vs. partner-led)
-- Regulatory and compliance variations by geography
+4. **Step 4 -- Detailed Buyer Personas**
+   - For each role in {{target_personas}}, develop:
+     - **Role & Responsibilities**: Job title, department, daily work, success metrics they are measured on
+     - **Pain Points & Challenges**: Operational (day-to-day frustrations), strategic (bigger challenges), political (internal dynamics); categorize which {{pain_points}} each persona feels most acutely and which only {{unique_differentiators}} solve
+     - **Buying Process Role**: Economic buyer (budget authority), technical buyer (evaluates fit), end user, or coach/champion; map decision triggers (regulations, competitive pressure, growth milestones, budget cycles)
+     - **Content & Channel Preferences**: Where they spend time, what formats they prefer (technical personas favor whitepapers; executives prefer ROI one-pagers), mapped to {{primary_channels}} and {{geographic_markets}} preferences
+     - **Persona-Specific Messaging**: Tailored value propositions using {{brand_voice}}; economic buyers need ROI framing; technical buyers need scalability and integration proof
+   - Define the buying committee structure for a typical {{average_deal_size}} deal: committee size, decision process (centralized vs. distributed), champion requirements, approval chains
+   - Map the typical buyer journey duration aligned to {{sales_cycle_length}}
 
-**Revenue & Funding Signals:**
-- Annual revenue ranges that afford {{average_deal_size}} investments
-- Funding stage (bootstrapped, Series A-D, public) and implications
-- Revenue growth trajectory (declining, flat, 20%+, hypergrowth)
-- Profitability vs. growth mode and budget availability
-- Department budget ranges for your solution category
+5. **Step 5 -- Value Alignment & Negative ICP**
+   - Document how {{pain_points}} manifest in target accounts with specific use cases where {{product_description}} excels
+   - Quantify achievable business impact tied to {{value_propositions}} and expected time-to-value
+   - Map strategic priority alignment: how the solution supports common executive initiatives (digital transformation, cost reduction, growth acceleration)
+   - Define negative ICP characteristics: traits that predict churn, difficult implementations, misalignment, support intensity beyond {{team_size}} capacity, or product roadmap mismatch
+   - Establish red flags that should trigger disqualification during sales process
 
-**SECTION 2: TECHNOGRAPHIC PROFILE**
+6. **Step 6 -- Scoring Model**
+   - Build Fit Score (0-100 points):
+     - Firmographic alignment: 30 points (size, industry, geography, revenue)
+     - Technographic fit: 20 points (tech stack, integrations, digital maturity)
+     - Strategic alignment: 25 points (pain intensity, use case match, value potential)
+     - Accessibility: 15 points (existing relationships, warm intros, engagement history)
+     - Timing: 10 points (budget cycle, trigger events, active buying signals)
+   - Build Engagement Score (0-100 points):
+     - Website behavior: 25 points (visit frequency, page depth, high-value pages)
+     - Content engagement: 25 points (downloads, webinar attendance, email engagement)
+     - Social engagement: 15 points (follows, shares, comments, DMs)
+     - Direct interactions: 25 points (demo requests, sales conversations, pricing inquiries)
+     - Intent signals: 10 points (third-party data, search behavior, competitive research)
+   - Create combined prioritization matrix:
+     - Tier 1 (90-100 combined): Immediate sales focus
+     - Tier 2 (70-89): Intensive nurture
+     - Tier 3 (50-69): Awareness building
+     - Below 50 or low fit regardless of engagement: Disqualify or long-term nurture
 
-Map the technology ecosystem that signals readiness and fit:
+7. **Step 7 -- Segmentation & Persona-Specific GTM Strategies**
+   - Break ICP into 3-5 actionable strategic segments, each with unique characteristics, needs, and tailored approach
+   - For each segment, define: customized value propositions, messaging frameworks addressing segment-specific {{pain_points}}, content strategies, channel strategies, and sales approaches
+   - Develop persona-specific activation strategies: recommended channels by persona effectiveness, content priorities, campaign ideas, and sales enablement needs
+   - Design account-based orchestration sequences for high-value personas: multi-channel touchpoint sequences across 6-8 weeks (e.g., LinkedIn ads, blog, webinar, email, demo) reinforcing {{value_propositions}}
+   - Allocate resources across segments from {{budget_range}}: budget distribution, sales specialization, marketing spend, expected conversion rates, CS intensity
 
-**Technology Stack Indicators:**
-- Core platforms aligned to {{tech_stack}} integration requirements
-- Complementary tools that create natural workflow integration
-- Competing solutions currently in use (displacement opportunities vs. {{competitors}})
-- Technical debt indicators that signal readiness for modernization
-- Cloud adoption maturity (on-prem, hybrid, cloud-native)
+8. **Step 8 -- Activation & Operationalization**
+   - Account list building: data sources and enrichment tools for {{geographic_markets}}, identification queries based on firmographic/technographic criteria, TAM sizing for {{industry}}, tiering using scoring model, territory assignment aligned to {{distribution_model}}
+   - Sales enablement outputs: ICP one-pagers, qualification questions mapped to ICP criteria, discovery scripts by segment, battlecards for {{competitors}} by segment, case study mapping
+   - Marketing activation: ABM strategies for Tier 1, demand gen programs via {{primary_channels}}, content calendar by segment, paid media targeting parameters, personalization strategies
+   - Measurement and iteration: dashboard tracking ICP fit distribution in pipeline, conversion rate analysis by score bands, win/loss patterns, MQA definitions, feedback loops from sales and CS
 
-**Digital Maturity Assessment:**
-- Marketing automation sophistication (none, basic, advanced)
-- Data infrastructure (spreadsheets, databases, data warehouses)
-- API usage and integration capability
-- Analytics and business intelligence adoption
-- Customer data platform and CDP maturity
+9. **Step 9 -- Validation & Refinement Process**
+   - Establish data sources: CRM analysis of won/lost deals, customer interviews with top 20% by LTV, sales team feedback, CS implementation insights, marketing conversion data from {{primary_channels}}
+   - Define validation metrics: win rate by fit score quartile, sales cycle by ICP characteristics, CAC by segment, LTV correlation with ICP criteria, expansion revenue patterns
+   - Set refinement cadence: monthly scoring accuracy review and weight adjustment; quarterly segment performance analysis and resource reallocation; semi-annual major ICP revision based on product evolution and market changes; continuous win/loss interview integration
 
-**Integration Requirements:**
-- Must-have integrations for {{product_description}} to deliver value
-- Nice-to-have integrations that enhance but aren't critical
-- Common tech stacks in {{industry}} that predict easy deployment
-- Technical resources available for implementation
+## Output Format
 
-**SECTION 3: BEHAVIORAL PATTERNS**
+### ICP Framework Document
+Organize the output into these sections:
 
-Identify actions and signals that predict buying intent:
+**1. ICP Summary (1 page)**
+| Dimension | Tier 1 (Ideal) | Tier 2 (Good) | Tier 3 (Possible) | Disqualify |
+|-----------|----------------|---------------|--------------------|-----------|
+| Company Size | [range] | [range] | [range] | [criteria] |
+| Industry | [verticals] | [verticals] | [verticals] | [exclusions] |
+| Revenue | [range] | [range] | [range] | [floor] |
+| Geography | [markets] | [markets] | [markets] | [exclusions] |
+| Tech Stack | [requirements] | [nice-to-haves] | [minimum] | [blockers] |
 
-**Digital Behavior Signals:**
-- Website visitor patterns (page visits, time on site, return frequency)
-- Content consumption (whitepapers, case studies, pricing page views)
-- Event participation (webinars, conferences, trade shows)
-- Social media engagement with your brand and industry topics
-- Email engagement rates and nurture responsiveness
+**2. Scoring Model** -- Table with component, weight, and scoring criteria for each sub-score
 
-**Intent Data Indicators:**
-- Third-party intent topics related to {{pain_points}} and solutions
-- Surge patterns indicating active research phase
-- Competitor research and comparison shopping behavior
-- Solution category research intensity
-- Timing signals (fiscal year planning, renewal windows)
+**3. Buyer Personas** -- One profile per persona including role, pain points, buying process role, preferred channels, messaging angle, and objection handling
 
-**Buying Committee Composition:**
-- Size and structure based on {{target_personas}}
-- Decision-making process (centralized vs. distributed)
-- Typical buyer journey stages and duration (aligned to {{sales_cycle_length}})
-- Champion availability and empowerment
-- Budget authority and approval chains
+**4. Segment Definitions** -- 3-5 segments with unique characteristics, value props, and GTM approach
 
-**Change Catalysts:**
-- Trigger events that create urgency (funding, leadership changes, M&A)
-- Pain intensity level (critical vs. nice-to-solve)
-- Competitive threats forcing action
-- Regulatory or compliance deadlines
-- Growth inflection points requiring new capabilities
+**5. Activation Playbook** -- Account list building criteria, sales qualification framework, marketing targeting parameters, ABM sequence templates
 
-**SECTION 4: VALUE ALIGNMENT**
+**6. Measurement Plan** -- KPIs, dashboards, and review cadence
 
-Ensure strategic fit beyond demographics:
+### Deliverables Checklist
+- ICP Framework Document (firmographic, technographic, behavioral criteria)
+- Scoring Model with calculation formulas and tier thresholds
+- 3-5 Detailed Buyer Personas with messaging frameworks
+- Segment Definitions with persona mapping
+- Tiered Account List criteria and prioritization scores
+- Sales Enablement Kit (qualification questions, battlecards, discovery scripts)
+- Marketing Activation Plan (channels, messaging, targeting parameters)
+- ABM sequence templates by persona
+- Measurement Dashboard template with ICP health metrics
+- Quarterly Review Process documentation
 
-**Problem-Solution Fit:**
-- How {{pain_points}} manifest in target accounts
-- Specific use cases where {{product_description}} excels
-- Quantifiable business impact achievable (tie to {{value_propositions}})
-- Time to value based on implementation complexity
-- Success stories from similar companies addressing similar challenges
+**Length:** 4,000-6,000 words
+**Tone:** Analytical, specific, data-driven. Every criterion should be measurable or observable. Avoid vague descriptors like "innovative companies" -- specify what innovation looks like (R&D spend >10% of revenue, dedicated innovation team, etc.).
+**Anti-patterns:** Avoid ICP definitions that are so broad they describe half the market; avoid personas that read like job descriptions without buying behavior; avoid scoring models without clear thresholds for action.
 
-**Strategic Priorities Alignment:**
-- How your solution supports {{key_goals}} common in target accounts
-- Executive initiatives your product enables (digital transformation, cost reduction, growth acceleration)
-- Department-level goals supported (revenue, efficiency, compliance, experience)
-- ROI profile matching investment priorities
+## Success Metrics
+- **Primary:** Improvement in win rate for accounts scoring Tier 1 vs. unscored accounts (target: 2x or higher)
+- **Leading indicators:** Percentage of pipeline in Tier 1/2 accounts; sales team adoption of qualification framework; marketing campaign performance when targeted to ICP vs. broad
+- **Guardrails:** If Tier 1 accounts represent less than 20% of pipeline after 90 days, the ICP is either too narrow or poorly operationalized -- investigate. If win rate does not differ meaningfully across tiers, the scoring model needs recalibration.
 
-**Risk Factors & Red Flags:**
-- Characteristics that predict churn or difficult implementations
-- Misalignment signals (wrong problem, insufficient budget, competing priorities)
-- Support intensity requirements vs. your {{team_size}} capacity
-- Customer success resource implications
-- Product roadmap mismatches with customer needs
+## Constraints
+- Scoring model weights must sum to 100 for both Fit and Engagement scores
+- Tier 1 should represent no more than 15-20% of total addressable accounts -- if larger, criteria are too loose
+- Every persona must connect to at least one segment and have specific channel and messaging recommendations
+- Negative ICP criteria are mandatory, not optional -- disqualification saves more pipeline than qualification
+- Validation cadence must be defined with specific owners and calendar commitments
 
-**SECTION 5: SCORING MODEL**
+## Examples
+### Skeleton: B2B SaaS Mid-Market ICP
+**ICP Summary:**
+| Dimension | Tier 1 | Tier 2 | Tier 3 | Disqualify |
+|-----------|--------|--------|--------|------------|
+| Size | 200-1000 emp | 100-199 or 1001-2500 | 50-99 emp | <50 or >5000 |
+| Industry | SaaS, FinTech | Healthcare IT, EdTech | Professional Services | Government, Non-profit |
+| Revenue | $20M-$200M | $10M-$19M or $201M-$500M | $5M-$9M | <$5M |
+| Geography | US, UK, Canada | EU, Australia | LATAM | Sanctioned regions |
+| Tech Stack | Salesforce + HubSpot | Salesforce OR HubSpot | Any modern CRM | No CRM |
 
-Create quantifiable framework for account prioritization:
+**Persona: VP of Marketing (Economic Buyer)**
+- Pain: Cannot attribute pipeline to marketing spend; board asking for efficiency metrics
+- Buys when: New fiscal year planning, post-Series B, or after CMO change
+- Channel: LinkedIn thought leadership, peer benchmarking reports, executive dinners
+- Message: "See exactly which campaigns drive pipeline -- not vanity metrics, revenue metrics"
+- Objection: "We already have attribution" -> "How confident is your CFO in those numbers?"
 
-**Fit Score Components (0-100 points):**
-- Firmographic alignment (30 points): Size, industry, geography, revenue
-- Technographic fit (20 points): Tech stack, integrations, maturity
-- Strategic alignment (25 points): Pain intensity, use case match, value potential
-- Accessibility (15 points): Existing relationships, warm intros, target account engagement
-- Timing (10 points): Budget cycle, trigger events, active buying signals
+**Scoring Example:**
+- Firmographic (28/30): 500 employees, SaaS, US, $50M revenue
+- Technographic (18/20): Salesforce + HubSpot, cloud-native, API-first
+- Strategic (20/25): High pain intensity, strong use case match, moderate value potential
+- Accessibility (10/15): No existing relationship, found via intent data
+- Timing (8/10): Active budget cycle, recent leadership change
+- **Fit Score: 84/100 = Tier 2** (upgrade to Tier 1 if champion identified)
 
-**Engagement Score Components (0-100 points):**
-- Website behavior (25 points): Visit frequency, page depth, high-value pages
-- Content engagement (25 points): Downloads, webinar attendance, email opens
-- Social engagement (15 points): Follows, shares, comments, DMs
-- Direct interactions (25 points): Demo requests, sales conversations, pricing inquiries
-- Intent signals (10 points): Third-party data, search behavior, competitive research
-
-**Combined Prioritization Matrix:**
-- High Fit + High Engagement (90-100): Tier 1 - Immediate sales focus
-- High Fit + Medium Engagement (70-89): Tier 2 - Intensive nurture
-- High Fit + Low Engagement (50-69): Tier 3 - Awareness building
-- Low Fit regardless of engagement: Disqualify or long-term nurture
-
-**SECTION 6: SEGMENTATION STRATEGY**
-
-Break ICP into actionable segments:
-
-**Strategic Segments:**
-- Segment 1: [Name] - Characteristics, unique needs, tailored approach
-- Segment 2: [Name] - Different pain points, messaging angles, channel preferences
-- Segment 3: [Name] - Distinct buying patterns, specialized solutions, vertical focus
-
-**Segment-Specific Positioning:**
-- Value propositions customized to {{value_propositions}} for each segment
-- Messaging frameworks addressing segment-specific {{pain_points}}
-- Content strategies by segment need and consumption preferences
-- Channel strategies based on where segments are reachable ({{primary_channels}})
-- Sales approaches by segment complexity and deal size
-
-**Resource Allocation:**
-- Budget distribution across segments (from {{budget_range}})
-- Sales team specialization by segment vs. generalist approach
-- Marketing spend allocation by segment opportunity size
-- Expected conversion rates and sales velocity by segment
-- Customer success intensity requirements by segment
-
-**SECTION 7: RESEARCH & VALIDATION**
-
-Build continuous ICP refinement process:
-
-**Data Sources:**
-- CRM analysis of won/lost deals within past {{sales_cycle_length}} x4
-- Customer interviews with top 20% performers by LTV
-- Sales team feedback on ideal vs. difficult customers
-- Customer success insights on smooth vs. challenging implementations
-- Marketing data on highest converting segments from {{primary_channels}}
-
-**Validation Metrics:**
-- Win rate by ICP fit score quartile
-- Sales cycle length by ICP characteristics
-- Customer acquisition cost by segment
-- Lifetime value correlation with ICP criteria
-- Expansion revenue patterns by account type
-
-**Refinement Cadence:**
-- Monthly: Review scoring accuracy, adjust weights
-- Quarterly: Segment performance analysis, resource reallocation
-- Semi-annually: Major ICP revision based on product evolution and market changes
-- Continuous: Incorporate win/loss interview insights and sales feedback
-
-**SECTION 8: ACTIVATION PLAYBOOK**
-
-Turn ICP into operational targeting:
-
-**Account List Building:**
-- Data sources and enrichment tools for {{geographic_markets}}
-- Account identification queries based on firmographic/technographic criteria
-- Initial universe sizing and TAM estimation for {{industry}}
-- Tiering and prioritization using scoring model
-- Territory assignment aligned to {{distribution_model}}
-
-**Sales Enablement:**
-- ICP one-pagers for sales team quick reference
-- Qualification questions mapped to ICP criteria
-- Discovery scripts addressing segment-specific pain points
-- Battle cards for competing against {{competitors}} in each segment
-- Case study mapping to ICP segments
-
-**Marketing Activation:**
-- Account-based marketing strategies for Tier 1 accounts
-- Demand generation programs targeting ICP firmographics via {{primary_channels}}
-- Content calendar addressing segment-specific challenges
-- Paid media targeting parameters on LinkedIn, Google, intent platforms
-- Personalization strategies using ICP data points
-
-**Measurement & Iteration:**
-- Dashboard tracking ICP fit distribution in pipeline
-- Conversion rate analysis by ICP score bands
-- Win/loss patterns by ICP characteristics
-- Marketing qualified account (MQA) definitions based on ICP+engagement
-- Feedback loops from sales and customer success to marketing
-
-**DELIVERABLES SUMMARY:**
-1. ICP Framework Document (firmographic, technographic, behavioral criteria)
-2. Scoring Model Spreadsheet with calculation formulas
-3. Segment Definitions & Personas within each segment from {{target_personas}}
-4. Tiered Account Lists with prioritization scores
-5. Sales Enablement Kit (qualification questions, battle cards, scripts)
-6. Marketing Activation Plan (channels from {{primary_channels}}, messaging, targeting)
-7. Measurement Dashboard template with key ICP health metrics
-8. Quarterly Review Process for continuous ICP refinement
-
-This ICP framework will transform {{company_name}}'s go-to-market efficiency by ensuring every dollar spent on {{primary_channels}} and every hour invested by your {{team_size}} team focuses on accounts most likely to close, implement successfully, and deliver strong lifetime value within your {{industry}} market.
-
----
-
-*Skill from GTM AI Platform. Replace `{{variables}}` with your context before running.*
+## Change Log
+- v2.0 (2026-03-24): Rewritten to standardized template; merged icp-persona-development (buyer persona methodology, buying committee mapping, persona-specific GTM strategies, data signal scoring)

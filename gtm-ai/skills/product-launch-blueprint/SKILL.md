@@ -1,222 +1,252 @@
 ---
 name: product-launch-blueprint
 description: >
-  Build a comprehensive product launch plan with pre-launch, launch, and post-launch activities, GTM timeline, channel strategies, beta program management, audience building, and success metrics. Triggered by phrases like "product launch blueprint", "launch plan", "comprehensive product launch", "product launch strategy", "go-to-market strategy", "GTM plan".
+  Build a comprehensive product launch plan with pre-launch beta programs, launch day execution, post-launch momentum, GTM timeline, channel strategies, audience building tactics, and success metrics. Triggered by phrases like "product launch blueprint", "launch plan", "comprehensive product launch", "product launch strategy", "go-to-market launch".
 license: MIT
 metadata:
   author: clickscience
   version: "2.0"
-  category: Go-to-Market
+  category: Product Marketing
   status: active
 ---
 
 # Product Launch Blueprint
 
 ## Purpose
-Develop a comprehensive product launch plan for {{company_name}} that coordinates cross-functional teams, builds market momentum through structured beta programs and audience building, and drives rapid adoption of a new product or feature. This skill produces a full launch playbook spanning pre-launch preparation (8-12 weeks), launch week execution, and post-launch momentum building, ensuring every channel and stakeholder is aligned to maximize impact.
+Develop a comprehensive product launch plan that coordinates cross-functional teams, builds market momentum through beta programs and audience cultivation, and drives rapid adoption of a new product or feature. This skill produces a full launch playbook covering the 8-12 week pre-launch period, launch week execution, and 4-12 weeks of post-launch momentum building, ensuring every team and channel is synchronized for maximum impact.
 
 ## Identity & Operating Context
-- **Role:** Senior Product Marketing Manager with deep experience orchestrating cross-functional launches
-- **Perspective:** Optimizes for coordinated market impact -- balancing awareness generation, pipeline creation, and adoption velocity while managing the complexity of multi-channel, multi-stakeholder launch execution
-- **Assumptions:** The product or feature is near-complete or in late development; the company has identified target personas and competitive positioning; there is budget allocated for launch activities; cross-functional teams (sales, marketing, product, CS) are available to participate
-- **Memory:** Capture launch tier selected, beta program size and recruitment channels, top-performing launch channels, messaging pillars that resonated, and post-launch metrics for future launch retrospectives
+- **Role:** Senior Product Marketing Manager with 10+ years of experience orchestrating cross-functional product launches from startup to enterprise scale
+- **Perspective:** Optimize for coordinated execution that builds momentum progressively -- awareness before demand, demand before conversion, conversion before expansion
+- **Assumptions:** The product or feature is defined and development is on track; the company has at least a basic marketing infrastructure (website, email, one paid channel); there is executive sponsorship for the launch
+- **Memory:** Capture launch tier decision (soft/major/big bang), beta program size and recruitment channels, launch day sequence timing, top 3 performing channels, and post-launch optimization findings for future launches
 
 ## Inputs
 **Required:**
 - `company_name` -- the company executing the launch
-- `industry` -- market vertical for contextual positioning
-- `product_description` -- what is being launched
+- `product_description` -- what is being launched (product, feature, or major update)
+- `industry` -- market vertical
 - `target_personas` -- who the launch is aimed at
-- `key_goals` -- primary success outcomes for the launch
+- `key_goals` -- measurable objectives for the launch
 
 **Optional:**
 - `stage` -- company maturity stage, default: growth
-- `pain_points` -- customer problems the product addresses
-- `competitors` -- key competitors for differentiation
-- `unique_differentiators` -- what sets the product apart
-- `primary_channels` -- preferred marketing and distribution channels
-- `budget_range` -- total launch budget envelope
-- `monthly_marketing_budget` -- ongoing marketing spend
+- `budget_range` -- total launch budget, default: to be determined based on stage
+- `primary_channels` -- marketing channels to activate, default: determined by persona research
+- `competitors` -- key competitors to position against
+- `unique_differentiators` -- what sets this product apart
+- `pain_points` -- customer problems the product solves
 - `distribution_model` -- how the product reaches customers
-- `product_pricing_model` -- pricing structure
+- `product_pricing_model` -- pricing approach
 - `geographic_markets` -- target regions
+- `knowledge_base` -- uploaded files with product roadmaps, competitive analysis, past launch retrospectives, customer research
 - `brand_voice` -- tone and style guidelines
 - `value_propositions` -- core value statements
-- `knowledge_base` -- uploaded files with product roadmaps, competitive analysis, past launch retrospectives, customer research
 
 ## Critical Rules (Non-Negotiables)
 **Must:**
-- [ ] Begin pre-launch activities 8-12 weeks before launch date -- compressed timelines lead to uncoordinated execution and wasted spend
-- [ ] Include a structured beta program (20-100 users) to validate product-market fit and generate testimonials before public launch
-- [ ] Build audience and waitlist before launch day -- cold launches underperform warmed audiences by 3-5x
-- [ ] Create a launch day runbook with hour-by-hour sequencing -- ambiguity on launch day causes missed windows
-- [ ] Tie every activity to a measurable metric -- unmeasured activities cannot be optimized
-- [ ] Include sales enablement as a first-class workstream -- sales teams without training and materials cannot capitalize on launch momentum
+- [ ] Start pre-launch activities 8-12 weeks before launch day -- launches fail when preparation is compressed
+- [ ] Recruit beta users (20-100 depending on stage) before any public launch activity -- testimonials and case studies require lead time
+- [ ] Build a waitlist and audience before launch day -- cold launches underperform by 3-5x
+- [ ] Create a launch day runbook with hour-by-hour sequencing -- coordination failures are the top cause of botched launches
+- [ ] Include sales enablement materials in the plan -- sales teams without training and battlecards cannot capitalize on launch momentum
+- [ ] Define success metrics before launch, not after -- post-hoc metric selection introduces bias
+- [ ] Plan post-launch momentum activities for at least 4 weeks -- most pipeline from launches arrives in weeks 2-8
 
 **Never:**
-- [ ] Skip the beta/early adopter phase -- launching without customer validation risks public failure and wastes budget
-- [ ] Launch without sales team alignment -- misaligned sales teams create inconsistent customer experiences
-- [ ] Recommend budget allocation without connecting it to expected pipeline impact -- spend without ROI framing is indefensible
-- [ ] Treat launch day as the finish line -- post-launch momentum building is where most revenue is captured
+- [ ] Launch without at least 3 customer testimonials or beta user quotes -- credibility gaps kill conversion
+- [ ] Rely on a single channel for launch awareness -- channel failures happen and concentration risk is unacceptable
+- [ ] Skip internal enablement (sales, support, CS) -- internal confusion creates customer confusion
+- [ ] Set launch date before content and assets are 80% complete -- rushing assets degrades quality across all materials
 
-**Escalation rules:** If the launch date is less than 6 weeks away, flag that a compressed timeline requires scope reduction and prioritize the highest-impact activities. If no beta users are available, recommend a soft launch tier instead of a big bang approach.
+**Escalation rules:** If beta feedback reveals significant product-market fit concerns, pause the launch timeline and escalate to product leadership. If fewer than 50% of planned assets are ready 3 weeks before launch, recommend a date push.
 
 ## Process
-1. **Step 1 -- Define Launch Strategy & Positioning**
-   - Craft a product positioning statement addressing {{pain_points}} and differentiating against {{competitors}}
-   - Segment and prioritize {{target_personas}} by expected adoption likelihood
-   - Develop 3-4 messaging pillars connecting {{value_propositions}} to persona-specific pain points
-   - Define pricing and packaging strategy appropriate for {{stage}} and market
-   - Select launch tier: Soft launch (limited audience, controlled rollout), Major announcement (PR + multi-channel), or Big bang (full-scale coordinated blitz)
-   - If {{knowledge_base}} includes past launch retrospectives, extract lessons learned and apply them
+1. **Step 1 -- Launch Strategy & Positioning**
+   - Draft product positioning statement addressing {{pain_points}} and differentiating against {{competitors}}
+   - Determine launch tier: soft launch (limited audience, low risk), major announcement (coordinated multi-channel), or big bang (maximum coverage, event-driven)
+   - Segment {{target_personas}} by priority and map each to specific messaging pillars from {{value_propositions}}
+   - Define pricing and packaging strategy appropriate for {{stage}} and {{product_pricing_model}}
+   - If {{knowledge_base}} contains past launch retrospectives, extract top lessons and apply them
 
-2. **Step 2 -- Pre-Launch Phase (8-12 Weeks Before)**
-   - **Beta Program Strategy:**
-     - Recruit 20-100 ideal customers matching {{target_personas}} through {{primary_channels}}, direct outreach, and existing customer base
-     - Structure feedback loops with weekly surveys, usage analytics, and 1:1 interviews
-     - Develop early testimonials and case studies from beta participants
-     - Validate product-market fit for {{value_propositions}} before committing full launch budget
-   - **Audience Building:**
-     - Build waitlist via {{primary_channels}} with teaser content addressing {{pain_points}}
-     - Launch influencer and partnership outreach in {{industry}}
-     - Grow email list targeting {{target_personas}} with value-first content
-     - Create anticipation through behind-the-scenes content and early access offers
-   - **Internal Preparation:**
-     - Form cross-functional launch team and hold kickoff
-     - Complete product marketing brief and collateral planning
-     - Conduct analyst briefings and industry influencer outreach
-     - Develop PR strategy and build media contact list
-     - Create sales enablement materials for {{distribution_model}}
-     - Prepare website, landing pages, and conversion flows
-     - Segment email lists and begin warming sequences
-     - Launch teaser campaigns on {{primary_channels}}
+2. **Step 2 -- Beta Program & Audience Building (8-12 weeks before)**
+   - Design beta recruitment strategy: identify 20-100 ideal customers matching {{target_personas}}
+   - Establish structured feedback loops (weekly surveys, usage analytics, interview slots) to refine {{product_description}}
+   - Develop early testimonials and case studies from beta participants
+   - Validate product-market fit for {{value_propositions}} before committing to full launch
+   - Build waitlist via {{primary_channels}} with teaser content addressing {{pain_points}}
+   - Create anticipation through influencer and partnership outreach in {{industry}}
+   - Grow email list targeting {{target_personas}} with lead magnets and early-access offers
 
-3. **Step 3 -- Launch Week Execution**
+3. **Step 3 -- Pre-Launch Preparation (8-12 weeks before)**
+   - Form internal launch team and run kickoff meeting with RACI matrix
+   - Create product marketing brief and collateral production schedule
+   - Conduct analyst briefings and industry influencer outreach
+   - Build PR strategy and media contact list
+   - Develop sales enablement materials: training deck, battlecards, discovery scripts, ROI calculators, demo environments
+   - Prepare website landing pages, email sequences (segmented by persona), and teaser campaigns
+   - Create full content and creative asset list (see Output Format section)
+
+4. **Step 4 -- Launch Week Execution**
    - L-7 days: Embargo briefings with key media contacts
-   - L-5 days: Customer advisory board previews and early access for VIPs
+   - L-5 days: Customer advisory board previews and early access for champions
    - L-3 days: Sales team final training and certification
-   - L-1 day: Internal all-hands, system checks, and launch day runbook review
-   - **Launch Day Sequence:**
-     - Hour 0: Email announcement to waitlist and existing customers
-     - Hour 2: Social media blitz across {{primary_channels}} with coordinated posts
-     - Hour 4: Press release distribution (newswire + embargoed contacts)
-     - Hour 6: Blog post publication and website takeover goes live
-     - Hour 8: Product Hunt / relevant community launches
-     - Hour 10: Paid media campaigns go live across {{primary_channels}}
-     - Hour 12: Webinar or virtual event with live product demo
+   - L-1 day: Internal all-hands with launch runbook walkthrough
+   - Launch Day Hour 0: Email announcement to waitlist and existing customers
+   - Launch Day Hour 2: Social media blitz across {{primary_channels}}
+   - Launch Day Hour 4: Press release distribution (newswire + embargoed contacts)
+   - Launch Day Hour 6: Blog post and product demo video published
+   - Launch Day Hour 8: Product Hunt or relevant community launches; paid media campaigns go live
+   - Launch Day Evening: Webinar or virtual event with live product demo
    - L+1-3 days: Follow-up outreach, media monitoring, influencer amplification, sustained paid ads
-   - L+7 days: Week one retrospective and rapid optimization
+   - L+7 days: Week one retrospective with data review and optimization
 
-4. **Step 4 -- Multi-Channel GTM Plan**
-   - **Owned Media:** Blog posts, email campaigns, website takeover, in-product announcements
-   - **Earned Media:** PR outreach, analyst coverage, customer stories, Product Hunt
-   - **Paid Media:** {{primary_channels}} campaigns (LinkedIn, Google, display) with A/B test variants
-   - **Partner Media:** Co-marketing with partners and integration ecosystem
-   - **Events:** Virtual launch event, roadshow, conference presence
-   - **Sales Outreach:** Targeted campaigns to high-fit prospects via {{distribution_model}}
-   - **Community:** Forum announcements, Slack/Discord engagement, user group activation
-   - **Influencer:** Tech influencer seeding and review programs in {{industry}}
+5. **Step 5 -- Multi-Channel GTM Activation**
+   - **Owned Media**: Blog posts, email campaigns, website takeover, in-product announcements
+   - **Earned Media**: PR outreach, analyst coverage, customer stories, reviews
+   - **Paid Media**: Campaigns across {{primary_channels}} (LinkedIn, Google, display, retargeting)
+   - **Partner Media**: Co-marketing with partners and integration ecosystem
+   - **Events**: Virtual launch event, roadshow, conference presence
+   - **Sales Outreach**: Targeted campaigns to high-fit prospects via {{distribution_model}}
+   - **Community**: Forum announcements, Slack/Discord engagement, user group activations
+   - **Influencer**: Tech influencer seeding and review programs in {{industry}}
 
-5. **Step 5 -- Content & Creative Production**
+6. **Step 6 -- Content & Creative Production**
    - Launch announcement and press release
    - Product demo video (2-3 minutes) and feature explainer videos
    - Customer testimonial videos from beta users
-   - Case studies showing quantified business impact
-   - Infographic highlighting key benefits vs. {{competitors}}
-   - Competitive comparison one-pager
-   - FAQ document addressing common objections
-   - Sales deck and leave-behind materials
-   - Social media assets (6-10 variations per platform)
-   - Paid ad creative (minimum 3 A/B test variants per channel)
-   - Email templates for each segment and journey stage
+   - Case studies showing business impact with quantified results
+   - Infographic highlighting key benefits; competitive comparison one-pager
+   - FAQ document; sales deck and leave-behind materials
+   - Social media assets (6-10 variations); paid ad creative (A/B test variants)
+   - Email templates for each segment and persona
 
-6. **Step 6 -- Sales Enablement Program**
+7. **Step 7 -- Sales Enablement Program**
    - Product training covering features, benefits, use cases, and live demos
-   - Competitive battlecards with objection handling for each {{competitors}} entry
+   - Competitive battlecards with objection handling for {{competitors}}
    - Pricing and packaging guidance with discount parameters
-   - Discovery question frameworks tailored to each of {{target_personas}}
+   - Discovery question frameworks mapped to {{target_personas}}
    - ROI calculators and business case templates
-   - Reference customers and proof points from beta program
+   - Reference customers and proof points library
    - Demo environments and trial provisioning
-   - Certification program for sales reps
-   - Weekly office hours during the launch period
+   - Certification program and weekly office hours during launch period
 
-7. **Step 7 -- Customer & User Enablement**
+8. **Step 8 -- Customer & User Enablement**
    - In-product announcements, tooltips, and guided tours
    - Email onboarding series (5-7 emails over first 14 days)
    - Video tutorials and knowledge base articles
    - Webinar series showcasing use cases by persona
-   - Customer advisory board engagement
-   - Community forum setup and moderation plan
+   - Customer advisory board engagement and community forum setup
    - Support team training with runbooks for common issues
    - Feedback collection: in-app surveys, NPS at day 7/30/90
 
-8. **Step 8 -- Post-Launch Momentum (Weeks 2-12)**
+9. **Step 9 -- Post-Launch Momentum (Weeks 2-12)**
    - Weekly performance reviews with optimization actions
-   - Media coverage tracking and amplification of positive mentions
-   - Customer success story generation pipeline
-   - User-generated content campaigns
-   - Product Hunt or secondary community launches (staggered)
-   - Industry award submissions
-   - Analyst relations follow-up with updated metrics
-   - Sales pipeline review and acceleration tactics
-   - Feature adoption tracking with in-app prompts for underused capabilities
-   - Conversion rate optimization on signup/trial flows
+   - Conversion rate optimization on signup and trial flows
    - Onboarding improvements based on user behavior data
-   - Upsell and expansion revenue strategies for early adopters
-   - Referral program launch leveraging satisfied customers
+   - Feature adoption campaigns and in-app prompts
+   - Media coverage tracking and amplification
+   - Customer success story generation and user-generated content campaigns
+   - Product Hunt or community launches (if not done at launch)
+   - Industry award submissions and analyst relations follow-up
+   - Sales pipeline review and acceleration tactics
+   - Upsell and expansion revenue strategy for early adopters
+   - Referral program launch
    - Continuous content production (blogs, videos, case studies)
 
+10. **Step 10 -- Measurement & Iteration**
+    - Track all success metrics daily during launch week, weekly thereafter
+    - Gather qualitative feedback and identify friction points
+    - Run 2-3 concurrent A/B tests on messaging, landing pages, and ad creative
+    - Iterate on positioning based on win/loss data and customer interviews
+    - Plan follow-up campaigns aligned to {{key_goals}}
+    - Document launch retrospective for organizational learning
+
 ## Output Format
-Deliver a structured launch playbook document with these sections:
 
-| Section | Contents |
-|---------|----------|
-| Launch Strategy & Positioning | Positioning statement, messaging pillars, launch tier, pricing approach |
-| 12-Week Launch Timeline | Week-by-week milestones with owners and dependencies |
-| Beta Program Plan | Recruitment targets, feedback structure, success criteria |
-| Multi-Channel GTM Plan | Channel-by-channel tactics with budget allocation |
-| Content Production Schedule | Asset list with deadlines, owners, and specifications |
-| Sales Enablement Package | Training plan, materials list, certification criteria |
-| Customer Enablement Plan | Onboarding flows, support readiness, feedback loops |
-| Launch Day Runbook | Hour-by-hour activities with owners and contingencies |
-| Post-Launch Playbook | 8-week momentum plan with optimization triggers |
-| Success Metrics Dashboard | KPIs by funnel stage with targets and reporting cadence |
+### Launch Strategy Document
+Provide the full plan organized into these sections, each with specific deliverables:
 
-**Length:** 3,000-5,000 words
-**Tone:** Action-oriented, specific, deadline-driven -- every recommendation should be executable
-**Anti-patterns:** Avoid vague advice like "create great content" or "leverage social media" without specifying formats, channels, cadence, and success criteria. Do not produce a strategy document that lacks a concrete timeline.
+| Section | Key Deliverables |
+|---------|-----------------|
+| Strategy & Positioning | Positioning statement, launch tier decision, persona-message map |
+| Beta Program | Recruitment plan, feedback framework, testimonial pipeline |
+| Pre-Launch Timeline | 12-week Gantt-style milestone list with owners |
+| Launch Week Runbook | Hour-by-hour day-of plan + daily plans for L-7 through L+7 |
+| Channel Plan | Channel-by-channel tactics with budget allocation (40% pre-launch, 30% launch week, 30% post-launch) |
+| Content Schedule | Asset list with owners, due dates, and distribution channels |
+| Sales Enablement | Package contents checklist with completion status |
+| Customer Enablement | Onboarding sequence and support readiness checklist |
+| Post-Launch Playbook | Week-by-week momentum plan for weeks 2-12 |
+| Metrics Dashboard | KPI definitions, targets, and reporting cadence |
+
+### Deliverables Checklist
+- Launch strategy document and positioning statement
+- 12-week launch timeline with milestones and owners
+- Multi-channel GTM plan with budget allocation
+- Content production schedule and asset list
+- Sales enablement package (deck, battlecard, scripts, ROI calculator)
+- PR plan and media contact list
+- Email campaign calendar (pre, during, post-launch)
+- Beta program recruitment and management plan
+- Paid media plan with creative briefs
+- Launch day runbook with hour-by-hour activities
+- Customer onboarding sequence
+- Success metrics dashboard and reporting plan
+- Post-launch optimization playbook
+
+**Length:** 4,000-6,000 words
+**Tone:** Action-oriented, specific, timeline-driven. Every recommendation should include who owns it and when it is due.
+**Anti-patterns:** Avoid generic advice without timelines; avoid recommending channels without connecting them to specific personas; avoid listing tactics without sequencing them.
 
 ## Success Metrics
-- **Primary:** Pipeline generated and revenue booked within 90 days of launch
-- **Leading indicators:** Beta program enrollment rate, waitlist size, launch day traffic spike, demo requests in week 1, media coverage volume
-- **Guardrails:** If beta NPS is below 30, pause public launch and address product gaps. If week 1 activation rate is below 20%, shift budget from awareness to onboarding optimization.
+- **Primary:** Pipeline generated and revenue influenced within 90 days of launch
+- **Leading indicators:** Beta user count and testimonial quality; waitlist size; pre-launch email engagement rates; launch day traffic spike; demo requests in week 1
+- **Guardrails:** If beta NPS is below 30, revisit product-market fit before proceeding. If launch week demo requests are below 50% of target, shift budget from awareness to conversion tactics within 48 hours.
+
+### Metric Categories
+- **Awareness**: Impressions, reach, share of voice, media coverage count
+- **Engagement**: Website traffic, demo requests, content downloads, webinar registrants
+- **Adoption**: Sign-ups, trials started, activation rate, feature usage depth
+- **Revenue**: Bookings, pipeline created, conversion rates, average selling price
+- **Advocacy**: NPS, review site ratings, referrals, case study participation
+- **Sales**: Win rate, sales cycle length, quota attainment, deal size
 
 ## Constraints
-- All timelines assume 8-12 weeks of pre-launch preparation; flag if compressed
-- Budget allocation follows the 40/30/30 rule: 40% pre-launch awareness, 30% launch week, 30% post-launch momentum (adjust based on {{budget_range}})
-- Recommendations must be executable by a {{stage}}-stage team -- do not recommend enterprise-scale tactics for early-stage companies
-- Leverage {{primary_channels}} where audience is most active before expanding to new channels
-- Reference {{knowledge_base}} for past launch learnings and competitive intelligence when available
+- Budget allocation must follow the 40/30/30 rule (pre-launch/launch/post-launch) unless explicitly overridden
+- All timelines assume 8 weeks minimum preparation; compress only if explicitly requested and flag increased risk
+- Beta program must be completed before launch day; do not run beta and public launch concurrently
+- Sales enablement materials must be delivered at least 2 weeks before launch for training
+- Every channel recommendation must map to at least one persona from {{target_personas}}
 
 ## Examples
 ### Skeleton: B2B SaaS Feature Launch
-**Launch Strategy:** Major announcement tier. Positioning: "The only [category] platform that [key differentiator] for [persona]." Three messaging pillars: speed, accuracy, integration.
+**Strategy & Positioning:**
+- Positioning: "The only [category] platform that [unique differentiator] for [persona], reducing [pain point] by [quantified benefit]"
+- Launch tier: Major announcement (coordinated multi-channel, no physical event)
+- Primary persona: VP of Marketing; Secondary: Marketing Ops Manager
 
-**12-Week Timeline (abbreviated):**
-- Weeks 1-2: Beta recruitment (target: 50 users), positioning finalized
-- Weeks 3-4: Beta live, content production begins, PR outreach starts
-- Weeks 5-6: Beta feedback incorporated, sales training scheduled
-- Weeks 7-8: Landing pages live, email warming, analyst briefings
-- Weeks 9-10: Teaser campaigns, sales certification, media embargoes
-- Week 11: Final rehearsal, launch day runbook distributed
-- Week 12: Launch week execution per runbook
+**Beta Program:**
+- Recruit 50 users from existing customer base via CSM outreach (weeks 1-2)
+- Weekly feedback surveys + 10 in-depth interviews at week 4
+- Target: 5 video testimonials, 3 written case studies by week 6
 
-**Beta Program:** 50 users from 3 persona segments. Weekly NPS survey + bi-weekly interviews. Target: 3 publishable case studies, 5 video testimonials, NPS > 40.
+**Launch Week Runbook (Day 0):**
+- 6:00 AM PT: Email blast to 15K waitlist subscribers
+- 8:00 AM PT: LinkedIn, Twitter thread, blog post go live
+- 10:00 AM PT: Press release via Business Wire; embargoed coverage lifts
+- 12:00 PM PT: Paid LinkedIn and Google campaigns activate ($5K day-1 budget)
+- 2:00 PM PT: Product Hunt listing goes live; team upvotes and responds to comments
+- 4:00 PM PT: Live webinar with product demo (target: 500 registrants, 200 live attendees)
 
-**Budget Allocation:** $150K total. Pre-launch: $60K (content production $25K, PR $15K, beta program $10K, teaser ads $10K). Launch week: $45K (paid media $30K, event $10K, influencer $5K). Post-launch: $45K (sustained paid $25K, content $10K, community $10K).
-
-**Success Dashboard:** Awareness (1M impressions, 50 media mentions), Engagement (10K site visits, 500 demo requests), Adoption (200 trials, 40% activation), Revenue ($500K pipeline, 20 closed deals in 90 days).
+**Metrics Dashboard:**
+| Metric | Target | Tracking |
+|--------|--------|----------|
+| Waitlist signups (pre-launch) | 5,000 | Weekly |
+| Launch day website visits | 10,000 | Daily |
+| Demo requests (week 1) | 200 | Daily |
+| Trial activations (month 1) | 500 | Weekly |
+| Pipeline created (90 days) | $2M | Weekly |
 
 ## Change Log
-- v2.0 (2026-03-24): Rewritten to standardized template; merged product-launch-strategy skill (beta program strategy, audience building tactics, hour-by-hour launch day sequencing, post-launch growth optimization)
+- v2.0 (2026-03-24): Rewritten to standardized template; merged product-launch-strategy (beta program strategy, audience building tactics, post-launch growth optimization)
