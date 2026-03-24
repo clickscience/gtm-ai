@@ -14,29 +14,31 @@ This is a **content library**, not an application. There is no build step, no te
 gtm-ai/
 ├── README.md                    # Public-facing product page
 ├── AGENTS.md                    # This file — context for coding agents
+├── CLAUDE.md                    # Claude Code integration instructions
 ├── CONTRIBUTING.md              # How to submit a skill
+├── CONTEXT_TEMPLATE.md          # Blank template for company context
 ├── SKILL_TEMPLATE.md            # Blank starter for new skills
+├── VARIABLES_REFERENCE.md       # All {{variables}} documented
 ├── LICENSE                      # MIT
 │
-├── skills/                      # All skills live here
+├── skills/                      # All skills live here (flat structure)
 │   ├── _index.md                # Catalog of all skills
-│   ├── demand-gen/              # Demand generation skills
-│   ├── content/                 # Content & messaging skills
-│   ├── competitive/             # Competitive intelligence skills
-│   ├── sales-enablement/        # Sales enablement skills
-│   ├── reporting/               # Reporting & analytics skills
-│   ├── gtm-engineering/         # Technical GTM skills
-│   └── linkedin-ads/            # Channel-specific skills
+│   ├── ab-test-planner/
+│   ├── campaign-brief-generator/
+│   ├── competitive-battlecard/
+│   └── [85 skill folders total]
 │
 └── .github/
     ├── ISSUE_TEMPLATE/          # Skill request + submission templates
     └── workflows/               # CI validation for SKILL.md frontmatter
 ```
 
+Skills are organized in a **flat structure** — all skill directories sit directly under `skills/`, not in category subdirectories. Category is captured in the frontmatter `metadata.category` field only.
+
 Each skill lives in its own directory:
 
 ```
-skills/[category]/[skill-name]/
+skills/[skill-name]/
 ├── SKILL.md          # Required
 ├── references/       # Optional supporting docs
 └── assets/           # Optional templates / resources
@@ -74,7 +76,7 @@ metadata:
 
 ### Adding a new skill
 
-1. Create a new directory under the appropriate category: `skills/[category]/[skill-name]/`
+1. Create a new directory directly under `skills/`: `skills/[skill-name]/`
 2. Copy `SKILL_TEMPLATE.md` into the directory and rename it `SKILL.md`
 3. Fill in the frontmatter — especially the `description` field
 4. Add the skill to `skills/_index.md`
@@ -102,7 +104,7 @@ Validate any skill before opening a PR:
 
 ```bash
 npm install -g @agentskills/skills-ref
-skills-ref validate ./skills/[category]/[skill-name]
+skills-ref validate ./skills/[skill-name]
 ```
 
 The GitHub Actions workflow runs this automatically on all PRs that touch `skills/**`.

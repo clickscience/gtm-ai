@@ -18,7 +18,7 @@ A good skill:
 
 ## Skill Categories
 
-Put your skill in the most relevant category:
+Set the `metadata.category` field in your skill's frontmatter to the most relevant category. Categories are **metadata only** — all skills live in a flat `skills/[skill-name]/` directory regardless of category.
 
 | Category | What Belongs Here |
 |----------|------------------|
@@ -40,12 +40,12 @@ Don't see the right category? Open an issue and we'll discuss adding one.
 
 1. Fork this repo
 2. Create a branch: `skill/[your-skill-name]`
-3. Create your skill directory: `skills/[category]/[skill-name]/`
+3. Create your skill directory: `skills/[skill-name]/`
 4. Copy `SKILL_TEMPLATE.md` into the directory and rename it `SKILL.md`
 5. Fill in the template fully — especially `description` and `Output Format`
 6. Add your skill to `skills/_index.md`
 7. Add a row to the correct table in `README.md`
-8. Validate: `skills-ref validate ./skills/[category]/[skill-name]`
+8. Validate: `skills-ref validate ./skills/[skill-name]`
 9. Open a PR with a brief description of what the skill does and who it's for
 
 ### Option 2: Open a skill request issue

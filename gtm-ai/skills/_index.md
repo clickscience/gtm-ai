@@ -2,7 +2,7 @@
 
 All skills in this library. All skills live at `skills/[skill-id]/SKILL.md`.
 
-**Total: 86 skills** — 15 hand-crafted + 71 platform library
+**Total: 85 skills** — 15 hand-crafted + 70 platform library
 
 ---
 
@@ -28,7 +28,7 @@ All skills in this library. All skills live at `skills/[skill-id]/SKILL.md`.
 
 ---
 
-## Platform Library Skills (71)
+## Platform Library Skills (70)
 
 | Skill | Description |
 |-------|-------------|
@@ -42,7 +42,6 @@ All skills in this library. All skills live at `skills/[skill-id]/SKILL.md`.
 | [campaign-execution-bdr-alignment](campaign-execution-bdr-alignment/) | Execution-ready demand gen plan with tiered campaigns, channel plays, and BDR orchestration |
 | [campaign-ideation-brainstorm](campaign-ideation-brainstorm/) | Generate innovative campaign ideas aligned with goals, audience, and market position |
 | [case-study-development](case-study-development/) | Create compelling case studies that showcase customer results and build social proof |
-| [competitive-battlecard](competitive-battlecard/) | Build battlecards with win/loss analysis, objection handling, and competitive positioning |
 | [competitive-intelligence](competitive-intelligence/) | Analyze competitors, identify market gaps, and develop winning positioning strategies |
 | [competitive-intelligence-framework](competitive-intelligence-framework/) | Competitive intelligence methodology for B2B SaaS to track market positioning |
 | [content-calendar-planner](content-calendar-planner/) | Comprehensive content calendar with themes, topics, formats, and distribution strategy |
@@ -108,9 +107,9 @@ All skills in this library. All skills live at `skills/[skill-id]/SKILL.md`.
 
 ## Stats
 
-- Total skills: 86
+- Total skills: 85
 - Hand-crafted: 15
-- Platform library: 71
+- Platform library: 70
 
 ---
 
