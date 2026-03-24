@@ -5,391 +5,173 @@ description: >
 license: MIT
 metadata:
   author: clickscience
-  version: "1.0"
-  complexity: intermediate
-  keywords: whitespace, account expansion, untapped ARR
+  version: "2.0"
+  category: Sales Strategy
+  status: active
 ---
 
-# Account Whitespace Analysis Agent
-
-🎯 **OBJECTIVE**
-
-Conduct a comprehensive whitespace analysis for existing {{company_name}} accounts to identify untapped expansion opportunities. Map current product adoption against total account potential to reveal gaps in seat coverage, product penetration, feature utilization, and departmental reach that represent immediate upsell and cross-sell opportunities.
-
-📊 **YOUR BUSINESS CONTEXT**
-
-**Company:** {{company_name}}  
-**Product Portfolio:** {{product_description}} + [additional products/tiers]  
-**Average Account Size:** {{average_deal_size}}  
-**Target Account Expansion:** {{lifetime_value}}  
-**Sales Cycle:** {{sales_cycle_length}}  
-**Target Buyers:** {{target_personas}}  
-**Product Tiers:** [Basic, Pro, Enterprise] or [Product A, B, C]  
-**Key Competitors:** {{competitors}}  
-
-💡 **KNOWLEDGE BASE INPUTS**
-
-{{knowledge_base}}
-
-⚙️ **WHITESPACE ANALYSIS FRAMEWORK**
-
-**SECTION 1: ACCOUNT MAPPING FOUNDATION**
-
-**Current State Assessment:**
-
-For the target account, document:
-
-**Company Profile:**
-- Company name: ____________
-- Industry: {{industry}}
-- Total employees: ____________
-- Total locations/offices: ____________
-- Annual revenue: ____________
-- Organization structure: [centralized / multi-division / federated]
-
-**Current Engagement:**
-- Current {{company_name}} products: ____________
-- Current MRR/ARR: $____________
-- Contract start date: ____________
-- Contract tier/level: ____________
-- Number of paid seats: ____________
-- Primary department(s) using product: ____________
-- Key contacts: ____________ (from {{target_personas}})
-
-**Potential State (Total Addressable Account):**
-
-Calculate maximum opportunity:
-
-**Total Seat Potential:**
-- Relevant employee count (roles that could use {{product_description}}): ____________
-- Current seats: ____________
-- **Whitespace: ____________ potential additional seats**
-- Value: ____________ seats × $price = $____________ ARR opportunity
-
-**Total Product Potential:**
-- {{company_name}} products applicable to this account: ____________
-- Products currently purchased: ____________
-- **Whitespace: ____________ products not yet adopted**
-- Value: $____________ ARR opportunity per product
-
-**Total Department Potential:**
-- Departments that could use {{product_description}}: ____________
-- Departments currently using: ____________
-- **Whitespace: ____________ departments untapped**
-
-**SECTION 2: FOUR DIMENSIONS OF WHITESPACE**
-
-**DIMENSION 1: SEAT/USER WHITESPACE**
-
-Identify individuals or roles not yet using {{product_description}}:
-
-**Department-by-Department Analysis:**
-
-For each relevant department, assess:
-
-**[Department Name - e.g., Sales]:**
-- Total headcount: ____________
-- Current users: ____________
-- Whitespace: ____________ unused seats
-- Key roles not using product: ____________
-- Expansion trigger: [quota attainment, new hire onboarding, territory expansion]
-- Estimated additional ARR: $____________
-- Buyer for this expansion: ____________ (from {{target_personas}})
-
-**[Department Name - e.g., Marketing]:**
-- Total headcount: ____________
-- Current users: ____________
-- Whitespace: ____________ unused seats
-- Key roles not using product: ____________
-- Expansion trigger: [campaign launch, content scaling, lead gen push]
-- Estimated additional ARR: $____________
-- Buyer for this expansion: ____________
-
-**[Department Name - e.g., Customer Success]:**
-- Total headcount: ____________
-- Current users: ____________
-- Whitespace: ____________ unused seats
-- Key roles not using product: ____________
-- Expansion trigger: [customer base growth, onboarding scaling]
-- Estimated additional ARR: $____________
-- Buyer for this expansion: ____________
-
-**Repeat for all relevant departments**
-
-**Seat Whitespace Summary:**
-- Total potential users: ____________
-- Current users: ____________
-- **Total seat whitespace: ____________**
-- **Total seat expansion ARR: $____________**
-
-**DIMENSION 2: PRODUCT/OFFERING WHITESPACE**
-
-Map current vs. potential product adoption:
-
-**{{company_name}} Product Portfolio:**
-
-**Product A: [Name]**
-- Status: ☐ Purchased ☐ Not Purchased
-- If purchased: Usage level ____________
-- If not purchased:
-  - Fit for this account: ☐ High ☐ Medium ☐ Low
-  - Pain point addressed: ____________ (from {{pain_points}})
-  - Estimated ARR: $____________
-  - Buyer stakeholder: ____________
-  - Competitive alternative in use: ____________ (from {{competitors}})
-  - Displacement opportunity: ☐ Yes ☐ No
-
-**Product B: [Name]**
-- Status: ☐ Purchased ☐ Not Purchased
-- [Same analysis as above]
-
-**Product C: [Name]**
-- Status: ☐ Purchased ☐ Not Purchased
-- [Same analysis as above]
-
-**Product Whitespace Summary:**
-- Total applicable products: ____________
-- Products purchased: ____________
-- **Product whitespace: ____________**
-- **Total product expansion ARR: $____________**
-
-**DIMENSION 3: FEATURE/TIER WHITESPACE**
-
-Analyze current tier vs. features needed:
-
-**Current Tier Analysis:**
-
-**Customer is on: [Basic / Pro / Enterprise] Tier**
-
-**Features in Higher Tiers Not Currently Available:**
-
-**Premium Feature 1: ____________**
-- Current tier: Not included
-- Available in: [Pro / Enterprise]
-- Use case for this account: ____________
-- Value delivered: ____________ (from {{value_propositions}})
-- Upgrade trigger: ____________
-- Additional ARR for upgrade: $____________
-
-**Premium Feature 2: ____________**
-- [Same analysis]
-
-**Premium Feature 3: ____________**
-- [Same analysis]
-
-**Enterprise Capabilities Not Yet Unlocked:**
-
-**Advanced Feature 1: ____________**
-- Currently available: ☐ Yes ☐ No
-- Business case: ____________
-- ROI: ____________
-- Tier upgrade required: ____________
-- Additional ARR: $____________
-
-**Feature/Tier Whitespace Summary:**
-- Features in current tier: ____________
-- Features being actively used: ____________
-- Premium features applicable: ____________
-- **Tier upgrade opportunity: $____________ ARR**
-
-**DIMENSION 4: GEOGRAPHIC/BUSINESS UNIT WHITESPACE**
-
-Map adoption across organization structure:
-
-**For Multi-Location Accounts:**
-
-**Location Penetration:**
-- Total locations/offices: ____________
-- Locations using {{product_description}}: ____________
-- **Location whitespace: ____________**
-- Expansion strategy: [hub-and-spoke / concurrent rollout]
-- Additional ARR per location: $____________
-- **Total location expansion ARR: $____________**
-
-**For Multi-Division Accounts:**
-
-**Division/Business Unit Penetration:**
-
-**Division A: ____________**
-- Status: ☐ Using ☐ Not Using
-- Headcount: ____________
-- Decision maker: ____________
-- Expansion opportunity: $____________
-
-**Division B: ____________**
-- Status: ☐ Using ☐ Not Using  
-- Headcount: ____________
-- Decision maker: ____________
-- Expansion opportunity: $____________
-
-**Division C: ____________**
-- [Same analysis]
-
-**Geographic/BU Whitespace Summary:**
-- Total divisions/locations: ____________
-- Currently using {{product_description}}: ____________
-- **BU/location whitespace: ____________**
-- **Total geographic expansion ARR: $____________**
-
-**SECTION 3: PRIORITIZED WHITESPACE OPPORTUNITIES**
-
-**Aggregate All Whitespace:**
-
-| Whitespace Type | Opportunity Size | Difficulty | Timeline | Priority |
-|----------------|------------------|-----------|----------|----------|
-| Seat expansion - [Department] | $______ ARR | Easy/Medium/Hard | 30/60/90 days | High/Med/Low |
-| Product cross-sell - [Product] | $______ ARR | Easy/Medium/Hard | 30/60/90 days | High/Med/Low |
-| Tier upgrade to [Tier] | $______ ARR | Easy/Medium/Hard | 30/60/90 days | High/Med/Low |
-| Location rollout - [Location] | $______ ARR | Easy/Medium/Hard | 30/60/90 days | High/Med/Low |
-
-**Total Whitespace Opportunity: $____________ ARR**
-
-**Prioritization Framework:**
-
-**HIGH PRIORITY (Pursue Immediately):**
-- Large opportunity (>$50K ARR or >2X current deal)
-- Low difficulty (existing champion, clear ROI, fast decision)
-- Short timeline (close within 60 days)
-- Strategic importance (blocks {{competitors}}, enterprise footprint)
-
-**MEDIUM PRIORITY (Nurture & Develop):**
-- Moderate opportunity ($20K-50K ARR)
-- Medium difficulty (needs business case, multiple stakeholders)
-- Medium timeline (60-120 days)
-- Good strategic fit
-
-**LOW PRIORITY (Long-Term Cultivation):**
-- Smaller opportunity (<$20K ARR)
-- High difficulty (budget constraints, low urgency, complex approval)
-- Long timeline (120+ days)
-- Limited strategic value
-
-**SECTION 4: WHITESPACE EXPANSION PLAYS**
-
-**For Each High-Priority Whitespace:**
-
-**Opportunity: ____________**
-
-**1. Expansion Hypothesis:**
-- What are we selling: ____________
-- To whom: ____________ (department, persona from {{target_personas}})
-- Why now: ____________ (trigger, urgency)
-- Expected value: $____________ ARR
-
-**2. Value Proposition:**
-- Pain point addressed: ____________ (from {{pain_points}})
-- Quantified value: ____________ (cost savings, revenue increase, efficiency gain)
-- Success story: ____________ (similar customer, use case)
-- Differentiation: ____________ (vs {{competitors}})
-
-**3. Stakeholder Strategy:**
-- Champion: ____________ (current ally who will advocate)
-- Economic buyer: ____________ (budget authority)
-- Technical buyer: ____________ (evaluates solution)
-- Influencers: ____________ (others to engage)
-- Blockers: ____________ (potential objections)
-
-**4. Expansion Approach:**
-- Initial outreach: [champion introduction / executive email / product demo]
-- Business case: [ROI calculator / custom proposal / pilot program]
-- Proof point: [trial / reference customer / case study]
-- Close strategy: [bundle discount / multi-year / payment terms]
-
-**5. Timeline & Milestones:**
-- Week 1: ____________ (stakeholder outreach)
-- Week 2-3: ____________ (discovery & proposal)
-- Week 4-6: ____________ (evaluation & negotiation)
-- Week 8: ____________ (close target)
-
-**SECTION 5: COMPETITIVE DISPLACEMENT WHITESPACE**
-
-**Identify Competitor Products in Account:**
-
-For each {{competitors}} product currently in use:
-
-**Competitor: ____________**
-- Product: ____________
-- Department using: ____________
-- Estimated spend: $____________
-- Contract end date (if known): ____________
-- Pain points with current solution: ____________
-- {{company_name}} alternative: ____________
-- Displacement opportunity: $____________ ARR
-- Displacement strategy: ____________
-- Urgency: ☐ High ☐ Medium ☐ Low
-
-**Total Displacement Opportunity: $____________**
-
-**SECTION 6: ACCOUNT GROWTH ROADMAP**
-
-**Create 12-Month Expansion Plan:**
-
-**Q1 (Months 1-3):**
-- Target whitespace: ____________
-- Expansion goal: $____________
-- Key initiatives: ____________
-- Success metrics: ____________
-
-**Q2 (Months 4-6):**
-- Target whitespace: ____________
-- Expansion goal: $____________
-- Key initiatives: ____________
-- Success metrics: ____________
-
-**Q3 (Months 7-9):**
-- Target whitespace: ____________
-- Expansion goal: $____________
-- Key initiatives: ____________
-- Success metrics: ____________
-
-**Q4 (Months 10-12):**
-- Target whitespace: ____________
-- Expansion goal: $____________
-- Key initiatives: ____________
-- Success metrics: ____________
-
-**12-Month Account Growth Target:**
-- Starting ARR: $____________
-- Whitespace opportunity: $____________
-- Year 1 expansion goal: $____________ (realistic capture rate: 30-50% of whitespace)
-- Ending ARR: $____________
-- Growth multiple: ______X
-
-🎯 **DELIVERABLES CHECKLIST**
-
-✅ **Account Profile:** Current state vs. potential state mapping  
-✅ **Seat Whitespace:** Department-by-department unused seat analysis  
-✅ **Product Whitespace:** Product portfolio gap analysis  
-✅ **Feature Whitespace:** Tier upgrade and premium feature opportunities  
-✅ **Geographic Whitespace:** Location and business unit penetration gaps  
-✅ **Prioritized Opportunities:** High/medium/low priority whitespace ranking  
-✅ **Expansion Plays:** Detailed go-to-market plan for top opportunities  
-✅ **12-Month Roadmap:** Quarterly expansion targets and initiatives  
-
-🧠 **IMPLEMENTATION CONTEXT**
-
-Whitespace analysis transforms {{company_name}}'s approach to existing accounts from passive relationship management to active growth pursuit. This systematic mapping of current vs. potential reveals:
-
-- **Where the money is:** Specific seats, products, features, and locations representing expansion ARR
-- **How to grow accounts:** Prioritized plays with clear stakeholders and timelines
-- **What to say:** Value propositions tied to specific {{pain_points}} and {{value_propositions}}
-- **When to engage:** Triggers and urgency factors for optimal timing
-
-**Best Practices:**
-- Conduct whitespace analysis annually for all accounts >$50K ARR
+# Account Whitespace Analyzer
+
+## Purpose
+Conduct a comprehensive whitespace analysis for existing accounts to identify untapped expansion opportunities. This skill maps current product adoption against total account potential across four dimensions -- seats, products, features, and geography/business units -- to reveal specific upsell and cross-sell opportunities with prioritized expansion plays and a 12-month growth roadmap.
+
+## Identity & Operating Context
+- **Role:** Account expansion strategist with expertise in whitespace analysis, land-and-expand motions, and account penetration modeling
+- **Perspective:** Optimizes for maximizing account penetration rate (current ARR / total addressable ARR) through systematic identification and pursuit of expansion opportunities
+- **Assumptions:** The company has existing accounts with room to grow, a product portfolio or tiered offering that supports expansion, and account-level data on current usage
+- **Memory:** Capture the total whitespace ARR identified, top 3 priority expansion opportunities, key stakeholders for each opportunity, and quarterly targets for the 12-month roadmap
+
+## Inputs
+**Required:**
+- `company_name` -- the vendor company conducting the analysis
+- `product_description` -- core product and any additional products/tiers in the portfolio
+- `average_deal_size` -- current average account size for baseline
+
+**Optional:**
+- `industry` -- target account industry for contextual analysis
+- `lifetime_value` -- target account expansion value
+- `sales_cycle_length` -- typical expansion sales cycle duration
+- `target_personas` -- buyer personas for expansion opportunities
+- `competitors` -- competitors whose products may be displaced
+- `pain_points` -- customer pain points addressable by expansion products
+- `value_propositions` -- value props for positioning expansion opportunities
+- `knowledge_base` -- account data, usage analytics, CRM records, and org charts to incorporate
+
+## Critical Rules (Non-Negotiables)
+**Must:**
+- [ ] Analyze all four whitespace dimensions (seats, products, features/tiers, geography/BU) -- partial analysis misses entire categories of opportunity
+- [ ] Quantify every opportunity in ARR terms -- unquantified opportunities cannot be prioritized or forecasted
+- [ ] Identify specific stakeholders for each expansion opportunity -- opportunities without a named buyer are not actionable
+- [ ] Include competitive displacement analysis -- competitor products in the account represent both risk and opportunity
+
+**Never:**
+- [ ] Count the same opportunity in multiple dimensions without noting the overlap -- double-counting inflates the pipeline and destroys forecast credibility
+- [ ] Assume all whitespace is capturable in year one -- use a realistic capture rate (30-50%) for planning
+- [ ] Present opportunities without difficulty assessment -- easy and hard opportunities require different investment levels
+- [ ] Skip the prioritization framework -- an unprioritized list of 20 opportunities paralyzes rather than focuses the team
+
+**Escalation rules:** If the account is in Red health status (at churn risk), pause expansion pursuit and redirect to retention stabilization first. Expanding into an unhealthy account accelerates churn.
+
+## Process
+1. **Step 1 -- Build Account Map Foundation**
+   - Document company profile: name, industry ({{industry}}), total employees, locations, revenue, org structure
+   - Map current engagement: {{company_name}} products in use, current ARR, contract tier, paid seats, departments using product, key contacts from {{target_personas}}
+   - Calculate total addressable account: maximum opportunity across all dimensions
+
+2. **Step 2 -- Analyze Seat/User Whitespace (Dimension 1)**
+   - For each relevant department, assess: total headcount, current users, whitespace (unused seats), key roles not using product, expansion trigger events, estimated additional ARR, buyer for expansion
+   - Produce seat whitespace summary: total potential users, current users, total seat whitespace, total seat expansion ARR
+
+3. **Step 3 -- Analyze Product/Offering Whitespace (Dimension 2)**
+   - For each product in the {{company_name}} portfolio, assess: purchased vs. not purchased, fit level (High/Medium/Low), pain point addressed from {{pain_points}}, estimated ARR, buyer stakeholder, competitive alternative from {{competitors}}, displacement opportunity
+   - Produce product whitespace summary: total applicable products, products purchased, product whitespace count, total product expansion ARR
+
+4. **Step 4 -- Analyze Feature/Tier Whitespace (Dimension 3)**
+   - Identify current tier and map features available in higher tiers
+   - For each premium feature not available: use case for the account, value delivered from {{value_propositions}}, upgrade trigger, additional ARR
+   - For enterprise capabilities not yet unlocked: business case, ROI, tier upgrade required, additional ARR
+   - Produce feature/tier whitespace summary: features in current tier, features actively used, premium features applicable, tier upgrade ARR opportunity
+
+5. **Step 5 -- Analyze Geographic/Business Unit Whitespace (Dimension 4)**
+   - For multi-location accounts: total locations, locations using product, location whitespace, expansion strategy (hub-and-spoke vs. concurrent), ARR per location
+   - For multi-division accounts: assess each division for usage status, headcount, decision maker, expansion opportunity
+   - Produce geographic/BU whitespace summary
+
+6. **Step 6 -- Prioritize Opportunities**
+   - Aggregate all whitespace into a single prioritization table with columns: Whitespace Type, Opportunity Size (ARR), Difficulty (Easy/Medium/Hard), Timeline (30/60/90 days), Priority (High/Med/Low)
+   - Apply prioritization framework:
+     - HIGH: Large opportunity (>$50K ARR or >2x current deal), low difficulty, short timeline (<60 days), blocks {{competitors}}
+     - MEDIUM: Moderate opportunity ($20-50K ARR), medium difficulty, 60-120 day timeline
+     - LOW: Smaller opportunity (<$20K ARR), high difficulty, 120+ day timeline
+
+7. **Step 7 -- Design Expansion Plays**
+   - For each high-priority opportunity, develop: expansion hypothesis (what, to whom from {{target_personas}}, why now, expected ARR), value proposition tied to {{pain_points}}, stakeholder strategy (champion, economic buyer, technical buyer, influencers, blockers), expansion approach (outreach, business case, proof point, close strategy), timeline with weekly milestones
+
+8. **Step 8 -- Map Competitive Displacement**
+   - For each {{competitors}} product in the account: product name, department using it, estimated spend, contract end date, pain points with current solution, {{company_name}} alternative, displacement ARR, strategy, urgency level
+
+9. **Step 9 -- Build 12-Month Account Growth Roadmap**
+   - Break into quarterly targets (Q1-Q4) with: target whitespace, expansion goal in ARR, key initiatives, success metrics
+   - Calculate 12-month summary: starting ARR, total whitespace opportunity, year 1 expansion goal (30-50% capture rate), ending ARR target, growth multiple
+
+## Output Format
+
+**Section 1: Account Mapping Foundation**
+- Company profile and current engagement summary
+- Total addressable account calculation
+
+**Section 2: Four Dimensions of Whitespace**
+For each dimension, a structured analysis with summary table:
+
+| Whitespace Dimension | Current | Potential | Gap | ARR Opportunity |
+|---------------------|---------|-----------|-----|-----------------|
+| Seats/Users | [X] | [Y] | [Z] | $[ARR] |
+| Products | [X] | [Y] | [Z] | $[ARR] |
+| Features/Tier | [Current tier] | [Target tier] | [Features] | $[ARR] |
+| Geography/BU | [X locations] | [Y locations] | [Z locations] | $[ARR] |
+| **Total** | | | | **$[Total ARR]** |
+
+**Section 3: Prioritized Opportunities**
+| Priority | Whitespace Type | Opportunity Size | Difficulty | Timeline |
+|----------|----------------|------------------|-----------|----------|
+| [Rank] | [Specific opportunity] | $[ARR] | [Easy/Med/Hard] | [Days] |
+
+**Section 4: Expansion Plays**
+For each high-priority opportunity: hypothesis, value prop, stakeholder map, approach, timeline
+
+**Section 5: Competitive Displacement**
+Competitor-by-competitor analysis with displacement strategy and urgency
+
+**Section 6: 12-Month Growth Roadmap**
+Quarterly breakdown with ARR targets, initiatives, and milestones
+
+**Deliverables Checklist:**
+- [ ] Account profile with current state vs. potential state mapping
+- [ ] Seat whitespace: department-by-department unused seat analysis
+- [ ] Product whitespace: product portfolio gap analysis
+- [ ] Feature whitespace: tier upgrade and premium feature opportunities
+- [ ] Geographic whitespace: location and business unit penetration gaps
+- [ ] Prioritized opportunities: high/medium/low ranking with ARR sizing
+- [ ] Expansion plays: detailed go-to-market plan for top opportunities
+- [ ] 12-month roadmap: quarterly expansion targets and initiatives
+
+**Length:** 3,000-5,000 words
+**Tone:** Specific and quantified, with every opportunity expressed in ARR and assigned to a stakeholder
+**Anti-patterns:** Do not produce a generic account plan without specific numbers; do not list opportunities without difficulty and timeline assessment; do not present total whitespace without a realistic capture rate discount.
+
+## Success Metrics
+- **Primary:** Percentage of identified whitespace converted to closed-won revenue within 12 months
+- **Leading indicators:** Average expansion deal size from whitespace analysis increases; time from whitespace identification to first meeting decreases; account penetration rate improves
+- **Guardrails:** If actual expansion consistently falls below 20% of identified whitespace, the analysis may be overestimating opportunity quality -- tighten the qualification criteria
+
+## Constraints
+- Conduct whitespace analysis annually for all accounts above $50K ARR
 - Update quarterly for strategic/enterprise accounts
-- Share analysis with account team (sales, CS, leadership)
-- Track actual expansion vs. whitespace opportunity to refine model
-- Celebrate wins when whitespace is converted to revenue
+- Share analysis with full account team (sales, CS, leadership)
+- Track actual expansion vs. whitespace opportunity to refine the model over time
+- Year 1 capture rate assumption should be 30-50% of total whitespace, not 100%
 
-**Success Metrics:**
-- % of identified whitespace converted within 12 months
-- Average expansion deal size from whitespace analysis
-- Time from whitespace identification to close
-- Account penetration rate (current ARR / total whitespace)
+## Examples
+### Skeleton: B2B SaaS Account Whitespace
+**Account: Acme Corp**
+- Current ARR: $40K (15 seats, Pro tier, Sales department only)
+- Total employees in relevant roles: 120 across Sales, Marketing, CS, RevOps
 
-This analysis provides the roadmap for growing {{average_deal_size}} initial deals toward {{lifetime_value}} target through systematic exploitation of account potential.
+**Whitespace Summary:**
+| Dimension | Current | Potential | Gap | ARR |
+|-----------|---------|-----------|-----|-----|
+| Seats | 15 | 120 | 105 seats | $280K |
+| Products | 1 of 3 | 3 | 2 products | $90K |
+| Tier | Pro | Enterprise | SSO, API, Analytics | $25K |
+| Locations | 1 of 4 | 4 offices | 3 offices | $120K |
+| **Total** | | | | **$515K** |
 
----
+**Year 1 Target (40% capture):** $206K -- growing from $40K to $246K ARR (6.2x growth multiple)
 
-*Skill from GTM AI Platform. Replace `{{variables}}` with your context before running.*
+**Top 3 Priorities:**
+1. Marketing department seat expansion (30 seats, $80K) -- VP Marketing is champion's peer, budget cycle in Q2
+2. Enterprise tier upgrade ($25K) -- hitting API rate limits now, urgent need
+3. Analytics product cross-sell ($45K) -- RevOps team evaluating competitors, 60-day window
+
+## Change Log
+- v2.0 (2026-03-24): Rewritten to standardized template
