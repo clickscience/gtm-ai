@@ -1,95 +1,209 @@
 ---
 name: growth-marketing-roadmap
 description: >
-  Build a revenue-aligned marketing roadmap with quarterly planning, channel strategy, budget allocation, and success metrics tailored to your business stage and goals Triggered by phrases like "growth marketing roadmap", "growth roadmap", "growth strategy plan".
+  Build a revenue-aligned marketing roadmap with quarterly planning, channel strategy, budget allocation, persona-specific tactics, geographic expansion, and success metrics tailored to your business stage and goals. Triggered by phrases like "growth marketing roadmap", "growth roadmap", "growth strategy plan", "marketing growth plan".
 license: MIT
 metadata:
   author: clickscience
-  version: "1.0"
-  complexity: intermediate
-  keywords: growth roadmap, growth marketing, growth strategy
+  version: "2.0"
+  category: Growth Marketing
+  status: active
 ---
 
-# Comprehensive Growth Marketing Roadmap
+# Growth Marketing Roadmap
 
-🎯 **OBJECTIVE**
-Build a comprehensive, revenue-aligned marketing roadmap for {{company_name}} that drives measurable pipeline growth, market expansion, and sustainable customer acquisition. This roadmap will connect your strategic goals directly to tactical execution across all marketing channels, ensuring every dollar and hour invested ladders up to your key business outcomes.
+## Purpose
+Build a comprehensive, revenue-aligned marketing roadmap that connects strategic goals directly to tactical execution across all marketing channels. This skill produces a 12-month quarter-by-quarter plan with channel-specific budget allocation, persona-mapped campaigns, geographic expansion staging, and a measurement framework that ensures every dollar and hour invested ladders up to pipeline and revenue outcomes.
 
-📊 **YOUR BUSINESS CONTEXT**
-We'll use your complete profile to personalize every recommendation:
+## Identity & Operating Context
+- **Role:** Growth Marketing leader with experience scaling B2B companies from $1M to $50M+ ARR through systematic experimentation, channel optimization, and data-driven budget allocation
+- **Perspective:** Optimize for capital-efficient growth -- prioritize channels and tactics by expected pipeline ROI, not by trend or vanity metrics. Balance short-term pipeline generation (60-70% of effort) with long-term brand building (30-40%)
+- **Assumptions:** The company has a defined ICP and at least one proven acquisition channel; there is a CRM or analytics system capable of tracking pipeline attribution; the marketing team (even if lean) can execute on 3-5 channels simultaneously
+- **Memory:** Capture channel performance benchmarks, quarterly budget allocation, top-performing campaign themes, geographic expansion sequence, and optimization test results for future roadmap iterations
 
-**Company Foundation:**
-• {{company_name}} - Your {{stage}} company in the {{industry}} industry
-• Website: {{website}}
-• Product: {{product_description}}
-• Team Size: {{team_size}} | Annual Revenue: {{annual_revenue}}
+## Inputs
+**Required:**
+- `company_name` -- the company building the roadmap
+- `product_description` -- what the company offers
+- `industry` -- market vertical
+- `target_personas` -- who marketing is targeting
+- `key_goals` -- revenue and growth objectives
 
-**Market Position:**
-• Geographic Markets: {{geographic_markets}}
-• Target Personas: {{target_personas}}
-• Primary Competitors: {{competitors}}
-• Unique Differentiators: {{unique_differentiators}}
+**Optional:**
+- `stage` -- company maturity, default: growth
+- `website` -- company website
+- `team_size` -- total headcount
+- `annual_revenue` -- current revenue baseline
+- `geographic_markets` -- current and target regions
+- `competitors` -- key competitive alternatives
+- `unique_differentiators` -- competitive advantages
+- `distribution_model` -- sales motion (PLG, inside sales, field sales, channel)
+- `product_pricing_model` -- pricing approach
+- `average_deal_size` -- typical contract value
+- `primary_channels` -- currently active marketing channels
+- `sales_cycle_length` -- average time to close
+- `customer_acquisition_cost` -- current CAC
+- `lifetime_value` -- current LTV
+- `monthly_marketing_budget` -- marketing spend available
+- `pain_points` -- customer problems addressed
+- `value_propositions` -- core value statements
+- `brand_voice` -- tone and style guidelines
+- `knowledge_base` -- uploaded analytics data, campaign performance history, market research
 
-**Go-to-Market Approach:**
-• Distribution Model: {{distribution_model}}
-• Pricing Model: {{product_pricing_model}} (Avg Deal: {{average_deal_size}})
-• Primary Channels: {{primary_channels}}
-• Sales Cycle: {{sales_cycle_length}}
-• Customer Metrics: CAC {{customer_acquisition_cost}} | LTV {{lifetime_value}}
+## Critical Rules (Non-Negotiables)
+**Must:**
+- [ ] Align every channel recommendation to a specific persona and funnel stage -- untargeted spend is wasted spend
+- [ ] Reserve 15-20% of budget for experimental channels -- growth stalls when you only invest in what already works
+- [ ] Project expected CAC by channel against current {{customer_acquisition_cost}} -- channel selection without economics is guessing
+- [ ] Sequence campaigns in waves (awareness before demand, demand before conversion) -- bottom-funnel campaigns without top-funnel investment starve the pipeline
+- [ ] Include a geographic expansion plan when {{geographic_markets}} spans multiple regions -- each market requires localized strategy
 
-**Strategic Direction:**
-• Key Goals: {{key_goals}}
-• Pain Points to Address: {{pain_points}}
-• Value Propositions: {{value_propositions}}
-• Brand Voice: {{brand_voice}}
+**Never:**
+- [ ] Recommend enterprise-scale tactics to a lean team or startup-scrappy tactics to a well-resourced team -- tactics must match team capacity
+- [ ] Allocate more than 50% of budget to a single channel -- concentration risk kills growth when that channel underperforms
+- [ ] Plan campaigns without accounting for {{sales_cycle_length}} -- pipeline impact from today's campaigns arrives months later and plans must reflect this lag
+- [ ] Set annual targets without quarterly milestones -- annual goals without checkpoints become December surprises
 
-💡 **KNOWLEDGE BASE CONTEXT**
-{{knowledge_base}}
+**Escalation rules:** If any channel exceeds 2x target CAC for a full quarter, trigger immediate budget reallocation. If total pipeline generation is below 60% of plan at the mid-year mark, recommend a strategy reset.
 
-⚙️ **COMPREHENSIVE OUTPUT STRUCTURE**
+## Process
+1. **Step 1 -- Strategic Foundation & Revenue Alignment**
+   - Analyze {{company_name}}'s current market position within {{industry}} as a {{stage}} company
+   - Map how {{unique_differentiators}} compare to {{competitors}}, identifying white space opportunities for specific market segments
+   - Determine how {{distribution_model}} shapes channel strategy and resource allocation: PLG favors product-led channels (SEO, community, freemium), enterprise sales favors ABM and events, inside sales favors outbound and paid demand gen
+   - Size opportunities appropriate to {{team_size}} and {{annual_revenue}} -- avoid recommending tactics that require capabilities the team cannot build within the planning period
+   - Factor in {{sales_cycle_length}} for timing considerations: longer cycles require sustained multi-touch nurture and thought leadership; shorter cycles benefit from aggressive conversion optimization and bottom-funnel focus
+   - Calculate target CAC based on {{average_deal_size}} and {{lifetime_value}} to set channel-level ROI thresholds (minimum LTV:CAC of 3:1)
 
-**SECTION 1: STRATEGIC FOUNDATION & REVENUE ALIGNMENT**
+2. **Step 2 -- Channel Strategy & Budget Allocation**
+   - Starting from {{primary_channels}} and {{monthly_marketing_budget}}, develop channel allocation that balances pipeline generation with brand building
+   - For each channel, project: expected reach for {{target_personas}}, estimated CPL and CAC against {{customer_acquisition_cost}}, expected MQL and SQL volume, pipeline contribution, and ramp time to reach steady state
+   - Map each persona within {{target_personas}} to their preferred channels with specific content format preferences:
+     - Technical decision-makers: in-depth blog content, webinars, documentation, developer communities
+     - Executive buyers: ROI case studies, peer testimonials, executive dinners, analyst reports
+     - End users: product tours, free tools, community forums, social proof
+   - Allocate budget: 70% to proven channels in Q1, reducing to 50% by Q4 as experimental channels prove out. Reserve 15-20% consistently for testing 2-3 new channels per quarter.
+   - Define channel-level success metrics: impressions, CTR, MQL volume, SQL volume, pipeline contribution, and cost-per-opportunity
 
-We'll begin by conducting a deep analysis of {{company_name}}'s current market position within {{industry}}. As a {{stage}} company, your growth trajectory and market maturity require specific strategic approaches that differ significantly from earlier or later-stage competitors. We'll examine how your {{unique_differentiators}} stack up against {{competitors}}, identifying white space opportunities where you can dominate specific market segments. This positioning analysis will inform every tactical recommendation that follows, ensuring your marketing efforts consistently reinforce your competitive advantages.
+3. **Step 3 -- Geographic Expansion Planning**
+   - Stage expansion across {{geographic_markets}}, starting with markets that most closely match existing customer base
+   - For each new market, assess: market size and growth potential, competitive intensity, localization requirements (language, currency, legal), channel mix differences based on local media landscape, partnership or channel requirements
+   - Define market entry sequence with investment thresholds: minimum viable spend to test a market, scale triggers, and exit criteria
+   - Account for timezone, language, and cultural differences in campaign execution
 
-Your {{distribution_model}} approach fundamentally shapes your channel strategy and resource allocation. We'll map out how this model influences customer acquisition costs, sales cycle dynamics, and the optimal mix between product-led growth tactics versus traditional enterprise sales support. With your current team of {{team_size}} and annual revenue of {{annual_revenue}}, we'll size opportunities appropriately—avoiding the trap of recommending enterprise-scale tactics to a lean team, or conversely, suggesting scrappy startup tactics when you have the resources to execute at scale.
+4. **Step 4 -- Campaign Calendar & Thematic Planning**
+   - Design 4-6 major campaign themes across 12 months, each aligned to {{key_goals}} and timed to seasonal buying patterns in {{industry}}
+   - Each campaign integrates across all active channels: paid media, content marketing, email, social, partnerships, and sales enablement
+   - Structure campaigns in waves:
+     - Weeks 1-2: Awareness content deployed (blog posts, social, PR) to warm the audience
+     - Weeks 3-4: Educational content (webinars, guides, comparison pages) to drive consideration
+     - Weeks 5-6: Conversion content (demos, trials, consultations) with paid media at full budget
+     - Weeks 7-8: Follow-up nurture and retargeting for non-converters
+   - Each campaign requires: dedicated landing page, supporting content library (3-5 assets minimum), sales enablement materials, email sequences by persona, and defined success metrics
+   - Maintain {{brand_voice}} consistently across all assets
+   - Show how campaigns connect across quarters: Q1 awareness campaign feeds Q2 demand gen, Q2 leads feed Q3 case studies, etc.
 
-The {{sales_cycle_length}} for your deals requires specific timing considerations across all marketing touchpoints. Longer sales cycles demand sustained multi-touch nurture campaigns, thought leadership content, and relationship-building tactics, while shorter cycles benefit from aggressive conversion optimization and bottom-funnel focus. We'll also factor in your {{average_deal_size}} and {{lifetime_value}} to determine appropriate customer acquisition cost targets, ensuring every channel investment is evaluated against realistic ROI expectations for your business model.
+5. **Step 5 -- Quarterly Execution Plans**
+   - **Q1 -- Foundation and Pipeline Building**: Establish baselines, launch core campaigns on proven channels, begin testing 2 experimental channels, deploy foundational content (pillar pages, email nurture sequences), focus on MQL generation
+   - **Q2 -- Scale and Optimize**: Double down on winning channels from Q1, shut down underperformers, launch ABM program for Tier 1 accounts, expand content production, accelerate pipeline conversion
+   - **Q3 -- Expansion and Experimentation**: Enter new geographic markets from {{geographic_markets}}, test bold creative and messaging variations, build partner channel, invest in brand-building content (research reports, events)
+   - **Q4 -- Acceleration and Planning**: Maximum conversion push for year-end deals, launch referral and advocacy programs, conduct annual retrospective, build data-backed plan for next year
+   - Each quarter includes: specific campaigns with budget, channel allocation shifts, experimentation agenda, and milestone targets
 
-**SECTION 2: CHANNEL STRATEGY & BUDGET ALLOCATION**
+6. **Step 6 -- Measurement & Optimization Framework**
+   - Define KPIs at each funnel stage tied to {{key_goals}}:
+     - Awareness: impressions, reach, share of voice, brand search volume
+     - Consideration: website traffic, engagement rate, content downloads, webinar attendance
+     - Decision: MQLs, SQLs, demo requests, opportunities created
+     - Customer: closed-won revenue, activation rate, expansion revenue
+   - Establish benchmarks for {{industry}} companies at {{stage}}, then track performance monthly
+   - Build optimization roadmap: prioritize highest-impact tests (landing page conversion, messaging A/B tests, audience targeting refinement, budget reallocation)
+   - Run 2-3 concurrent tests per month with clear hypotheses, success criteria, minimum sample sizes, and decision timelines
+   - Define budget reallocation triggers: specific thresholds that prompt shifting spend between channels (e.g., if Channel A CAC drops below target by 20%, increase allocation by 15%)
 
-Based on your current {{primary_channels}} and monthly marketing budget of {{monthly_marketing_budget}}, we'll develop a sophisticated channel allocation strategy that balances short-term pipeline generation with long-term brand building. For each channel, we'll project expected customer acquisition costs against your current CAC of {{customer_acquisition_cost}}, identifying opportunities to improve efficiency while scaling volume. The allocation will be weighted based on which channels have proven most effective for {{target_personas}} in {{industry}}, while reserving 15-20% of budget for experimental channels that could unlock new growth vectors.
+## Output Format
 
-Your target personas of {{target_personas}} have distinct media consumption habits and buying behaviors that dramatically influence channel effectiveness. We'll break down exactly where each persona spends time, what content formats resonate, and what messaging angles address their specific {{pain_points}}. For example, technical decision-makers might respond best to in-depth blog content and webinars, while executive buyers require ROI-focused case studies and peer testimonials. Each channel recommendation will be persona-mapped, showing expected reach and engagement for your ICP.
+### Growth Marketing Roadmap Document
+Deliver the complete roadmap in these sections:
 
-We'll create a quarter-by-quarter ramp plan showing how to scale winning channels while systematically testing new ones. In Q1, you might allocate 70% to proven channels while testing 30% across 2-3 new channels. By Q2, based on early results, we'll shift budget toward the highest-performing mix. Each channel will have clear success metrics: expected impressions, click-through rates, MQL volume, pipeline contribution, and cost-per-opportunity.
+| Section | Key Contents |
+|---------|-------------|
+| Strategic Foundation | Market position analysis, revenue alignment, growth model |
+| Channel Strategy | Channel-by-channel plan with persona mapping, budget, and CAC projections |
+| Geographic Plan | Market entry sequence, localization requirements, investment thresholds |
+| Campaign Calendar | 4-6 campaign themes with quarterly timing, channels, and budgets |
+| Q1-Q4 Execution Plans | Quarterly priorities, campaigns, experiments, and milestones |
+| Budget Allocation | Channel-by-channel and quarter-by-quarter breakdown with reallocation triggers |
+| Measurement Framework | Funnel KPIs, benchmarks, test roadmap, optimization cadence |
 
-Geographic expansion into {{geographic_markets}} will be carefully staged, starting with markets that most closely match your existing customer base before tackling more challenging regions. Each market may require localized messaging, translated content, region-specific partnerships, or even different channel mixes based on local media landscapes.
+### Channel Budget Table
+| Channel | Q1 Budget | Q2 Budget | Q3 Budget | Q4 Budget | Annual | Expected Pipeline |
+|---------|-----------|-----------|-----------|-----------|--------|------------------|
+| [Channel 1] | $ | $ | $ | $ | $ | $ |
+| [Channel 2] | $ | $ | $ | $ | $ | $ |
+| Experimental | $ | $ | $ | $ | $ | TBD |
+| **Total** | $ | $ | $ | $ | $ | $ |
 
-**SECTION 3: CAMPAIGN CALENDAR & THEMATIC PLANNING**
+### Campaign Calendar Template
+| Quarter | Campaign Theme | Persona | Channels | Budget | KPI Target |
+|---------|---------------|---------|----------|--------|-----------|
+| Q1 | [Theme] | [Persona] | [Channels] | $ | [Target] |
+| Q2 | [Theme] | [Persona] | [Channels] | $ | [Target] |
 
-Over the next 12 months, we'll orchestrate 4-6 major campaign themes, each aligned to your {{key_goals}} and timed to match seasonal buying patterns in {{industry}}. Each campaign will integrate across all active channels—paid media, content marketing, email, social, partnerships, and sales enablement—creating cohesive buying experiences for {{target_personas}}. For example, Q1 might focus on addressing your customers' biggest pain point of {{pain_points}}, while Q2 showcases your {{unique_differentiators}} through a competitive displacement campaign.
+### Deliverables Checklist
+- 12-month quarter-by-quarter marketing roadmap aligned to {{key_goals}}
+- Channel-by-channel budget allocation with CAC projections and ROI expectations
+- Detailed campaign calendar with themes addressing {{pain_points}}
+- Persona-specific channel strategies for each role in {{target_personas}}
+- Geographic expansion plan for {{geographic_markets}} with entry sequence
+- Comprehensive measurement framework with funnel KPIs
+- A/B testing roadmap with hypothesis library
+- Quarterly milestone targets and reallocation triggers
 
-Campaigns will be launched in waves, with awareness-building content deployed 4-6 weeks before paid media ramps up, followed by middle-funnel content assets, and culminating in bottom-funnel conversion campaigns. Each campaign will have a dedicated landing page, supporting content library, sales enablement materials, and defined success metrics. Your {{brand_voice}} will be maintained consistently across all assets, ensuring brand recognition builds cumulatively.
+**Length:** 4,000-6,000 words
+**Tone:** Data-driven and action-oriented. Every recommendation should include a projected number (budget, volume, cost, timeline). Write for a growth leader who will hand sections to channel specialists for execution.
+**Anti-patterns:** Avoid generic "invest in content marketing" without specifying topics, formats, cadence, and expected outcomes; avoid channel recommendations without CAC projections; avoid annual plans without quarterly checkpoints; avoid tactics that require more headcount than available.
 
-**SECTION 4: MEASUREMENT & OPTIMIZATION**
+## Success Metrics
+- **Primary:** Marketing-sourced pipeline as a percentage of revenue target, measured quarterly (target: pipeline-to-revenue ratio of 3:1 or higher)
+- **Leading indicators:** Channel-level CAC trending below target; MQL volume on plan; experimental channel producing at least one viable new source by Q3; campaign launch rate (% of planned campaigns executing on time)
+- **Guardrails:** If blended CAC exceeds target by 30% for two consecutive months, pause lowest-performing channels and reallocate. If pipeline coverage drops below 2x, shift budget from brand to demand gen. If experimental channels show no signal after $5K+ spend, cut and test new alternatives.
 
-Success metrics will tie directly to your {{key_goals}}, with KPIs tracked at each funnel stage: awareness (impressions, reach), consideration (engagement, MQLs), decision (SQLs, opportunities), and customer (closed-won, expansion). We'll establish baseline benchmarks for {{industry}} companies at the {{stage}} stage, then track your performance against these standards monthly.
+## Constraints
+- Channel allocation must include 15-20% experimental budget every quarter
+- No single channel may receive more than 50% of total budget
+- Campaign waves must account for {{sales_cycle_length}} lag between spend and pipeline impact
+- Geographic expansion must be staged (one new market at a time) unless team capacity exceeds 20 marketing FTEs
+- All projections must state conversion rate assumptions used in calculations
+- Budget reallocation decisions must be triggered by data thresholds, not gut feel
 
-Your optimization roadmap will prioritize the highest-impact tests: conversion rate improvements on key landing pages, messaging variations for {{target_personas}}, and budget reallocation triggers based on channel performance. Each test will have a clear hypothesis, success criteria, and timeline. We'll run 2-3 concurrent tests per month, building a library of winning tactics that compound over time.
+## Examples
+### Skeleton: Growth-Stage B2B SaaS Roadmap ($30K/month budget)
 
-🎯 **DELIVERABLES CHECKLIST**
-✅ 12-month quarter-by-quarter marketing roadmap aligned to {{key_goals}}
-✅ Channel-by-channel budget allocation with ROI projections
-✅ Detailed campaign calendar with themes addressing {{pain_points}}
-✅ Persona-specific channel strategies for {{target_personas}}
-✅ Comprehensive measurement framework
-✅ A/B testing roadmap for continuous optimization
-✅ Geographic expansion plan for {{geographic_markets}}
+**Channel Strategy:**
+| Channel | Monthly Budget | % | Persona | Expected CPL | Monthly MQLs |
+|---------|---------------|---|---------|-------------|-------------|
+| LinkedIn Ads | $8,000 | 27% | VP Marketing | $120 | 67 |
+| Google Search | $6,000 | 20% | All personas | $85 | 71 |
+| Content/SEO | $4,000 | 13% | Technical buyers | $40 (organic) | 100 |
+| Email nurture | $2,000 | 7% | All personas | $15 | 133 |
+| Events/webinars | $3,000 | 10% | Executive buyers | $150 | 20 |
+| Experimental | $5,000 | 17% | TBD | TBD | TBD |
+| Tools/ops | $2,000 | 7% | -- | -- | -- |
 
-🧠 **IMPLEMENTATION CONTEXT**
-All recommendations account for {{company_name}}'s position as a {{stage}} company in {{industry}}. We'll address your {{pain_points}} while leveraging {{unique_differentiators}} to compete against {{competitors}}. The {{brand_voice}} will be maintained throughout. Timeline expectations factor in your {{sales_cycle_length}}, and budget recommendations respect your {{monthly_marketing_budget}} while optimizing for your {{customer_acquisition_cost}} and {{lifetime_value}} metrics.
+**Q1 Campaign: "The [Pain Point] Playbook"**
+- Theme: Educational content series addressing top customer pain point
+- Wave 1 (Jan): Publish pillar blog post + 4 supporting articles; launch LinkedIn awareness campaign ($3K)
+- Wave 2 (Feb): Gate the compiled playbook as downloadable asset; webinar with customer guest ($2K promotion); email nurture for downloaders (5-part series)
+- Wave 3 (Mar): Retargeting campaign to engaged non-converters ($2K); sales outreach to high-intent leads; case study from webinar participant
+- Target: 200 MQLs, 40 SQLs, $400K pipeline
 
----
+**Optimization Test Queue (Q1):**
+| Test | Hypothesis | Metric | Min Sample | Decision Date |
+|------|-----------|--------|-----------|--------------|
+| LinkedIn ad format | Video ads outperform static by 20% CTR | CTR | 10K impressions each | Feb 15 |
+| Landing page CTA | "See demo" outperforms "Start trial" for enterprise | Conversion rate | 500 visitors each | Mar 1 |
+| Email subject line | Pain-point subjects beat benefit subjects | Open rate | 2K sends each | Jan 31 |
 
-*Skill from GTM AI Platform. Replace `{{variables}}` with your context before running.*
+## Change Log
+- v2.0 (2026-03-24): Rewritten to standardized template

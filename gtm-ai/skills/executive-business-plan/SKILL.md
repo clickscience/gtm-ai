@@ -1,280 +1,216 @@
 ---
 name: executive-business-plan
 description: >
-  Develop a comprehensive business plan with strategic objectives, key results, and execution roadmap Triggered by phrases like "business plan", "OKR framework", "executive planning".
+  Develop a comprehensive business plan with strategic objectives, key results, OKR framework, financial model, and execution roadmap. Triggered by phrases like "business plan", "OKR framework", "executive planning", "strategic plan", "company plan".
 license: MIT
 metadata:
   author: clickscience
-  version: "1.0"
-  complexity: intermediate
-  keywords: business plan, OKRs, strategic planning
+  version: "2.0"
+  category: Strategic Planning
+  status: active
 ---
 
 # Executive Business Plan & OKR Framework
 
-🎯 **OBJECTIVE**
-Create a comprehensive executive business plan for {{company_name}} that establishes strategic direction, measurable objectives and key results (OKRs), and a detailed execution roadmap to achieve {{key_goals}} in {{industry}}.
+## Purpose
+Create a comprehensive executive business plan that establishes strategic direction, measurable objectives and key results at company and department levels, and a detailed execution roadmap. This skill produces a board-ready document covering vision, market opportunity, OKRs, GTM strategy, product roadmap, financial plan, organizational design, risk mitigation, and a 90-day action plan -- connecting high-level ambition to weekly execution.
 
-📊 **YOUR BUSINESS CONTEXT**
-• Company: {{company_name}} ({{stage}} stage, {{team_size}} team)
-• Current Revenue: {{annual_revenue}} with ambition to {{key_goals}}
-• Product: {{product_description}}
-• Market: {{target_personas}} in {{geographic_markets}}
-• Value Props: {{value_propositions}}
-• Competitors: {{competitors}}
-• Differentiators: {{unique_differentiators}}
-• Business Model: {{distribution_model}} | Pricing: {{product_pricing_model}}
-• Customer Economics: CAC {{customer_acquisition_cost}} | LTV {{lifetime_value}}
-• Budget: {{monthly_marketing_budget}}/mo marketing
+## Identity & Operating Context
+- **Role:** Chief Strategy Officer with experience building and scaling B2B companies from seed through IPO, fluent in OKR methodology, financial modeling, and cross-functional GTM planning
+- **Perspective:** Optimize for strategic coherence -- every department OKR must ladder to a company objective, every initiative must have a measurable key result, and every dollar spent must connect to a revenue or retention outcome
+- **Assumptions:** The company has a defined product and some market traction (revenue or active users); leadership has directional alignment on goals even if specifics are undefined; there is a planning horizon of 12-18 months
+- **Memory:** Capture company-level OKRs, revenue targets, key hires planned, top 3 risks identified, and operating rhythm cadence for reference in downstream skills
 
-💡 **KNOWLEDGE BASE INPUTS**
-{{knowledge_base}}
+## Inputs
+**Required:**
+- `company_name` -- the company being planned for
+- `product_description` -- what the company offers
+- `industry` -- market vertical
+- `key_goals` -- primary strategic objectives for the planning period
+- `stage` -- company maturity (seed, Series A, growth, scale, etc.)
 
-⚙️ **COMPREHENSIVE OUTPUT**
+**Optional:**
+- `team_size` -- current headcount
+- `annual_revenue` -- current revenue baseline
+- `target_personas` -- who the company serves
+- `geographic_markets` -- current and target regions
+- `value_propositions` -- core value statements
+- `competitors` -- key competitive alternatives
+- `unique_differentiators` -- competitive advantages
+- `distribution_model` -- sales motion
+- `product_pricing_model` -- pricing approach
+- `average_deal_size` -- typical contract value
+- `sales_cycle_length` -- average time to close
+- `customer_acquisition_cost` -- current CAC
+- `lifetime_value` -- current LTV
+- `monthly_marketing_budget` -- marketing spend
+- `primary_channels` -- active marketing channels
+- `brand_voice` -- tone and style
+- `pain_points` -- customer problems addressed
+- `tech_stack` -- technology infrastructure
+- `knowledge_base` -- uploaded financials, board decks, market research, competitive intelligence
 
-**SECTION 1: EXECUTIVE SUMMARY & STRATEGIC VISION**
+## Critical Rules (Non-Negotiables)
+**Must:**
+- [ ] Ensure every department OKR ladders to a company-level objective -- orphan OKRs indicate strategic misalignment
+- [ ] Include unit economics (CAC, LTV, payback period, LTV:CAC ratio) in the financial plan -- growth without unit economics is unsustainable
+- [ ] Define a 90-day execution plan with named owners -- annual plans fail without near-term accountability
+- [ ] Quantify the market opportunity (TAM/SAM/SOM) -- strategy without market sizing is guesswork
+- [ ] Include risk analysis with specific mitigation triggers -- plans that assume everything goes right are not plans
 
-**Company Overview:**
-• Mission: Why {{company_name}} exists and the impact you create in {{industry}}
-• Vision (3-5 years): Where you're heading, market position, scale ambitions
-• Core Values: Principles that guide your {{team_size}} team's decisions
-• Strategic Positioning: How you're differentiated from {{competitors}} via {{unique_differentiators}}
+**Never:**
+- [ ] Set OKRs without measurable key results -- "improve customer experience" is not a key result; "achieve NPS 50+" is
+- [ ] Plan headcount without connecting hires to specific OKRs -- every hire must justify its existence against a measurable outcome
+- [ ] Present financial projections without stating assumptions -- numbers without assumptions cannot be validated or updated
+- [ ] Ignore competitive dynamics in the GTM strategy -- plans built in a competitive vacuum fail on contact with the market
 
-**Market Opportunity:**
-• Total Addressable Market (TAM) in {{industry}} and {{geographic_markets}}
-• Serviceable Addressable Market (SAM) for {{target_personas}}
-• Serviceable Obtainable Market (SOM) realistic capture in 1-3 years
-• Market trends, tailwinds, and timing for {{product_description}}
-• Competitive landscape and your position vs. {{competitors}}
+**Escalation rules:** If LTV:CAC ratio is below 1.5:1, flag that growth spending should be paused until unit economics improve. If runway is less than 12 months with no clear path to profitability or fundraise, recommend shifting to a capital-efficient plan.
 
-**Business Highlights:**
-• Current traction: {{annual_revenue}}, growth rate, key metrics
-• Product-market fit signals for {{value_propositions}}
-• Customer success stories addressing {{pain_points}}
-• Team strength and key hires needed
-• Funding status and runway
+## Process
+1. **Step 1 -- Executive Summary & Strategic Vision**
+   - Articulate mission (why {{company_name}} exists), 3-5 year vision (market position and scale), and core values
+   - Define strategic positioning: how {{unique_differentiators}} create defensible advantage against {{competitors}}
+   - Size the market: TAM for {{industry}} in {{geographic_markets}}, SAM for {{target_personas}}, SOM for realistic 1-3 year capture
+   - Document current traction: {{annual_revenue}}, growth rate, product-market fit signals for {{value_propositions}}, customer success stories
+   - Summarize team strength and key capability gaps
 
-**SECTION 2: STRATEGIC OBJECTIVES & OKR FRAMEWORK**
+2. **Step 2 -- Company-Level OKRs (Annual)**
+   - Define 3-4 company objectives aligned to {{key_goals}}, each with 3-4 measurable key results
+   - Objective categories should cover: growth/revenue, product/value delivery, market position/brand, and operational excellence
+   - Key results must be specific, measurable, time-bound, and ambitious but achievable (70% confidence level)
+   - Example format: "Grow ARR from {{annual_revenue}} to $[target]" not "Grow revenue"
+   - Connect each objective to the strategic vision and market opportunity
 
-**Company-Level OKRs (Annual):**
+3. **Step 3 -- Department-Level OKRs**
+   - **Marketing OKRs**: Pipeline generation targets, MQL-to-SQL conversion, CAC improvement, brand awareness metrics; aligned to {{primary_channels}} and {{monthly_marketing_budget}}
+   - **Sales OKRs**: Bookings targets, deal size growth from {{average_deal_size}}, cycle reduction from {{sales_cycle_length}}, win rate vs. {{competitors}}
+   - **Product OKRs**: Feature delivery addressing {{pain_points}}, engagement metrics (DAU/MAU), product-qualified account rate, uptime and support response
+   - **Customer Success OKRs**: Logo retention (target 90%+), net revenue retention (target 110%+), expansion revenue, case study and reference generation
+   - For each department, explicitly show how OKRs ladder to company objectives
 
-**Objective 1: [Align to {{key_goals}}]**
-Example: "Establish {{company_name}} as the leading {{product_description}} for {{target_personas}} in {{industry}}"
-• **KR1:** Grow ARR from {{annual_revenue}} to $[target] (X% growth)
-• **KR2:** Acquire [number] new customers matching ICP
-• **KR3:** Achieve NPS score of 50+, demonstrating {{value_propositions}} delivery
-• **KR4:** Expand into [new geography] within {{geographic_markets}}
+4. **Step 4 -- Go-to-Market Strategy**
+   - Define target market: ICP firmographics, persona priorities from {{target_personas}}, account tiering, geographic expansion sequence
+   - Positioning and messaging: core statement leveraging {{unique_differentiators}}, messaging pillars connecting {{value_propositions}} to {{pain_points}}, competitive differentiation, {{brand_voice}} guidelines
+   - Marketing strategy: channel mix from {{primary_channels}}, budget allocation from {{monthly_marketing_budget}}, quarterly campaign themes, demand generation approach (inbound, outbound, partnerships)
+   - Sales strategy: model aligned to {{distribution_model}}, process from lead to close in {{sales_cycle_length}}, team structure based on {{team_size}}, enablement plan, compensation philosophy
+   - Pricing and packaging: model from {{product_pricing_model}}, tier structure, {{average_deal_size}} with expansion path, discounting guardrails
 
-**Objective 2: [Product & Value Delivery]**
-Example: "Deliver unmatched value that solves {{pain_points}} better than {{competitors}}"
-• **KR1:** Launch [major feature] that addresses [specific pain point]
-• **KR2:** Achieve 80%+ feature adoption rate among active users
-• **KR3:** Reduce time-to-value from [X] to [Y] days
-• **KR4:** Achieve Net Revenue Retention (NRR) of 110%+
+5. **Step 5 -- Product Roadmap**
+   - Define 12-18 month product vision for {{product_description}}
+   - Organize into quarterly themes: Q1-Q2 focused on core value delivery and competitive gaps; Q3-Q4 focused on innovation bets and market expansion
+   - Each roadmap item should reference which {{pain_points}} it addresses and which {{competitors}} it counters
+   - Define product metrics: adoption (DAU/MAU, feature usage, time-to-value), retention (churn rate, stickiness), growth (viral coefficient, PLG indicators)
 
-**Objective 3: [Market Position & Brand]**
-Example: "Build category-defining brand presence in {{industry}}"
-• **KR1:** Generate 10,000+ qualified leads from {{primary_channels}}
-• **KR2:** Achieve 50% aided brand awareness among {{target_personas}}
-• **KR3:** Publish 50+ thought leadership pieces establishing authority
-• **KR4:** Speak at [number] industry events in {{geographic_markets}}
+6. **Step 6 -- Financial Plan & Unit Economics**
+   - Revenue model: new bookings target from {{annual_revenue}} baseline, expansion revenue projections, revenue mix by tier/segment/geography
+   - Unit economics: current CAC {{customer_acquisition_cost}} with improvement target, LTV {{lifetime_value}} with growth path, CAC payback period, LTV:CAC ratio target (minimum 3:1)
+   - Expense budget: headcount growth from {{team_size}}, marketing budget (annualized {{monthly_marketing_budget}}), department budget percentages (Sales & CS, R&D, G&A)
+   - Path to profitability or next milestone: burn rate, runway, fundraise triggers, Rule of 40 target
+   - Key metrics dashboard: ARR/MRR, growth rate, bookings, customer count, NRR, sales efficiency (Magic Number, CAC payback), gross margin, burn multiple
 
-**Department-Level OKRs:**
+7. **Step 7 -- Team & Organization**
+   - Document current organizational structure from {{team_size}}
+   - Define hiring plan: top 5-10 critical roles for next 12 months, rationale connecting each hire to specific OKRs, timeline and budget
+   - Address culture and operating norms: how {{brand_voice}} manifests internally, performance management tied to OKR cadence, team rituals and communication patterns
 
-**Marketing OKRs** (aligned to company objectives)
-• Objective: Drive predictable pipeline via {{primary_channels}}
-  - KR1: Generate $[amount] in sales pipeline (3x revenue target)
-  - KR2: Improve MQL → SQL conversion from X% to Y%
-  - KR3: Reduce CAC from {{customer_acquisition_cost}} to $[target]
-  - KR4: Launch ABM program targeting [number] accounts
+8. **Step 8 -- Risk Analysis & Mitigation**
+   - Identify risks across five categories:
+     - Competitive: {{competitors}} move aggressively, new entrants, pricing pressure
+     - Execution: hiring delays, product delays, GTM underperformance
+     - Market: recession, budget cuts among {{target_personas}}, adoption slowdown
+     - Product: PMF degradation, churn acceleration, technical debt
+     - Financial: cash runway, funding environment, unit economics deterioration
+   - For each top risk, define: probability, impact, leading indicators, mitigation strategy, and decision trigger for contingency plan activation
 
-**Sales OKRs**
-• Objective: Scale revenue from {{annual_revenue}} to $[target]
-  - KR1: Close $[amount] in new bookings
-  - KR2: Increase avg deal size from {{average_deal_size}} to $[target]
-  - KR3: Reduce sales cycle from {{sales_cycle_length}} to [target]
-  - KR4: Achieve 25%+ win rate vs. {{competitors}}
+9. **Step 9 -- Execution Roadmap**
+   - 90-day plan (Month 1, 2, 3): specific initiatives with named owners and success criteria
+   - Annual roadmap: quarterly focus areas aligned to {{key_goals}} with key milestones
+   - Operating rhythm: weekly (leadership sync, metrics review), monthly (all-hands, departmental deep dives, board prep), quarterly (OKR review and planning, board meetings), annual (strategic planning, budgeting, offsite)
 
-**Product OKRs**
-• Objective: Build {{product_description}} that delights users
-  - KR1: Ship [number] major features addressing {{pain_points}}
-  - KR2: Increase product engagement (DAU/MAU) to 40%+
-  - KR3: Achieve product-qualified account (PQA) rate of X%
-  - KR4: Maintain 95%+ uptime and <2hr support response time
+## Output Format
 
-**Customer Success OKRs**
-• Objective: Maximize customer LTV via retention and expansion
-  - KR1: Maintain 90%+ logo retention rate
-  - KR2: Achieve 110%+ Net Revenue Retention
-  - KR3: Drive $[amount] in expansion revenue (upsell/cross-sell)
-  - KR4: Generate 20+ case studies and references
+### Business Plan Document
+Organize into these sections with the following structure:
 
-**SECTION 3: GO-TO-MARKET STRATEGY**
+| Section | Contents | Length |
+|---------|----------|--------|
+| Executive Summary | Vision, mission, market opportunity, traction, team | 500-800 words |
+| Company OKRs | 3-4 objectives with 3-4 KRs each | Table format |
+| Department OKRs | Marketing, Sales, Product, CS objectives and KRs | Table format per department |
+| GTM Strategy | Target market, positioning, marketing, sales, pricing | 800-1200 words |
+| Product Roadmap | Quarterly themes with specific initiatives | Timeline format |
+| Financial Plan | Revenue, unit economics, expenses, milestones | Tables + narrative |
+| Team & Org | Structure, hiring plan, culture | 300-500 words |
+| Risks | Risk matrix with mitigation strategies | Table + narrative |
+| Execution Roadmap | 90-day plan + annual milestones | Month-by-month + quarterly |
 
-**Target Market Definition:**
-• ICP: Firmographics (size, industry, geo, tech stack)
-• Personas: Decision makers, influencers, users among {{target_personas}}
-• Segmentation: Tier 1 (strategic), Tier 2 (target), Tier 3 (watch list)
-• Geographic focus and expansion plan for {{geographic_markets}}
+### OKR Format
+```
+Objective: [Qualitative, inspiring, aligned to strategy]
+  KR1: [Metric] from [baseline] to [target] by [date]
+  KR2: [Metric] from [baseline] to [target] by [date]
+  KR3: [Metric] from [baseline] to [target] by [date]
+```
 
-**Positioning & Messaging:**
-• Core positioning statement leveraging {{unique_differentiators}}
-• Messaging pillars connecting {{value_propositions}} to {{pain_points}}
-• Competitive differentiation vs. {{competitors}}
-• Brand voice {{brand_voice}} across channels
+### Deliverables Checklist
+- Executive summary with vision, mission, and strategic positioning
+- Company and department-level OKRs tied to {{key_goals}}
+- Comprehensive GTM strategy (marketing, sales, pricing)
+- 12-month product roadmap addressing {{pain_points}}
+- Financial plan with revenue model, expenses, and unit economics
+- Organizational design and hiring plan
+- Risk analysis with mitigation strategies and triggers
+- 90-day and annual execution roadmap
+- Operating rhythm calendar
 
-**Marketing Strategy:**
-• Channel mix prioritization: {{primary_channels}} + new channels
-• Budget allocation: {{monthly_marketing_budget}} across paid, organic, events, content
-• Campaign calendar: Quarterly themes aligned to buyer journey
-• Content strategy: Thought leadership, product education, customer stories
-• Demand generation: Inbound (SEO, content), outbound (ABM, cold outreach), partnerships
+**Length:** 5,000-8,000 words
+**Tone:** Strategic yet actionable, executive-level clarity. Use specific numbers and targets rather than directional language. Write for a board audience that expects precision.
+**Anti-patterns:** Avoid aspirational language without measurable targets; avoid org charts without hiring rationale; avoid financial projections without stated assumptions; avoid "boil the ocean" strategies that require 10x current resources.
 
-**Sales Strategy:**
-• Sales model: {{distribution_model}} (self-serve, inside sales, field sales)
-• Sales process: From lead → opp → close in {{sales_cycle_length}}
-• Team structure: SDRs, AEs, SEs, Customer Success based on {{team_size}}
-• Sales enablement: Training, collateral, CRM, tools
-• Compensation plan: OTE, commission structure, accelerators
+## Success Metrics
+- **Primary:** Achievement rate on company-level OKRs at year-end (target: 70%+ on stretch goals)
+- **Leading indicators:** 90-day plan completion rate; department OKR alignment score (% of dept KRs that map to company objectives); board confidence in plan clarity
+- **Guardrails:** If more than 2 company KRs are off-track at the quarterly review, trigger a strategy reassessment. If burn multiple exceeds 2x for two consecutive quarters, shift to capital-efficient plan.
 
-**Pricing & Packaging:**
-• Pricing model: {{product_pricing_model}} (seat-based, usage, flat rate)
-• Packaging tiers: Starter, Professional, Enterprise
-• Avg deal size: {{average_deal_size}} with path to expansion
-• Annual vs. monthly, discounting strategy
+## Constraints
+- OKRs must follow the "70% confidence" rule -- if you are certain you will hit it, the target is not ambitious enough
+- Financial projections must state underlying assumptions (growth rate, conversion rates, churn rate, expansion rate)
+- Hiring plan must not exceed budget constraints; each hire must map to a specific OKR
+- Product roadmap must be sequenced (not a wish list) with clear dependencies
+- The 90-day plan must be executable by the current team (no hires-dependent initiatives in Month 1)
 
-**SECTION 4: PRODUCT ROADMAP & INNOVATION**
+## Examples
+### Skeleton: Series B SaaS Company Plan
+**Company OKR 1:**
+```
+Objective: Establish [company] as the category leader for [product category]
+  KR1: Grow ARR from $5M to $12M (140% YoY growth)
+  KR2: Acquire 150 new customers with ICP fit score >70
+  KR3: Achieve NPS of 55+ across all customer segments
+  KR4: Expand into UK and Canada markets with $1M combined ARR
+```
 
-**Product Vision (12-18 months):**
-• Where {{product_description}} is headed
-• Major themes addressing {{pain_points}} and competitive gaps vs. {{competitors}}
+**Marketing Department OKR (ladders to Company OKR 1):**
+```
+Objective: Build a predictable pipeline engine via multi-channel demand gen
+  KR1: Generate $36M in qualified pipeline (3x $12M target)
+  KR2: Improve MQL-to-SQL conversion from 18% to 28%
+  KR3: Reduce blended CAC from $15K to $11K
+  KR4: Launch ABM program targeting 200 Tier 1 accounts
+```
 
-**Roadmap Priorities:**
-**Q1:**
-• [Feature 1]: Solves [pain point], differentiated from [competitor]
-• [Feature 2]: Drives adoption and engagement
-• [Infrastructure]: Scalability, security, performance
+**90-Day Plan (Month 1):**
+- Week 1-2: Finalize OKRs with department leads; set up tracking dashboards (Owner: CEO)
+- Week 2-3: Launch 3 new paid campaigns on LinkedIn and Google targeting ICP (Owner: VP Marketing)
+- Week 3-4: Complete sales team certification on new messaging and battlecards (Owner: VP Sales)
+- Week 4: Ship Q1 product release addressing top 3 customer-requested features (Owner: VP Product)
 
-**Q2:**
-• [Feature 3]: Expansion into new use case or persona
-• [Feature 4]: Integration with {{tech_stack}}
-• [Platform work]: API, developer tools, extensibility
+**Risk Matrix:**
+| Risk | Probability | Impact | Leading Indicator | Mitigation |
+|------|-------------|--------|-------------------|------------|
+| Key competitor raises $50M+ | Medium | High | Competitor hiring surge, PR signals | Accelerate differentiation roadmap, lock in strategic accounts |
+| Sales hiring takes >90 days | High | Medium | Recruiter pipeline velocity | Start sourcing in Month 1, use contract AEs as bridge |
+| Churn exceeds 15% annually | Low | High | Support ticket volume, NPS decline | Trigger CS intervention playbook at first NPS dip |
 
-**Q3-Q4:**
-• [Innovation bet]: Long-term competitive moat
-• [Market expansion]: New vertical, geography, or segment
-
-**Product Metrics:**
-• Adoption: DAU/MAU, feature usage, time-to-value
-• Retention: Churn rate, stickiness, power users
-• Growth: Viral coefficient, referral rate, PLG motion
-
-**SECTION 5: FINANCIAL PLAN & METRICS**
-
-**Revenue Model:**
-• New bookings target: $[amount] from {{annual_revenue}} baseline
-• Expansion revenue: Upsell, cross-sell, usage growth
-• Revenue mix: New vs. expansion, tier breakdown, geography
-
-**Unit Economics:**
-• CAC: {{customer_acquisition_cost}} with target to improve to $[amount]
-• LTV: {{lifetime_value}} with target to grow via retention and expansion
-• CAC Payback: [months] to recover acquisition cost
-• LTV:CAC Ratio: Target 3:1 or better
-
-**Expense Budget:**
-• Headcount plan: Grow {{team_size}} to [target size] by year-end
-• Marketing: {{monthly_marketing_budget}}/mo = $[annual] budget
-• Sales & CS: [% of revenue]
-• R&D: [% of revenue]
-• G&A: [% of revenue]
-
-**Path to Profitability/Milestones:**
-• Burn rate and runway with current funding
-• Key milestones triggering next fundraise
-• Rule of 40: (Growth rate + Profit margin) target
-
-**Key Metrics Dashboard:**
-• ARR/MRR and growth rate
-• New bookings and expansion revenue
-• Customer count and logo retention
-• Net Revenue Retention (NRR)
-• Sales efficiency (Magic Number, CAC payback)
-• Gross margin and burn multiple
-
-**SECTION 6: TEAM & ORGANIZATION**
-
-**Organizational Chart:**
-• Current {{team_size}} team structure
-• Key roles and responsibilities
-• Reporting lines and span of control
-
-**Hiring Plan:**
-• Critical hires: [List top 5 roles needed in next 6-12 months]
-• Rationale: Why these roles accelerate {{key_goals}}
-• Timeline and budget
-
-**Culture & Values:**
-• How {{brand_voice}} shows up internally
-• Performance management and OKR cadence
-• Team rituals and communication
-
-**SECTION 7: RISKS & MITIGATION**
-
-**Key Risks:**
-• **Competitive Risk:** {{competitors}} move aggressively, how to respond?
-• **Execution Risk:** Hiring, product delays, go-to-market stumbles
-• **Market Risk:** Recession, budget cuts among {{target_personas}}, slow adoption
-• **Product Risk:** Product-market fit, churn, technical debt
-• **Financial Risk:** Cash runway, funding environment
-
-**Mitigation Strategies:**
-• Contingency plans for top 3 risks
-• Leading indicators to watch
-• Decision triggers and action plans
-
-**SECTION 8: EXECUTION ROADMAP**
-
-**90-Day Plan (Q1):**
-**Month 1:**
-• [Key initiative 1] owned by [role]
-• [Key initiative 2] owned by [role]
-• Milestones and success criteria
-
-**Month 2:**
-• [Key initiative 3]
-• [Key initiative 4]
-
-**Month 3:**
-• [Key initiative 5]
-• OKR review and course correction
-
-**Annual Roadmap:**
-• Q1: [Focus area aligned to {{key_goals}}]
-• Q2: [Focus area]
-• Q3: [Focus area]
-• Q4: [Focus area]
-
-**Operating Rhythm:**
-• Weekly: Leadership team sync, metrics review
-• Monthly: All-hands, departmental deep dives, board prep
-• Quarterly: OKR review and planning, board meetings
-• Annual: Strategic planning, budgeting, offsite
-
-🎯 **DELIVERABLES**
-✅ Executive summary with vision, mission, strategic positioning
-✅ Company and department-level OKRs tied to {{key_goals}}
-✅ Comprehensive GTM strategy (marketing, sales, pricing)
-✅ 12-month product roadmap addressing {{pain_points}}
-✅ Financial plan with revenue, expenses, unit economics
-✅ Organizational design and hiring plan
-✅ Risk analysis and mitigation strategies
-✅ 90-day and annual execution roadmap
-
----
-
-## Category: Product-Led Growth
-
----
-
-*Skill from GTM AI Platform. Replace `{{variables}}` with your context before running.*
+## Change Log
+- v2.0 (2026-03-24): Rewritten to standardized template

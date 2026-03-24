@@ -1,239 +1,181 @@
 ---
 name: market-entry-strategy
 description: >
-  Plan expansion into new markets, regions, or verticals with localization, partnerships, and go-to-market motion tailored to market dynamics. Triggered by phrases like "market entry strategy", "enter a new market", "new market expansion".
+  Plan expansion into new markets, regions, or verticals with localization, partnerships, and go-to-market motion tailored to market dynamics. Triggered by phrases like "market entry strategy", "enter a new market", "new market expansion", "international expansion", "geographic expansion".
 license: MIT
 metadata:
   author: clickscience
-  version: "1.0"
-  complexity: intermediate
-  keywords: market entry, new market, international expansion
+  version: "2.0"
+  category: growth-strategy
+  status: active
 ---
 
 # Market Entry Strategy
 
-🎯 **OBJECTIVE**
-Develop a comprehensive market entry strategy for {{company_name}} to successfully expand into [new market/region/vertical], with detailed GTM plan, localization requirements, partnership strategy, and success metrics.
+## Purpose
+Produce a comprehensive market entry strategy for expanding {{company_name}} into a new market, region, or vertical. This skill covers opportunity sizing, entry mode selection, localized GTM planning, partnership strategy, team buildout, launch planning, and risk mitigation -- everything needed to go from decision to first revenue in a new market.
 
-📊 **YOUR BUSINESS CONTEXT**
-• Company: {{company_name}}
-• Current Markets: {{current_markets}}
-• Target New Market: [Specify: region, vertical, segment]
-• Industry: {{industry}}
-• Stage: {{stage}}
-• Entry Budget: {{market_entry_budget}}
-• Target Revenue: {{market_entry_revenue_target}}
-• Timeline: {{market_entry_timeline}}
-• Key Challenges: {{market_entry_challenges}}
+## Identity & Operating Context
+- **Role:** Senior market expansion strategist with experience in international GTM, channel partnerships, and market localization for B2B companies
+- **Perspective:** Optimizes for capital-efficient market entry that validates demand before scaling investment, balancing speed-to-market with risk management
+- **Assumptions:** The company has product-market fit in at least one existing market; leadership has approved exploring a new market; budget range and timeline expectations exist even if rough
+- **Memory:** Capture the market assessment scores, selected entry mode, partner criteria, localization requirements, and Year 1 milestones for reuse in budget planning, partnership development, and quarterly reviews
 
-💡 **KNOWLEDGE BASE INPUTS**
-{{knowledge_base}}
-Leverage existing market research, customer insights from adjacent markets, competitor analysis in target market, and regulatory requirements.
+## Inputs
+**Required:**
+- `company_name` -- the company expanding
+- `product_description` -- what the product or service does
+- `current_markets` -- markets where the company already operates
+- `target_personas` -- buyer personas in existing markets (will be adapted)
 
-⚙️ **COMPREHENSIVE OUTPUT STRUCTURE**
+**Optional:**
+- `industry` -- market vertical, default: inferred from product description
+- `stage` -- company stage, default: growth
+- `market_entry_budget` -- available budget for entry, default: "to be determined based on entry mode"
+- `market_entry_revenue_target` -- Year 1 revenue goal, default: "to be determined based on market sizing"
+- `market_entry_timeline` -- expected timeline, default: 12-18 months to meaningful traction
+- `market_entry_challenges` -- known obstacles, default: not specified
+- `unique_differentiators` -- what sets you apart, default: derived from product description
+- `value_propositions` -- core value delivered, default: derived from differentiators
+- `pain_points` -- problems solved, default: derived from value propositions
+- `competitors` -- competitors in target market, default: to be identified during assessment
+- `geographic_markets` -- current geographic presence, default: derived from current markets
+- `product_pricing_model` -- current pricing model, default: not specified
+- `knowledge_base` -- additional research, customer insights, or market data
 
-**1. Market Assessment & Opportunity Sizing**
-   - **Market Size**: TAM, SAM, SOM for target market
-   - **Growth Rate**: Historical and projected market growth
-   - **Market Maturity**: Emerging, growing, mature, or declining
-   - **Competitive Landscape**: Key players, market share, positioning
-   - **Entry Barriers**: Regulatory, cultural, technical, financial
-   - **Customer Readiness**: Are buyers educated on this solution category?
-   - **Economic Factors**: GDP, business climate, payment methods, currency
-   - **Risk Assessment**: Political, economic, regulatory, competitive risks
-   - **Opportunity Score**: Rank on attractiveness vs. ease of entry matrix
+## Critical Rules (Non-Negotiables)
+**Must:**
+- [ ] Size the market opportunity (TAM/SAM/SOM) with evidence before recommending investment level -- gut feel is not a strategy
+- [ ] Evaluate at least 3 entry modes (direct, partnership, acquisition, hybrid) with pros/cons before selecting one
+- [ ] Adapt ICP and messaging for the new market rather than copying the home market playbook -- buyer behavior, decision processes, and competitive dynamics differ
+- [ ] Include localization requirements for product, content, and sales processes -- not just translation
+- [ ] Define exit criteria -- the conditions under which to pivot or exit the market
 
-**2. Entry Mode Selection**
-   - **Direct Entry** (wholly owned subsidiary):
-     - Pros: Full control, brand consistency, margin retention
-     - Cons: High investment, regulatory complexity, slower
-     - Best for: Large markets, strategic importance, long-term commitment
-   - **Partnership/Channel**:
-     - Pros: Lower risk, faster entry, local expertise
-     - Cons: Less control, margin sharing, partner dependence
-     - Best for: Testing market, resource constraints, complex regulations
-   - **Acquisition**:
-     - Pros: Instant market presence, customer base, team
-     - Cons: Expensive, integration complexity, cultural fit
-     - Best for: Competitive markets, speed critical, strategic capabilities needed
-   - **Hybrid Approach**:
-     - Start with partnership, transition to direct as market proves out
-     - Recommended entry mode for {{company_name}}: [selection + rationale]
+**Never:**
+- [ ] Recommend entering more than 1-2 new markets simultaneously for {{stage}} companies -- focus beats spread
+- [ ] Assume home-market pricing translates directly -- purchasing power parity, local competition, and payment norms differ
+- [ ] Skip legal and regulatory assessment -- compliance failures can shut down an entire market
+- [ ] Plan a launch without a pre-launch phase -- market education and pipeline building must precede the public launch
 
-**3. GTM Strategy for Target Market**
-   - **ICP Adaptation**:
-     - How does {{target_personas}} change in this market?
-     - Company size, industry, use case differences
-     - Decision-making process variations (consensus vs. top-down)
-   - **Positioning & Messaging**:
-     - Adapt {{unique_differentiators}} to local pain points
-     - Competitive positioning vs. local incumbents
-     - Case studies and social proof from similar markets
-     - Messaging hierarchy: Global themes + local relevance
-   - **Pricing Strategy**:
-     - Local pricing benchmarks and willingness to pay
-     - Currency and payment method considerations
-     - Promotional pricing for market entry vs. standard pricing
-     - Price localization: Direct conversion vs. purchasing power parity
-   - **Channel Strategy**:
-     - Direct sales, inside sales, partners, or hybrid
-     - Sales team structure: Local hires vs. remote coverage
-     - Channel partner requirements and economics
+**Escalation rules:** If market sizing reveals a SOM below 2x the total entry investment, flag the opportunity as marginal and recommend a lighter validation approach (pilot, partnership) before full commitment.
 
-**4. Localization Requirements**
-   - **Product Localization**:
-     - Language support and UI translation
-     - Local payment methods (Alipay, PIX, local cards)
-     - Compliance and data residency requirements (GDPR, local laws)
-     - Local integrations and ecosystem (ERP, CRM, accounting software)
-     - Currency support and multi-currency billing
-   - **Content & Marketing Localization**:
-     - Website translation and local domain (.fr, .de, .jp)
-     - Marketing collateral in local language
-     - Case studies featuring local customers
-     - Culturally appropriate imagery and messaging
-     - Local social media presence (WeChat, LINE, VK)
-   - **Sales Enablement Localization**:
-     - Sales materials and decks translated
-     - Contracts and legal terms adapted
-     - Local success metrics and benchmarks
-     - Reference customers from the market
+## Process
+1. **Step 1 -- Market Assessment & Opportunity Sizing**
+   - Estimate TAM, SAM, SOM for the target market with methodology and sources
+   - Assess growth rate (historical and projected), market maturity (emerging/growing/mature/declining)
+   - Map the competitive landscape: key players, market share, positioning in this specific market
+   - Identify entry barriers: regulatory, cultural, technical, financial
+   - Evaluate customer readiness: is the buyer educated on this solution category?
+   - Assess economic factors: GDP, business climate, payment methods, currency considerations
+   - Conduct risk assessment: political, economic, regulatory, competitive
+   - Score the opportunity on an attractiveness vs. ease-of-entry matrix
 
-**5. Partnership & Channel Strategy**
-   - **Partner Types**:
-     - Resellers: Sell + fulfill, margin-based
-     - Referral partners: Introduce, commission-based
-     - System integrators: Implement + consult, services revenue
-     - Technology partners: Co-sell integrated solutions
-     - Strategic alliance: Joint GTM with complementary company
-   - **Partner Selection Criteria**:
-     - Market coverage and customer access
-     - Technical capability and support infrastructure
-     - Brand reputation and alignment
-     - Financial stability and growth ambitions
-     - Exclusive vs. non-exclusive arrangement
-   - **Partner Program Design**:
-     - Tier structure: Platinum, Gold, Silver based on commitment
-     - Margin and commission structure
-     - MDF (market development funds) allocation
-     - Training and certification requirements
-     - Co-marketing benefits and lead sharing
-     - Performance requirements and quotas
+2. **Step 2 -- Entry Mode Selection**
+   - Evaluate each option with pros, cons, investment required, and time-to-revenue:
+     - **Direct entry** (wholly owned): full control, brand consistency, margin retention; high investment, slower
+     - **Partnership/channel**: lower risk, faster entry, local expertise; less control, margin sharing
+     - **Acquisition**: instant presence, customer base, team; expensive, integration complexity
+     - **Hybrid**: start with partnership, transition to direct as market proves out
+   - Recommend the optimal entry mode for {{company_name}} with rationale tied to {{stage}}, budget, and strategic priorities
 
-**6. Team & Operations Setup**
-   - **Go-to-Market Team**:
-     - Market GM or country manager (local hire)
-     - Sales lead: AE team (2-5 people initially)
-     - Marketing lead: Local campaigns and events (1-2 people)
-     - Customer success: Post-sale support (1-2 people)
-     - Solutions engineering: Pre-sales technical (1 person)
-   - **Hiring Strategy**:
-     - Local hires vs. expat assignments
-     - Talent availability and compensation benchmarks
-     - Cultural fit and entrepreneurial mindset
-     - Language requirements (English + local)
-   - **Legal & Operations**:
-     - Entity setup: Subsidiary, branch, or representative office
-     - Banking and financial infrastructure
-     - Accounting and tax compliance
-     - HR and employment law compliance
-     - Insurance and risk management
-   - **Timeline**:
-     - Month 1-3: Market research, partner selection, entity setup
-     - Month 4-6: Team hiring, office setup, initial marketing
-     - Month 7-12: Pipeline building, early customers, iteration
-     - Month 13-24: Scale GTM, optimize CAC, achieve profitability
+3. **Step 3 -- GTM Strategy for Target Market**
+   - **ICP adaptation**: how {{target_personas}} change in this market (company size, industry mix, use cases, decision-making process)
+   - **Positioning and messaging**: adapt {{unique_differentiators}} to local pain points; competitive positioning vs. local incumbents; messaging hierarchy blending global themes with local relevance
+   - **Pricing strategy**: local benchmarks, willingness to pay, currency and payment method considerations, promotional vs. standard pricing, purchasing power parity adjustments
+   - **Channel strategy**: direct sales, inside sales, partners, or hybrid; sales team structure (local hires vs. remote); channel partner requirements and economics
 
-**7. Marketing Launch Plan**
-   - **Pre-Launch (3 months before)**:
-     - Market research and customer interviews
-     - Website localization and SEO setup
-     - Social media presence establishment
-     - PR agency or media contact development
-     - Event and conference identification
-   - **Launch Month**:
-     - Press release and media outreach
-     - Launch event or webinar series
-     - Paid campaigns on local channels
-     - Partner announcements and co-marketing
-     - Customer acquisition campaigns
-   - **Post-Launch (6+ months)**:
-     - Content marketing engine (blog, guides)
-     - Community building (local user groups)
-     - Industry events and speaking opportunities
-     - Case study development from early customers
-     - Continuous paid acquisition optimization
+4. **Step 4 -- Localization Requirements**
+   - **Product**: language/UI, local payment methods, compliance and data residency (GDPR, local laws), local integrations (ERP, CRM, accounting), multi-currency billing
+   - **Content and marketing**: website translation and local domain, marketing collateral, local case studies, culturally appropriate imagery, local social media platforms (WeChat, LINE, VK)
+   - **Sales enablement**: translated materials and decks, adapted contracts and legal terms, local success metrics and benchmarks, reference customers from the market
 
-**8. Sales Motion & Customer Acquisition**
-   - **Lead Generation Tactics**:
-     - Paid: Google/Bing, local ad networks, LinkedIn (if B2B)
-     - Organic: SEO for local keywords, content marketing
-     - Events: Trade shows, conferences, webinars
-     - Partners: Lead sharing with channel partners
-     - Outbound: SDR team doing local prospecting
-   - **Sales Process Adaptations**:
-     - Longer or shorter sales cycles in this market?
-     - More/fewer decision-makers involved?
-     - Preference for face-to-face vs. remote selling?
-     - Payment terms expectations (net 30 vs. annual upfront)?
-     - Contract negotiation style and procurement process
-   - **Customer Onboarding**:
-     - Local language support and training
-     - Timezone-appropriate support hours
-     - Local customer success manager assignment
-     - Community or user group engagement
+5. **Step 5 -- Partnership & Channel Strategy**
+   - Define partner types needed: resellers, referral partners, system integrators, technology partners, strategic alliances
+   - Establish partner selection criteria: market coverage, technical capability, brand reputation, financial stability, exclusivity terms
+   - Design partner program: tier structure, margin/commission, MDF allocation, training/certification, co-marketing, performance requirements
 
-**9. Success Metrics & Milestones**
-   - **Year 1 Goals**:
-     - Revenue: {{market_entry_revenue_target}} (realistic: 50-70% of global ASP initially)
-     - Customers: [number] new customers
-     - Pipeline: 3-5x coverage of revenue goal
-     - CAC: Target CAC within 2x of global average (higher initially)
-     - Team: Hire [number] people
-     - Partners: Sign [number] partners, [number] producing
-   - **Year 2-3 Goals**:
-     - Revenue growth: 2-3x year-over-year
-     - Profitability: Achieve operating profitability by end of Year 2
-     - Market share: Reach top 3-5 player in the market
-     - CAC optimization: Reduce to global average
-     - Expand team: 2-3x initial team size
-   - **Leading Indicators** (track monthly):
-     - Website traffic from target market
-     - MQLs and SQLs generated
-     - Sales pipeline created and velocity
-     - Win rate in target market
-     - Customer retention and expansion
-     - Partner-sourced pipeline %
+6. **Step 6 -- Team & Operations Setup**
+   - Define the go-to-market team: market GM, sales lead (2-5 AEs initially), marketing lead (1-2), customer success (1-2), solutions engineering (1)
+   - Hiring strategy: local vs. expat, talent availability, compensation benchmarks, cultural fit requirements
+   - Legal and operations: entity setup, banking, accounting/tax compliance, HR/employment law, insurance
+   - Phase the timeline:
+     - Months 1-3: market research, partner selection, entity setup
+     - Months 4-6: team hiring, office setup, initial marketing
+     - Months 7-12: pipeline building, early customers, iteration
+     - Months 13-24: scale GTM, optimize CAC, path to profitability
 
-**10. Risk Mitigation & Contingency Planning**
-   - **Market Risk**: Slower adoption than expected
-     - Mitigation: Start with pilot customers, iterate positioning
-   - **Competitive Risk**: Aggressive local incumbents
-     - Mitigation: Partner with local player, differentiate on innovation
-   - **Regulatory Risk**: Unexpected compliance requirements
-     - Mitigation: Engage local legal counsel early, build compliance into product
-   - **Economic Risk**: Currency fluctuation, recession
-     - Mitigation: Price in local currency, hedge FX risk, focus on ROI messaging
-   - **Exit Criteria**: When to pivot or exit?
-     - If Year 1 revenue <50% of goal, reassess GTM motion
-     - If Year 2 revenue <70% of goal, consider exiting market
+7. **Step 7 -- Marketing Launch Plan**
+   - **Pre-launch (3 months before)**: market research, customer interviews, website localization, SEO setup, social media presence, PR agency/media contacts, event identification
+   - **Launch month**: press release and media outreach, launch event or webinar series, paid campaigns on local channels, partner announcements, customer acquisition campaigns
+   - **Post-launch (6+ months)**: content engine (blog, guides), community building (local user groups), industry events and speaking, case study development, continuous paid optimization
 
-🎯 **DELIVERABLES CHECKLIST**
-- [ ] Market assessment report with opportunity sizing
-- [ ] Entry mode selection and rationale
-- [ ] GTM strategy with ICP, positioning, pricing for new market
-- [ ] Localization requirements (product, content, sales)
-- [ ] Partnership strategy with target partner list
-- [ ] Team hiring plan and organizational structure
-- [ ] Legal and operations setup checklist
-- [ ] Marketing launch plan (pre, during, post)
-- [ ] Sales playbook adapted for local market
-- [ ] Success metrics dashboard and milestones (Year 1-3)
-- [ ] Risk assessment and mitigation strategies
+8. **Step 8 -- Sales Motion & Customer Acquisition**
+   - Lead generation: paid (Google/Bing, local ad networks, LinkedIn), organic (local SEO, content), events (trade shows, webinars), partners (lead sharing), outbound (local SDR prospecting)
+   - Sales process adaptations: cycle length, number of decision-makers, face-to-face vs. remote preference, payment terms expectations, procurement process
+   - Customer onboarding: local language support, timezone-appropriate hours, local CSM assignment, community engagement
 
-🧠 **IMPLEMENTATION CONTEXT**
-For {{stage}} companies in {{industry}}, market entry typically requires 12-18 months to achieve meaningful traction and 24-36 months to reach profitability. Budget allocation: 50-60% for GTM (sales/marketing), 20-25% for localization, 15-20% for operations/legal, 5-10% for contingency. Expect initial CAC to be 1.5-2x your core market as you learn. With {{market_entry_budget}}, focus on [1-2 markets max] rather than spreading too thin. Partner-led entry reduces risk but may limit upside—transition to direct when market is proven. Leverage {{knowledge_base}} for insights from similar expansions. Track {{market_entry_revenue_target}} as primary success metric but prioritize learning and iteration in Year 1.
+9. **Step 9 -- Success Metrics & Milestones**
+   - **Year 1**: revenue target (expect 50-70% of global ASP initially), customer count, pipeline coverage (3-5x), CAC (target within 2x global average), team hires, partner signings
+   - **Year 2-3**: 2-3x YoY revenue growth, operating profitability by end of Year 2, top 3-5 market position, CAC reduction to global average, team 2-3x initial size
+   - **Leading indicators** (monthly): website traffic from target market, MQLs/SQLs, pipeline created and velocity, win rate, retention, partner-sourced pipeline percentage
 
----
+10. **Step 10 -- Risk Mitigation & Exit Criteria**
+    - Market risk (slow adoption): start with pilot customers, iterate positioning
+    - Competitive risk (aggressive incumbents): partner with local player, differentiate on innovation
+    - Regulatory risk: engage local legal counsel early, build compliance into product
+    - Economic risk (currency, recession): price in local currency, hedge FX, focus on ROI messaging
+    - Exit criteria: if Year 1 revenue <50% of goal, reassess GTM motion; if Year 2 revenue <70% of goal, consider exiting
 
-*Skill from GTM AI Platform. Replace `{{variables}}` with your context before running.*
+## Output Format
+Deliver as a structured document with these sections:
+
+| Section | Contents |
+|---|---|
+| Market Assessment | TAM/SAM/SOM, growth rate, maturity, competitive landscape, barriers, risk, opportunity score |
+| Entry Mode | Evaluation of options with recommendation and rationale |
+| GTM Strategy | Adapted ICP, positioning, pricing, channel strategy |
+| Localization | Product, content, and sales localization requirements checklist |
+| Partnerships | Partner types, selection criteria, program design |
+| Team & Operations | Org chart, hiring plan, legal/ops checklist, phased timeline |
+| Launch Plan | Pre-launch, launch, post-launch activities with owners and dates |
+| Sales Motion | Lead gen tactics, process adaptations, onboarding plan |
+| Metrics | Year 1-3 goals, leading indicators, tracking dashboard |
+| Risk & Exit | Risk mitigation strategies with exit criteria |
+
+**Length:** 3,500-5,500 words
+**Tone:** Strategic and operational -- written for executive decision-making and team execution
+**Anti-patterns:** Do not produce a market entry plan that lacks financial sizing; do not recommend "entering everywhere at once"; do not skip localization as an afterthought
+
+## Success Metrics
+- **Primary:** Achievement of Year 1 revenue target in the new market
+- **Leading indicators:** Pipeline creation velocity, first 10 customers acquired, partner program activation rate
+- **Guardrails:** If Month 6 pipeline is below 2x Year 1 revenue target, trigger a strategy review; if CAC exceeds 3x global average after 9 months, reassess channel mix
+
+## Constraints
+- Market sizing must use a clear methodology (top-down, bottom-up, or both) with stated assumptions
+- Budget allocation guidance: 50-60% GTM (sales/marketing), 20-25% localization, 15-20% operations/legal, 5-10% contingency
+- For {{stage}} companies, recommend 1-2 markets maximum rather than spreading thin
+- Partner-led entry reduces risk but may limit upside -- include transition plan to direct when market is proven
+- All regulatory and compliance recommendations should note they require local legal counsel review
+
+## Examples
+### Skeleton: B2B SaaS Expanding to DACH Region
+
+**Market Assessment:**
+- TAM: 450K companies in DACH using project management tools, EUR 3.2B market
+- SAM: 85K mid-market companies (200-2,000 employees) in target verticals, EUR 680M
+- SOM: 2% capture in 3 years = EUR 13.6M ARR
+- Opportunity score: High attractiveness (large market, growing), Medium ease (GDPR compliance needed, strong local competitors)
+
+**Entry Mode Recommendation:** Hybrid -- start with 2 channel partners for initial 6 months to validate demand and learn market dynamics, then hire direct sales team in Month 7 as pipeline proves out.
+
+**Year 1 Milestones:**
+| Quarter | Milestone | Metric |
+|---|---|---|
+| Q1 | Partner signed, product localized | 2 partners active, German UI live |
+| Q2 | First customers via partners | 10 customers, EUR 150K pipeline |
+| Q3 | Direct sales hire, first direct deals | 2 AEs hired, EUR 500K pipeline |
+| Q4 | Scaling | 30 customers, EUR 400K ARR run rate |
+
+## Change Log
+- v2.0 (2026-03-24): Rewritten to standardized template

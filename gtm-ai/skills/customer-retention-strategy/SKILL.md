@@ -1,136 +1,160 @@
 ---
 name: customer-retention-strategy
 description: >
-  Reduce churn, increase customer lifetime value, and build expansion revenue through strategic engagement Triggered by phrases like "customer retention strategy", "reduce churn", "retention and expansion".
+  Reduce churn, increase customer lifetime value, and build expansion revenue through strategic engagement. Triggered by phrases like "customer retention strategy", "reduce churn", "retention and expansion".
 license: MIT
 metadata:
   author: clickscience
-  version: "1.0"
-  complexity: intermediate
-  keywords: retention, churn reduction, NRR
+  version: "2.0"
+  category: Executive Planning
+  status: active
 ---
 
 # Customer Retention & Expansion Strategy
 
-🎯 **OBJECTIVE**
-Develop a comprehensive customer retention and expansion strategy for {{company_name}} that reduces churn, increases {{lifetime_value}}, and drives expansion revenue from existing customers of {{product_description}}.
+## Purpose
+Develop a comprehensive customer retention and expansion strategy that reduces churn, increases lifetime value, and drives expansion revenue from existing customers. This skill produces a health scoring model, segment-specific retention playbooks, expansion revenue strategies, and engagement programs that transform reactive churn firefighting into proactive account growth.
 
-📊 **YOUR BUSINESS CONTEXT**
-• Company: {{company_name}} in {{industry}} ({{stage}} stage)
-• Product: {{product_description}}
-• Customer Metrics: LTV {{lifetime_value}} | CAC {{customer_acquisition_cost}}
-• Pricing Model: {{product_pricing_model}}
-• Avg Deal Size: {{average_deal_size}}
-• Value Delivered: {{value_propositions}}
-• Customer Pain Points: {{pain_points}}
-• Team Size: {{team_size}}
+## Identity & Operating Context
+- **Role:** Customer success strategist specializing in retention economics, health scoring, and expansion revenue
+- **Perspective:** Optimizes for net revenue retention (NRR) by balancing churn prevention with expansion acceleration
+- **Assumptions:** The company has an existing customer base with some churn data, a product that delivers recurring value, and a team capable of executing retention plays
+- **Memory:** Capture the health scoring model criteria, segment-specific playbooks, top churn risk factors, and expansion triggers for future account reviews
 
-💡 **KNOWLEDGE BASE INPUTS**
-{{knowledge_base}}
+## Inputs
+**Required:**
+- `company_name` -- the company building the retention strategy
+- `product_description` -- what the product does and its core value
+- `lifetime_value` -- current or target customer LTV
+- `customer_acquisition_cost` -- CAC for LTV:CAC ratio analysis
 
-⚙️ **COMPREHENSIVE OUTPUT**
+**Optional:**
+- `industry` -- industry vertical, default: SaaS
+- `stage` -- company maturity stage, default: growth
+- `product_pricing_model` -- pricing structure (per-seat, usage-based, tiered, etc.)
+- `average_deal_size` -- starting deal size for land-and-expand modeling
+- `value_propositions` -- core value delivered to customers
+- `pain_points` -- customer pain points the product addresses
+- `target_personas` -- personas for engagement program design
+- `key_goals` -- business goals retention should support
+- `team_size` -- team capacity for executing retention programs
+- `knowledge_base` -- churn data, NPS results, support ticket trends, usage analytics
 
-**SECTION 1: CUSTOMER HEALTH SCORING**
+## Critical Rules (Non-Negotiables)
+**Must:**
+- [ ] Define a health scoring model with explicit criteria and thresholds -- without health scores, intervention is reactive instead of proactive
+- [ ] Provide different playbooks for each risk segment (Red, Yellow, Green, Blue) -- one-size-fits-all retention fails
+- [ ] Include expansion revenue strategies alongside retention -- retention without expansion caps NRR at 100%
+- [ ] Tie all programs to measurable metrics (NRR, GRR, CSAT, NPS) -- unmeasured programs get defunded
 
-**Define Health Score Criteria:**
-• **Product Usage:** Feature adoption, login frequency, depth of engagement
-• **Business Outcomes:** Achievement of {{key_goals}}, ROI realization
-• **Relationship Strength:** NPS scores, support interactions, executive sponsorship
-• **Expansion Signals:** User growth, additional use case discovery
+**Never:**
+- [ ] Recommend retention tactics that degrade product experience (e.g., artificial switching costs) -- these accelerate churn long-term
+- [ ] Treat all churning customers the same -- high-value account recovery requires different investment than low-value
+- [ ] Ignore the LTV:CAC ratio when sizing retention investments -- spending more to retain than the customer is worth destroys economics
 
-**Risk Segmentation:**
-• **Red (Churn Risk):** Low usage, unresolved issues, contract approaching renewal
-• **Yellow (At Risk):** Declining engagement, single point of contact
-• **Green (Healthy):** Strong usage, achieving outcomes, expansion potential
-• **Blue (Champions):** High advocacy, reference customers, upsell ready
+**Escalation rules:** If current churn rate exceeds 15% annually or LTV:CAC is below 3:1, flag as critical and recommend executive-level intervention before proceeding with tactical playbooks.
 
-**SECTION 2: RETENTION PLAYS BY SEGMENT**
+## Process
+1. **Step 1 -- Assess Current State**
+   - Review LTV ({{lifetime_value}}), CAC ({{customer_acquisition_cost}}), and pricing model ({{product_pricing_model}})
+   - Identify current churn patterns and root causes from {{knowledge_base}}
+   - Benchmark against industry standards for {{industry}} at {{stage}} stage
 
-**For Red (Churn Risk) Accounts:**
-• Executive intervention and account recovery plan
-• Root cause analysis of {{pain_points}} not being solved
-• Customized success plan with measurable milestones
-• Expedited support and hands-on assistance
+2. **Step 2 -- Build Health Scoring Model**
+   - Define four health score dimensions: Product Usage, Business Outcomes, Relationship Strength, and Expansion Signals
+   - Create four risk segments with clear criteria:
+     - Red (Churn Risk): Low usage, unresolved issues, approaching renewal
+     - Yellow (At Risk): Declining engagement, single point of contact
+     - Green (Healthy): Strong usage, achieving outcomes, expansion potential
+     - Blue (Champions): High advocacy, reference customers, upsell ready
 
-**For Yellow (At Risk) Accounts:**
-• Proactive outreach with value check-ins
-• Feature education focused on {{value_propositions}}
-• Expand stakeholder relationships beyond single contact
-• Quarterly business reviews with ROI demonstration
+3. **Step 3 -- Design Retention Plays by Segment**
+   - For Red accounts: Executive intervention, root cause analysis of {{pain_points}} not solved, customized success plans, expedited support
+   - For Yellow accounts: Proactive value check-ins, feature education on {{value_propositions}}, stakeholder expansion, QBRs with ROI demonstration
+   - For Green accounts: Engagement maintenance, expansion opportunity identification, testimonial collection, referral enrollment
+   - For Blue accounts: Executive sponsor program, co-marketing, early feature access, dedicated CSM
 
-**For Green (Healthy) Accounts:**
-• Maintain engagement through newsletters, updates, community
-• Identify expansion opportunities (more seats, upsells, cross-sells)
-• Collect testimonials and case studies
-• Referral program enrollment
+4. **Step 4 -- Develop Expansion Revenue Strategies**
+   - Map land-and-expand motion from {{average_deal_size}} to 2-3x expansion path
+   - Identify expansion triggers: user growth, new departments, additional use cases
+   - Design customer-led growth features: internal virality, ROI reporting, usage-based pricing alignment
+   - Build cross-sell and upsell playbooks optimized for {{product_pricing_model}}
 
-**For Blue (Champions) Accounts:**
-• Executive sponsor program and VIP treatment
-• Co-marketing opportunities and speaking engagements
-• Early access to new features and beta programs
-• Dedicated customer success manager
+5. **Step 5 -- Design Engagement Programs**
+   - Onboarding Excellence: 30-60-90 day milestones, time-to-value acceleration, feature adoption campaigns, success stories from similar {{target_personas}}
+   - Ongoing Education: Webinar series, knowledge base, office hours, certification programs
+   - Community Building: User community, customer advisory board, annual events, peer networking
 
-**SECTION 3: EXPANSION REVENUE STRATEGIES**
+6. **Step 6 -- Build Measurement Framework**
+   - Define key metrics: NRR, GRR, LTV trend, time-to-churn indicators, expansion revenue percentage, NPS, CSAT
+   - Establish continuous improvement cycle: monthly churn analysis, win-back campaigns, product feedback loop, retention team OKRs tied to {{key_goals}}
 
-**Land and Expand Motions:**
-• Start with {{average_deal_size}}, identify 2-3x expansion path
-• Map expansion triggers: user growth, new departments, additional use cases
-• Pricing model optimization for {{product_pricing_model}}
-• Cross-sell and upsell playbooks
+## Output Format
 
-**Customer-Led Growth:**
-• Internal virality features (sharing, collaboration, invites)
-• ROI reporting that champions can share with leadership
-• Usage-based pricing that aligns value with cost
-• Multi-product bundling strategies
+**Section 1: Customer Health Scoring**
+- Health score criteria table with four dimensions and scoring rubric
+- Risk segmentation definitions (Red, Yellow, Green, Blue) with entry/exit criteria
 
-**SECTION 4: CUSTOMER ENGAGEMENT PROGRAMS**
+**Section 2: Retention Plays by Segment**
+- For each segment: specific actions, owner, timeline, and expected outcome
 
-**Onboarding Excellence:**
-• 30-60-90 day success milestones
-• Time-to-value acceleration
-• Feature adoption campaigns
-• Success stories from similar {{target_personas}}
+**Section 3: Expansion Revenue Strategies**
+- Land-and-expand motion with deal sizing
+- Customer-led growth features
+- Cross-sell and upsell playbooks
 
-**Ongoing Education:**
-• Webinar series on advanced features and best practices
-• Knowledge base and self-service resources
-• Office hours and AMA sessions
-• Certification and training programs
+**Section 4: Customer Engagement Programs**
+- Onboarding Excellence program with milestones
+- Ongoing Education calendar
+- Community Building initiatives
 
-**Community Building:**
-• User community or forum
-• Customer advisory board
-• Annual user conference or virtual event
-• Peer networking and best practice sharing
+**Section 5: Measurement & Optimization**
+- KPI definitions and targets
+- Reporting cadence
+- Continuous improvement process
 
-**SECTION 5: MEASUREMENT & OPTIMIZATION**
+**Deliverables Summary:**
+- Customer health scoring model
+- Retention playbooks by risk segment
+- Expansion revenue strategies and pricing optimization
+- Customer engagement programs (onboarding, education, community)
+- Measurement framework with retention and LTV metrics
+- 90-day retention improvement roadmap
 
-**Key Retention Metrics:**
-• Net Retention Rate (NRR) and Gross Retention Rate (GRR)
-• Customer Lifetime Value {{lifetime_value}} trend
-• Time to churn and early warning indicators
-• Expansion revenue as % of total revenue
-• NPS and CSAT scores
+**Length:** 2,000-3,500 words
+**Tone:** Data-driven and operationally specific, with clear ownership and timelines for every recommendation
+**Anti-patterns:** Do not produce vague advice like "improve customer experience" -- every recommendation must specify who does what, by when, measured how.
 
-**Continuous Improvement:**
-• Monthly churn analysis and root cause identification
-• Win-back campaigns for churned customers
-• Product feedback loop to address {{pain_points}}
-• Retention team OKRs tied to {{key_goals}}
+## Success Metrics
+- **Primary:** Net Revenue Retention (NRR) improvement quarter-over-quarter
+- **Leading indicators:** Health score coverage across accounts reaches 90%+; Red account count decreases month-over-month; expansion pipeline grows
+- **Guardrails:** If churn root causes are unknown (no exit interviews, no usage data), pause playbook design and recommend a 30-day data collection sprint
 
-🎯 **DELIVERABLES**
-✅ Customer health scoring model
-✅ Retention playbooks by risk segment
-✅ Expansion revenue strategies and pricing optimization
-✅ Customer engagement programs (onboarding, education, community)
-✅ Measurement framework with retention and LTV metrics
-✅ 90-day retention improvement roadmap
+## Constraints
+- Retention investments must be sized relative to LTV:CAC ratio
+- Playbooks must be executable by current {{team_size}}
+- Expansion strategies must align with {{product_pricing_model}}
 
----
+## Examples
+### Skeleton: B2B SaaS Retention Strategy
+**Health Score Model:**
+| Dimension | Weight | Green | Yellow | Red |
+|-----------|--------|-------|--------|-----|
+| Product Usage | 30% | DAU/MAU > 60% | 30-60% | < 30% |
+| Business Outcomes | 30% | Hitting 2+ KPIs | Hitting 1 KPI | No KPIs met |
+| Relationship | 20% | 3+ contacts, NPS 9+ | 1-2 contacts, NPS 7-8 | 1 contact, NPS < 7 |
+| Expansion Signals | 20% | Feature requests, growth | Stable | Declining usage |
 
-## Category: Executive Planning
+**Red Account Play:**
+- Day 1: CSM escalates to VP CS; schedules executive-to-executive call
+- Day 3: Root cause analysis completed; custom recovery plan drafted
+- Day 7: Recovery plan presented with 30-day milestones
+- Day 30: Progress review; if no improvement, engage product team for custom solution
 
----
+**Expansion Motion:**
+- Starting deal: $25K ARR (10 seats, Pro tier)
+- Path to $75K: Add 20 seats ($25K) + upgrade to Enterprise ($25K)
+- Triggers: Team grows past 15 users, second department requests access, usage hits tier limits
 
-*Skill from GTM AI Platform. Replace `{{variables}}` with your context before running.*
+## Change Log
+- v2.0 (2026-03-24): Rewritten to standardized template

@@ -1,262 +1,155 @@
 ---
 name: enterprise-saas-pipeline-push
 description: >
-  Quarterly pipeline acceleration campaign targeting enterprise SaaS buyers with aggressive demand generation tactics Triggered by phrases like "pipeline push campaign", "enterprise pipeline acceleration", "end of quarter".
+  Design and execute a quarterly pipeline acceleration campaign targeting enterprise SaaS buyers with aggressive multi-channel demand generation tactics, competitive displacement, and urgency-driven offers. Triggered by phrases like "pipeline push campaign", "enterprise pipeline acceleration", "end of quarter push", "quarterly pipeline blitz", "demand gen campaign".
 license: MIT
 metadata:
   author: clickscience
-  version: "1.0"
-  complexity: intermediate
-  keywords: pipeline push, EoQ campaign, deal acceleration
+  version: "2.0"
+  category: Demand Generation
+  status: active
 ---
 
 # Enterprise SaaS Pipeline Push Campaign
 
-🎯 **OBJECTIVE**
+## Purpose
+Execute a 12-week pipeline acceleration campaign targeting enterprise SaaS buyers, generating $5-10M in qualified pipeline through multi-channel demand generation, competitive displacement, and Q1 budget capture tactics. Provides a complete campaign blueprint from target account identification through end-of-quarter conversion.
 
-Execute an aggressive Q1 pipeline acceleration campaign for {{company_name}} targeting enterprise SaaS buyers, generating $[5-10M] in qualified pipeline to set up strong Q2-Q3 revenue performance.
+## Identity & Operating Context
+- **Role:** Demand generation strategist specializing in enterprise SaaS pipeline acceleration and multi-channel campaign orchestration
+- **Perspective:** Optimizes for qualified pipeline generation within a fixed 12-week window, balancing volume with deal quality
+- **Assumptions:** Fresh annual budgets are available at the start of the quarter; enterprise SaaS buyers are receptive to vendor outreach when aligned to new-year priorities; the company has SDR capacity and marketing budget to execute multi-channel campaigns
+- **Memory:** Capture target account list, segment assignments, campaign performance benchmarks by channel, and pipeline conversion rates for future quarter planning
 
-📊 **YOUR BUSINESS CONTEXT**
+## Inputs
+**Required:**
+- `company_name` -- the company running the campaign
+- `product_description` -- the product being promoted
+- `target_personas` -- enterprise buyer roles to target
+- `pain_points` -- buyer pain points for messaging
+- `value_propositions` -- core value props for campaign messaging
 
-**Company:** {{company_name}}  
-**Product/Service:** {{product_description}}  
-**Target Market:** Enterprise SaaS Companies (500+ employees, $50M+ revenue)  
-**Target Personas:** {{target_personas}}  
-**Pain Points:** {{pain_points}}  
-**Value Propositions:** {{value_propositions}}  
-**Competitors:** {{competitors}}  
-**Sales Cycle:** {{sales_cycle_length}}  
-**Average Deal Size:** {{average_deal_size}}  
-**Q1 Pipeline Goal:** $[5-10M] in new qualified opportunities  
-**Budget:** {{monthly_marketing_budget}} × 3 months  
+**Optional:**
+- `competitors` -- competitors for displacement messaging
+- `unique_differentiators` -- differentiators for competitive positioning
+- `sales_cycle_length` -- typical enterprise sales cycle, default: "3-6 months"
+- `average_deal_size` -- target deal size for pipeline math
+- `monthly_marketing_budget` -- monthly budget (campaign uses 3X for quarter)
+- `knowledge_base` -- additional market intelligence
 
-💡 **KNOWLEDGE BASE INPUTS**
+## Critical Rules (Non-Negotiables)
+**Must:**
+- [ ] Segment target accounts into tiers with differentiated tactics -- one-size-fits-all enterprise campaigns underperform
+- [ ] Include both inbound (content, events, paid) and outbound (SDR, ABM, exec outreach) motions -- pipeline push requires full-funnel activation
+- [ ] Build urgency through time-limited offers and scarcity -- without urgency, enterprise deals slip to next quarter
+- [ ] Measure leading indicators weekly (downloads, MQLs, meetings) not just lagging pipeline -- course-correct early
 
-{{knowledge_base}}
+**Never:**
+- [ ] Launch without a defined target account list -- spray-and-pray wastes budget on unqualified prospects
+- [ ] Rely solely on paid advertising -- enterprise deals require human touch through SDR and executive engagement
+- [ ] Use fake scarcity or misleading urgency claims -- enterprise buyers see through it and it damages trust
+- [ ] Wait until Week 10 to push for conversion -- the campaign should build progressive urgency from Week 1
 
-⚙️ **CAMPAIGN FRAMEWORK**
+**Escalation rules:** If pipeline generation is below 50% of target by Week 6, escalate to leadership for budget reallocation or tactic pivot. If competitive displacement accounts show no engagement by Week 4, shift resources to greenfield accounts.
 
-**CAMPAIGN OVERVIEW**
+## Process
+1. **Step 1 -- Define Target Account Profile and Segmentation**
+   - Define ideal customer: company stage (Series B+ or profitable scale-up), employee count (500-5,000), revenue ($50M-$500M ARR), growth rate (30%+ YoY), tech stack signals, pain signals
+   - Build target account list of 500 accounts using intent data, score by fit and engagement, assign to reps by territory
+   - Segment into three tiers:
+     - Segment 1 -- High-Growth SaaS (50% of focus): Series B+ raised in past 18 months, expanding markets, pain: scaling operations during hypergrowth
+     - Segment 2 -- Enterprise SaaS Incumbents (30%): 1,000+ employees, replacing legacy systems, pain: modernizing to stay competitive
+     - Segment 3 -- Product-Led Growth SaaS (20%): PLG converting to enterprise sales motion, pain: bridging self-serve to enterprise
 
-**Timeline:** 12-week campaign (January - March)
-**Target:** Enterprise SaaS companies experiencing growth challenges or scaling pains
-**Goal:** Generate 40-60 qualified opportunities worth $5-10M in pipeline
-**Approach:** Multi-channel blitz with urgency messaging, competitive displacement, and Q1 budget capture
+2. **Step 2 -- Develop Campaign Messaging**
+   - Core positioning: "{{company_name}} helps enterprise SaaS companies scale efficiently without sacrificing speed or burning out teams"
+   - Quarter-specific messaging emphasizing new-year momentum, fresh budgets, and achieving annual goals early
+   - Urgency drivers: limited implementation slots, pricing lock before increase, bonus onboarding support
+   - Four message pillars: scale operations (handle 2-3X growth without proportional headcount), improve efficiency (cost reduction from value props), competitive edge (differentiators competitors cannot match), proven at scale (customer proof points)
 
-**WHY Q1 MATTERS FOR ENTERPRISE SAAS**
+3. **Step 3 -- Execute Weeks 1-3 (Awareness and Research Launch)**
+   - Launch gated benchmark report (e.g., "2025 SaaS Operations Benchmark Report") with lightweight form
+   - Begin daily executive LinkedIn content, blog posts addressing pain points, and social threads on industry trends
+   - Launch paid advertising: LinkedIn targeting SaaS executives, Google capturing intent keywords, retargeting website visitors to demo offer
+   - Build and score target account list, assign to SDR territories
 
-**Buyer Psychology:**
-- Fresh budgets and strategic initiatives approved in Q4
-- Leadership committed to achieving annual goals
-- Willingness to invest in tools that impact KPIs
-- Pressure to show progress on Q1 OKRs
+4. **Step 4 -- Execute Weeks 4-6 (Engagement and Consideration)**
+   - Run webinar series: industry predictions panel (Week 4), scaling masterclass (Week 6), featuring customer executives and analysts
+   - Activate SDR outbound push: personalized outreach to content downloaders, multi-touch sequence (email, LinkedIn, call, video), segment-specific messaging
+   - Publish 2 new customer case studies with video testimonials and before/after content
+   - Launch ABM for top 50 accounts: personalized landing pages, executive direct mail, dedicated BDR per account
 
-**Competitive Advantage:**
-- {{competitors}} often slow in Q1 (post-holiday lag)
-- Decision-makers are back from vacation and focused
-- Conference season starts (opportunities for in-person engagement)
-- Economic cycles may favor new vendor consideration
+5. **Step 5 -- Execute Weeks 7-9 (Proof and Acceleration)**
+   - Host virtual summit (half-day event): 5 sessions with customers, analysts, executives; breakout rooms; post-event on-demand access with follow-up sequences
+   - Publish competitive displacement content: switching guides, competitive win case studies, TCO calculator vs. competitors
+   - Conduct weekly pipeline reviews: identify stuck deals, deploy executive engagement and targeted content to accelerate
 
-**TARGET ACCOUNT PROFILE**
+6. **Step 6 -- Execute Weeks 10-12 (Conversion Push)**
+   - Launch limited-time offer: "FastStart Program" with 30-day implementation guarantee, bonus onboarding, pricing lock
+   - Final push tactics: call blitz to all open opportunities, executive-to-executive emails for stalled deals, on-demand customer references, custom ROI analysis for top opportunities
+   - End-of-quarter close: flexible deal structures, implementation scheduling for next quarter start, team recognition for wins
 
-**Ideal Customer:**
-- **Company Stage:** Series B+ SaaS companies or profitable scale-ups
-- **Employee Count:** 500-5,000 employees
-- **Revenue:** $50M-$500M ARR
-- **Growth:** 30%+ YoY growth or preparing for next fundraise
-- **Tech Stack:** Using {{competitors}} or fragmented point solutions
-- **Pain Signals:** Hiring for roles related to {{pain_points}}, discussing [relevant topic] publicly
+## Output Format
+Deliver a complete campaign plan with:
 
-**Segmentation:**
+| Section | Contents |
+|---------|----------|
+| Target Account Profile | ICP definition, 3-segment breakdown with messaging per segment |
+| Campaign Messaging | Core positioning, urgency drivers, 4 message pillars |
+| 12-Week Tactical Calendar | Week-by-week activities across all channels |
+| Budget Allocation | Breakdown by category with percentages |
+| Content Plan | Assets needed (benchmark report, case studies, webinars, summit, competitive guides) |
+| ABM Plan | Top 50 account tactics |
+| Measurement Framework | Leading, mid-funnel, pipeline, and revenue metrics with targets |
 
-**Segment 1: High-Growth SaaS (50% of focus)**
-- Raised Series B+ in past 18 months
-- Expanding into new markets or verticals
-- Pain point: Scaling operations, maintaining efficiency during hypergrowth
-- Message: "Scale without breaking your operations or burning out your team"
-
-**Segment 2: Enterprise SaaS Incumbents (30% of focus)**
-- Established players with 1,000+ employees
-- Replacing legacy systems or consolidating tools
-- Pain point: Modernizing tech stack, improving cross-functional alignment
-- Message: "Modernize [process] to stay competitive with emerging players"
-
-**Segment 3: Product-Led Growth SaaS (20% of focus)**
-- PLG model converting to enterprise sales
-- Adding sales-assist motion
-- Pain point: Scaling from self-serve to enterprise
-- Message: "Bridge PLG to enterprise sales with {{product_description}}"
-
-**CAMPAIGN MESSAGING**
-
-**Core Positioning:**
-"{{company_name}} helps enterprise SaaS companies scale efficiently without sacrificing speed or burning out teams"
-
-**Q1-Specific Messaging:**
-- "Start 2025 Strong: Achieve Your Q1 Goals with {{company_name}}"
-- "Don't Wait Until Q2: Fast-Track Your [Initiative] Now"
-- "Join [X SaaS Companies] Who Chose {{company_name}} to Power Their 2025 Growth"
-
-**Urgency Drivers:**
-- "Limited Q1 Implementation Slots Available"
-- "Lock in 2024 Pricing Before Q2 Increase"
-- "Q1 Bonus: [Extra onboarding support / Free month / Accelerated deployment]"
-
-**Message Pillars:**
-
-1. **Scale Operations:** Handle 2-3X growth without proportional headcount increase
-2. **Improve Efficiency:** {{value_propositions}} leading to [X% cost reduction]
-3. **Competitive Edge:** {{unique_differentiators}} that {{competitors}} can't match
-4. **Proven at Scale:** [X% of Top 100 SaaS companies] use {{company_name}}
-
-**CAMPAIGN TACTICS - 12 WEEKS**
-
-**WEEKS 1-3: AWARENESS & RESEARCH LAUNCH**
-
-**Benchmark Report Launch:**
-- Create "2025 SaaS Operations Benchmark Report"
-- Survey data from 200+ SaaS leaders
-- Gate with lightweight form (email + company only)
-- Promote across LinkedIn, email, paid channels
-
-**Target Account Identification:**
-- Build list of 500 target accounts using intent data
-- Score accounts by fit and engagement
-- Assign to sales reps by territory
-
-**Content Blitz:**
-- Daily LinkedIn posts from executives on SaaS challenges
-- Twitter/X threads on industry trends
-- Blog posts addressing {{pain_points}} in SaaS context
-
-**Paid Advertising Launch:**
-- LinkedIn: Target SaaS executives with benchmark report
-- Google: Capture intent keywords related to {{pain_points}}
-- Retargeting: Website visitors to demo offer
-
-**WEEKS 4-6: ENGAGEMENT & CONSIDERATION**
-
-**Webinar Series:**
-- Week 4: "SaaS Leaders Summit: 2025 Predictions Panel"
-- Week 6: "Scaling [Function] from $50M to $200M ARR"
-- Featuring customer executives and industry analysts
-- Live Q&A with interactive polls
-
-**SDR Outbound Push:**
-- Personalized outreach to benchmark report downloaders
-- Multi-touch sequence: Email → LinkedIn → Call → Video
-- Messaging tied to their specific segment pain points
-
-**Customer Story Campaign:**
-- Publish 2 new SaaS customer case studies
-- Video testimonials from SaaS executives
-- "Day in the Life" before/after content
-
-**ABM for Top 50 Accounts:**
-- Personalized landing pages for strategic accounts
-- Executive-level direct mail packages
-- Dedicated BDR for each top 50 account
-
-**WEEKS 7-9: PROOF & ACCELERATION**
-
-**Virtual Summit:**
-- "SaaS ScaleUp Summit" – Half-day virtual event
-- 5 sessions with customers, analysts, executives
-- Breakout rooms for networking and Q&A
-- Post-event: On-demand access with follow-up sequences
-
-**Competitive Displacement:**
-- Publish "Switching from [Competitor]" guides
-- Case studies of competitive wins
-- TCO calculator showing savings vs. {{competitors}}
-
-**Pipeline Reviews:**
-- Weekly reviews with sales leadership
-- Identify stuck deals, accelerate with content/events
-- Executive engagement for strategic opportunities
-
-**WEEKS 10-12: CONVERSION PUSH**
-
-**Q1 Limited-Time Offer:**
-- "Q1 FastStart Program" – 30-day implementation guarantee
-- Additional onboarding resources at no extra cost
-- Pricing lock before potential Q2 increase
-
-**Final Push Tactics:**
-- Call blitz to all open opportunities
-- Executive-to-executive emails for stalled deals
-- Customer references on-demand
-- Custom ROI analysis for top opportunities
-
-**End-of-Quarter Close:**
-- Flexible deal structures to close before March 31
-- Implementation scheduling for Q2 start
-- Celebration and recognition for sales wins
-
-**BUDGET ALLOCATION (3 × {{monthly_marketing_budget}})**
+**Budget Allocation Table:**
 
 | Category | % of Budget | Purpose |
 |----------|------------|---------|
 | Paid Advertising | 35% | LinkedIn, Google, retargeting |
-| Content & Creative | 20% | Benchmark report, videos, case studies |
-| Events & Webinars | 20% | Virtual summit, webinar series |
-| ABM & Direct Mail | 15% | Top 50 accounts, executive gifts |
-| Technology & Tools | 10% | ABM platform, intent data, analytics |
+| Content and Creative | 20% | Benchmark report, videos, case studies |
+| Events and Webinars | 20% | Virtual summit, webinar series |
+| ABM and Direct Mail | 15% | Top 50 accounts, executive engagement |
+| Technology and Tools | 10% | ABM platform, intent data, analytics |
 
-**Target Spend:** [3X {{monthly_marketing_budget}}]
-**Target Pipeline:** [$5-10M in qualified opportunities]
-**Expected Close Rate:** [20-30% within 6 months]
+**Length:** 3,000-5,000 words
+**Tone:** Action-oriented and operationally specific -- this is an execution plan, not a strategy overview
+**Anti-patterns:** Do not produce vague "run a webinar" recommendations without topic, timing, and audience; do not list tactics without connecting them to pipeline targets
 
-**MEASUREMENT & SUCCESS METRICS**
+## Success Metrics
+- **Primary:** $5-10M in qualified pipeline generated within 12 weeks
+- **Leading indicators:** Benchmark report downloads (500+), website traffic increase (50%+), new contacts (1,000+), email open rate (25%+)
+- **Mid-funnel:** MQLs (200-300), webinar registrations (500+), demo requests (75-100), SDR meetings booked (150+)
+- **Pipeline:** Opportunities created (40-60), pipeline value ($5-10M), sales accepted opportunities (30-50)
+- **Revenue (Q2-Q3):** Closed-won $1-3M, 30-40% close rate, 90%+ year-1 retention, 25%+ expansion from new logos
+- **Guardrails:** If MQLs are below 100 by Week 4, reallocate paid budget to higher-performing channels; if SDR meeting rate is below 5%, revise messaging and sequences
 
-**Leading Indicators (Weeks 1-4):**
-- Benchmark report downloads: [500+]
-- Website traffic increase: [50%+]
-- New contacts added: [1,000+]
-- Email engagement: [25%+ open rate]
+## Constraints
+- Campaign operates within a fixed 12-week window -- all activities must fit this timeline
+- Budget is capped at 3X monthly marketing budget for the quarter
+- SDR team capacity limits parallel outbound volume -- prioritize Segment 1 if capacity constrained
+- Enterprise sales cycles extend beyond the campaign; pipeline generated here closes in Q2-Q3
 
-**Mid-Funnel (Weeks 5-8):**
-- MQLs generated: [200-300]
-- Webinar registrations: [500+]
-- Demo requests: [75-100]
-- SDR meetings booked: [150+]
+## Examples
+### Skeleton: Q1 Pipeline Push for Analytics Platform
+**Week 1-3 (Awareness)**
+- Launch "2025 SaaS Analytics Benchmark Report" (gated, email + company)
+- 5 LinkedIn posts/week from CEO and VP Marketing
+- Google Ads on "SaaS analytics scaling" keywords, $15K spend
+- SDR list building: 500 accounts scored and assigned
 
-**Pipeline (Weeks 9-12):**
-- Opportunities created: [40-60]
-- Pipeline value: [$5-10M]
-- Average deal size: [{{average_deal_size}} or higher]
-- Sales accepted opportunities: [30-50]
+**Week 4-6 (Engagement)**
+- Webinar: "Scaling Analytics from $50M to $200M ARR" -- 250 registrants target
+- SDR sequences: 3-touch to benchmark downloaders, segment-specific pain messaging
+- ABM: personalized landing pages for top 50, exec gift boxes for top 10
 
-**Revenue (Q2-Q3):**
-- Closed-won from campaign: [$1-3M in Q2]
-- Pipeline converted: [30-40% close rate]
-- Customer retention: [90%+ year 1]
-- Expansion opportunities: [25%+ of new logos]
+**Week 10-12 (Conversion)**
+- "Q1 FastStart" offer: 30-day implementation guarantee + 1 free month
+- Call blitz: all open opps contacted 3X in final 2 weeks
+- CEO-to-CEO email for 5 largest stalled deals
 
-📋 **CAMPAIGN DELIVERABLES**
+**Target Outcomes:** 45 qualified opportunities, $7M pipeline, 35 sales-accepted
 
-✅ **Research Content:** 2025 SaaS Operations Benchmark Report  
-✅ **Educational Assets:** Enterprise SaaS Scaling Playbook  
-✅ **Proof Points:** 5-7 case studies, video testimonials  
-✅ **Demand Generation:** Multi-channel campaigns (LinkedIn, Google, email, ABM)  
-✅ **Events:** Virtual SaaS ScaleUp Summit, 2 webinars  
-✅ **Sales Enablement:** Battlecards, demo scripts, proposal templates  
-✅ **Q1 Offer:** Limited-time FastStart Program with urgency  
-✅ **Measurement:** Full-funnel dashboard and weekly reporting  
-
-🚀 **NEXT STEPS**
-
-1. Finalize target account list and segment by priority
-2. Commission 2025 SaaS Benchmark Report (survey + analysis)
-3. Create hero content assets and landing pages
-4. Configure ABM platform and intent data integration
-5. Launch paid advertising and SDR outbound in Week 1
-6. Execute webinar series in Weeks 4 and 6
-7. Host Virtual Summit in Week 8
-8. Push Q1 limited-time offer in Weeks 10-12
-9. Conduct daily pipeline reviews in final 2 weeks
-10. Report on results and plan Q2 follow-up for unconverted pipeline
-
----
-
-*Skill from GTM AI Platform. Replace `{{variables}}` with your context before running.*
+## Change Log
+- v2.0 (2026-03-24): Rewritten to standardized template
+- v1.0: Initial version with 12-week enterprise SaaS pipeline push framework

@@ -5,203 +5,153 @@ description: >
 license: MIT
 metadata:
   author: clickscience
-  version: "1.0"
-  complexity: intermediate
-  keywords: paid media, media planning, advertising strategy
+  version: "2.0"
+  category: campaigns
+  status: active
 ---
 
 # Paid Media Campaign Planner
 
-# Paid Media Campaign Strategy
+## Purpose
+Develops a comprehensive paid media strategy that spans search, social, and display channels to efficiently acquire customers, drive qualified leads, and maximize return on ad spend. Produces channel plans, audience strategies, creative briefs, budget allocations, and measurement frameworks ready for execution.
 
-## Objective
-Develop a comprehensive paid media strategy that efficiently acquires customers, drives qualified leads, and maximizes return on ad spend for {{company_name}} across search, social, and display channels.
+## Identity & Operating Context
+- **Role:** Senior paid media strategist with cross-channel expertise in B2B and B2C advertising
+- **Perspective:** Optimizes for cost-efficient customer acquisition across the full funnel while maintaining brand safety and scalable growth
+- **Assumptions:** At least one advertising channel is active or planned; marketing budget is defined; conversion tracking infrastructure exists or can be implemented
+- **Memory:** Capture channel-level CPAs, winning audience segments, top creative formats, and budget efficiency ratios for future optimization cycles
 
-## Business Context
-**Company**: {{company_name}}
-**Website**: {{website}}
-**Product/Service**: {{product_description}}
-**Industry**: {{industry}}
-**Target Audience**: {{target_personas}}
-**Geographic Markets**: {{geographic_markets}}
-**Marketing Budget**: {{monthly_marketing_budget}}
-**Customer Acquisition Cost Target**: {{customer_acquisition_cost}}
-**Key Goals**: {{key_goals}}
+## Inputs
+**Required:**
+- `company_name` -- the business running paid media
+- `product_description` -- product or service being advertised
+- `target_personas` -- audience segments to reach
+- `monthly_marketing_budget` -- total budget available for paid media
+- `key_goals` -- business objectives (awareness, leads, conversions)
 
-## Deliverables
+**Optional:**
+- `website` -- company website URL
+- `industry` -- market vertical
+- `geographic_markets` -- target regions
+- `customer_acquisition_cost` -- target CAC
+- `knowledge_base` -- additional reference material
 
-### 1. Paid Media Strategy Foundation
-**Objectives & KPIs**
-- Primary campaign objectives (awareness, leads, conversions)
-- Target cost per lead/acquisition
-- ROAS and ROI targets
-- Volume and growth goals
-- Brand safety requirements
+## Critical Rules (Non-Negotiables)
+**Must:**
+- [ ] Allocate budget across channels with explicit rationale tied to funnel stage and audience behavior
+- [ ] Include a 15-20% test budget reserve for experimentation on new channels or tactics
+- [ ] Define clear KPIs and targets for every campaign type before recommending tactics
+- [ ] Provide a bidding strategy recommendation (manual vs. automated) with rationale for each channel
 
-**Budget Allocation Framework**
-- Channel budget distribution
-- Campaign type allocation
-- Geographic prioritization
-- Test budget reserves
-- Seasonal adjustments
+**Never:**
+- [ ] Recommend channels without connecting them to specific personas and funnel stages
+- [ ] Ignore brand safety requirements in programmatic or display recommendations
+- [ ] Propose a budget allocation that exceeds {{monthly_marketing_budget}}
 
-### 2. Search Advertising Strategy
-**Google Ads Structure**
-- Campaign architecture
-- Ad group organization
-- Keyword strategy and match types
-- Negative keyword management
-- Extension strategy
+**Escalation rules:** If target CAC is unrealistic given industry benchmarks, flag the mismatch and propose adjusted targets before proceeding.
 
-**Keyword Strategy**
-- Branded terms protection
-- Non-branded category terms
-- Competitor conquesting approach
-- Long-tail opportunity mining
-- Question and problem-based keywords
+## Process
+1. **Step 1 -- Objectives and KPIs**
+   - Define primary campaign objectives (awareness, leads, conversions) based on {{key_goals}}
+   - Set target cost per lead/acquisition relative to {{customer_acquisition_cost}}
+   - Establish ROAS and ROI targets, volume goals, and brand safety requirements
 
-**Ad Copy Framework**
-- Headline formulas and variations
-- Description best practices
-- CTA optimization
-- Dynamic insertion rules
-- Ad testing rotation
+2. **Step 2 -- Budget Allocation Framework**
+   - Distribute {{monthly_marketing_budget}} across channels by priority
+   - Allocate by campaign type (search, social, display, programmatic)
+   - Prioritize by geography using {{geographic_markets}}
+   - Reserve 15-20% for testing
+   - Account for seasonal adjustments relevant to {{industry}}
 
-**Bidding Strategy**
-- Manual vs. automated bidding
-- Target CPA/ROAS settings
-- Bid adjustment strategies
-- Portfolio bidding approach
-- Dayparting and scheduling
+3. **Step 3 -- Search Advertising Strategy**
+   - Design Google Ads campaign architecture and ad group organization
+   - Develop keyword strategy: branded terms, non-branded category terms, competitor conquesting, long-tail opportunities, question-based keywords
+   - Build negative keyword management plan
+   - Create ad copy framework with headline formulas, description best practices, CTA optimization, dynamic insertion rules, and testing rotation
+   - Recommend bidding strategy: manual vs. automated, target CPA/ROAS settings, bid adjustments, portfolio bidding, dayparting and scheduling
 
-### 3. Social Media Advertising
-**Meta (Facebook/Instagram)**
-- Campaign objective selection
-- Audience targeting strategy
-- Custom and lookalike audiences
-- Placement optimization
-- Creative format mix
+4. **Step 4 -- Social Media Advertising**
+   - **Meta (Facebook/Instagram):** Campaign objective selection, audience targeting (custom and lookalike audiences), placement optimization, creative format mix
+   - **LinkedIn:** Account-based targeting, job title and seniority targeting, company and industry filters, sponsored content strategy, lead gen forms vs. website conversion
+   - **Other platforms:** Twitter, YouTube, TikTok (if relevant to {{target_personas}}), Reddit and niche platforms
 
-**LinkedIn Advertising**
-- Account-based targeting
-- Job title and seniority targeting
-- Company and industry filters
-- Sponsored content strategy
-- Lead gen forms vs. website conversion
+5. **Step 5 -- Display and Programmatic**
+   - Design display network strategy: contextual, audience, placement, and topic targeting; managed placements
+   - Plan programmatic buying: DSP selection, audience data strategy, inventory sources, brand safety controls, viewability standards
 
-**Other Platforms**
-- Twitter ads strategy
-- YouTube advertising
-- TikTok (if relevant)
-- Reddit and niche platforms
+6. **Step 6 -- Creative Strategy**
+   - Define creative formats: static images, carousel/collection ads, video lengths and formats, interactive/rich media, native advertising
+   - Build creative testing framework: headline, visual, CTA, format, and messaging angle tests
+   - Plan creative production: in-house vs. agency, asset requirements, brand compliance, localization, refresh cadence
 
-### 4. Display & Programmatic
-**Display Network Strategy**
-- Contextual targeting
-- Audience targeting
-- Placement targeting
-- Topic targeting
-- Managed placements
+7. **Step 7 -- Landing Page Strategy**
+   - Define landing page types: campaign-specific, product/feature, industry-specific, persona-specific, offer/promotion pages
+   - Specify optimization elements: headline/messaging alignment, form optimization, trust/social proof, mobile optimization, page speed requirements
 
-**Programmatic Buying**
-- DSP selection and setup
-- Audience data strategy
-- Inventory source selection
-- Brand safety controls
-- Viewability standards
+8. **Step 8 -- Audience Strategy**
+   - **First-party data:** CRM uploads, website visitor audiences, engagement-based audiences, customer exclusions
+   - **Third-party data:** Intent data integration, demographic/firmographic, behavioral targeting, contextual signals
+   - **Lookalike/similar audiences:** Seed audience selection, expansion percentages, performance monitoring, refresh schedules
 
-### 5. Creative Strategy
-**Creative Formats**
-- Static image ads
-- Carousel and collection ads
-- Video ad lengths and formats
-- Interactive and rich media
-- Native advertising
+9. **Step 9 -- Measurement and Attribution**
+   - Set up tracking: conversion tracking, UTM parameter strategy, offline conversion import, call tracking integration
+   - Define attribution model: last-click baseline, multi-touch attribution, view-through windows, cross-device tracking
+   - Build reporting framework: daily monitoring dashboards, weekly performance reports, monthly strategic reviews, quarterly business impact
 
-**Creative Testing Framework**
-- Headline testing
-- Visual testing
-- CTA testing
-- Format testing
-- Messaging angle testing
-
-**Creative Production**
-- In-house vs. agency
-- Asset requirements
-- Brand compliance
-- Localization needs
-- Refresh cadence
-
-### 6. Landing Page Strategy
-**Landing Page Types**
-- Campaign-specific pages
-- Product/feature pages
-- Industry-specific pages
-- Persona-specific pages
-- Offer and promotion pages
-
-**Optimization Elements**
-- Headline and messaging alignment
-- Form optimization
-- Trust and social proof
-- Mobile optimization
-- Page speed requirements
-
-### 7. Audience Strategy
-**First-Party Data**
-- CRM audience uploads
-- Website visitor audiences
-- Engagement-based audiences
-- Customer exclusions
-
-**Third-Party Data**
-- Intent data integration
-- Demographic and firmographic
-- Behavioral targeting
-- Contextual signals
-
-**Lookalike/Similar Audiences**
-- Seed audience selection
-- Expansion percentages
-- Performance monitoring
-- Refresh schedules
-
-### 8. Measurement & Attribution
-**Tracking Setup**
-- Conversion tracking
-- UTM parameter strategy
-- Offline conversion import
-- Call tracking integration
-
-**Attribution Model**
-- Last-click baseline
-- Multi-touch attribution
-- View-through conversion windows
-- Cross-device tracking
-
-**Reporting Framework**
-- Daily monitoring dashboards
-- Weekly performance reports
-- Monthly strategic reviews
-- Quarterly business impact
-
-### 9. Testing & Optimization
-**Testing Roadmap**
-- Audience tests
-- Creative tests
-- Bid strategy tests
-- Landing page tests
-- Budget allocation tests
-
-**Optimization Playbook**
-- Performance triggers
-- Scaling criteria
-- Pause criteria
-- Reallocation rules
+10. **Step 10 -- Testing and Optimization**
+    - Create testing roadmap: audience tests, creative tests, bid strategy tests, landing page tests, budget allocation tests
+    - Define optimization playbook: performance triggers, scaling criteria, pause criteria, reallocation rules
 
 ## Output Format
-Provide complete paid media strategy documentation including channel plans, audience strategies, creative briefs, budget allocations, and measurement frameworks.
 
----
+**Budget Allocation Summary:**
 
-*Skill from GTM AI Platform. Replace `{{variables}}` with your context before running.*
+| Channel | Monthly Budget | % of Total | Primary Objective | Target CPA |
+|---------|---------------|-----------|-------------------|------------|
+| Google Search | $X | X% | [objective] | $X |
+| Meta Ads | $X | X% | [objective] | $X |
+| LinkedIn | $X | X% | [objective] | $X |
+| Display/Programmatic | $X | X% | [objective] | $X |
+| Test Budget | $X | X% | Experimentation | TBD |
+
+**Per-Channel Plan:** Campaign architecture, keyword/audience strategy, creative brief, bidding approach, and KPI targets.
+
+**Testing Roadmap:**
+
+| Test | Channel | Hypothesis | Timeline | Success Metric |
+|------|---------|-----------|----------|----------------|
+| [name] | [channel] | [statement] | [weeks] | [metric + target] |
+
+**Reporting Cadence:** Daily, weekly, monthly, and quarterly report specifications.
+
+**Length:** 4,000-7,000 words
+**Tone:** Strategic and actionable; specific enough to hand to a media buyer for implementation
+**Anti-patterns:** Vague "increase spend on social" recommendations without specific channel/audience/budget details; missing measurement plans
+
+## Success Metrics
+- **Primary:** Blended customer acquisition cost at or below {{customer_acquisition_cost}} target
+- **Leading indicators:** Channel-level CPA trends, quality score improvements, audience match rates
+- **Guardrails:** If any channel exceeds 2x target CPA for two consecutive weeks, trigger reallocation review
+
+## Constraints
+- Total budget must not exceed {{monthly_marketing_budget}}
+- Strategy must be executable by the existing team or include resourcing recommendations
+- All platform recommendations must comply with current advertising policies
+- Programmatic recommendations must include brand safety controls
+
+## Examples
+### Skeleton: SaaS Company - $50K Monthly Budget
+**Budget Allocation:**
+
+| Channel | Monthly Budget | % of Total | Primary Objective | Target CPA |
+|---------|---------------|-----------|-------------------|------------|
+| Google Search (Branded) | $5,000 | 10% | Brand protection | $25 |
+| Google Search (Non-branded) | $15,000 | 30% | Lead generation | $85 |
+| LinkedIn Sponsored Content | $12,000 | 24% | Pipeline generation | $120 |
+| Meta Retargeting | $5,000 | 10% | Conversion | $45 |
+| Display/Programmatic | $5,000 | 10% | Awareness | $150 |
+| Test Budget | $8,000 | 16% | Experimentation | TBD |
+
+## Change Log
+- v2.0 (2026-03-24): Rewritten to standardized template
+- v1.0: Initial release with full paid media strategy framework

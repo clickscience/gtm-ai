@@ -1,149 +1,159 @@
 ---
 name: competitive-intelligence
 description: >
-  Analyze competitors, identify market gaps, and develop winning positioning strategies Triggered by phrases like "competitive analysis", "competitive intelligence", "market positioning".
+  Analyze competitors, identify market gaps, and develop winning positioning strategies with battle cards, win/loss programs, and ongoing intelligence processes. Triggered by phrases like "competitive analysis", "competitive intelligence", "market positioning", "CI program", "battle cards", "win/loss analysis".
 license: MIT
 metadata:
   author: clickscience
-  version: "1.0"
-  complexity: intermediate
-  keywords: competitive research, market analysis
+  version: "2.0"
+  category: competitive-strategy
+  status: active
 ---
 
 # Competitive Intelligence & Market Positioning
 
-🎯 **OBJECTIVE**
-Conduct comprehensive competitive intelligence for {{company_name}} to understand the {{industry}} landscape, identify market opportunities, and develop differentiated positioning against {{competitors}} that resonates with {{target_personas}}.
+## Purpose
+Produce a comprehensive competitive intelligence package that maps the competitive landscape, identifies market gaps and white space, and delivers actionable positioning strategies with battle cards and response playbooks. This skill gives sales, marketing, and product teams the intelligence they need to win against {{competitors}} and defend existing accounts.
 
-📊 **YOUR BUSINESS CONTEXT**
-• Company: {{company_name}} ({{stage}} stage) in {{industry}}
-• Product: {{product_description}}
-• Target Market: {{target_personas}} in {{geographic_markets}}
-• Your Differentiators: {{unique_differentiators}}
-• Value Props: {{value_propositions}}
-• Competitors: {{competitors}}
-• Pricing: {{product_pricing_model}} (Avg Deal: {{average_deal_size}})
+## Identity & Operating Context
+- **Role:** Senior competitive intelligence analyst with expertise in B2B SaaS market dynamics, win/loss research, and strategic positioning
+- **Perspective:** Optimizes for actionable intelligence that directly improves win rates, informs product roadmap, and sharpens market positioning
+- **Assumptions:** The company has identified its primary competitors and has some market presence; sales team can provide anecdotal win/loss data even if no formal program exists
+- **Memory:** Capture the competitive positioning framework, win themes, key competitor weaknesses, and battle card content for reuse in sales enablement, campaign planning, and product strategy skills
 
-💡 **KNOWLEDGE BASE INPUTS**
-{{knowledge_base}}
+## Inputs
+**Required:**
+- `company_name` -- the company conducting competitive intelligence
+- `product_description` -- what the product or service does
+- `competitors` -- known direct competitors to analyze
+- `target_personas` -- buyer personas to position against
+- `unique_differentiators` -- what sets you apart
 
-⚙️ **COMPREHENSIVE OUTPUT**
+**Optional:**
+- `industry` -- market vertical, default: inferred from product description
+- `value_propositions` -- core value delivered, default: derived from differentiators
+- `pain_points` -- problems the product solves, default: derived from value propositions
+- `geographic_markets` -- regions served, default: global
+- `stage` -- company stage, default: growth
+- `product_pricing_model` -- pricing approach, default: not specified
+- `average_deal_size` -- typical contract value, default: not specified
+- `lifetime_value` -- customer LTV, default: not specified
+- `customer_acquisition_cost` -- CAC, default: not specified
+- `primary_channels` -- marketing and sales channels, default: website, email, LinkedIn, sales
+- `brand_voice` -- voice guidelines, default: professional
+- `knowledge_base` -- additional context, research documents, or internal data
 
-**SECTION 1: COMPETITIVE LANDSCAPE ANALYSIS**
+## Critical Rules (Non-Negotiables)
+**Must:**
+- [ ] Analyze both direct competitors and indirect alternatives (DIY, manual processes, adjacent products) -- buyers evaluate all options
+- [ ] Include specific, factual evidence for every competitive claim -- unsubstantiated assertions destroy sales credibility
+- [ ] Produce battle cards that sales reps can use in live conversations, not academic reports
+- [ ] Cover both offensive (displacement) and defensive (retention) strategies
+- [ ] Design an ongoing intelligence-gathering cadence, not just a point-in-time snapshot
 
-**Direct Competitors Deep Dive:**
-For each competitor in {{competitors}}, analyze:
-• **Product Capabilities:** Feature comparison, strengths/weaknesses vs. {{product_description}}
-• **Positioning & Messaging:** How they describe themselves, target personas, key claims
-• **Pricing Strategy:** {{product_pricing_model}} comparison, deal sizes, packaging
-• **Go-to-Market:** Distribution model, sales approach, key channels
-• **Market Perception:** Reviews (G2, Capterra), NPS scores, win/loss intelligence
-• **Recent Moves:** Funding, product launches, partnerships, executive changes
+**Never:**
+- [ ] Make claims about competitor weaknesses without evidence from public sources (reviews, documentation, pricing pages) -- legal and credibility risk
+- [ ] Ignore indirect competition and the status quo -- "do nothing" is often the biggest competitor
+- [ ] Produce a feature-comparison matrix without translating features into buyer-relevant outcomes
+- [ ] Assume competitive dynamics are static -- include signals to monitor for changes
 
-**Indirect Competitors & Substitutes:**
-• Alternative solutions {{target_personas}} use to solve {{pain_points}}
-• DIY or manual approaches
-• Adjacent products expanding into your space
-• Emerging startups to watch
+**Escalation rules:** If fewer than 2 competitors can be meaningfully analyzed due to lack of information, flag the gap and recommend primary research (customer interviews, analyst briefings) before finalizing battle cards.
 
-**Competitive Dynamics:**
-• Market share distribution and trends
-• Category leaders vs. challengers vs. niche players
-• Consolidation trends (M&A activity)
-• Pricing pressure and market maturation
+## Process
+1. **Step 1 -- Competitive Landscape Mapping**
+   - Identify 8-10 competitors: direct feature competitors, adjacent market players, emerging startups, and potential future threats
+   - For each competitor in {{competitors}}, analyze:
+     - Product capabilities: feature comparison, strengths/weaknesses vs. {{product_description}}
+     - Positioning and messaging: how they describe themselves, target personas, key claims
+     - Pricing strategy: model comparison, deal sizes, packaging tiers, discounting strategies
+     - Go-to-market: distribution model, sales motion (product-led vs. sales-led), key channels, partnership ecosystem
+     - Market perception: reviews (G2, Capterra), NPS indicators, customer satisfaction signals
+     - Recent moves: funding, product launches, partnerships, executive changes, M&A
+     - Content and thought leadership: webinar presence, technical documentation quality, community engagement
+     - Technology stack: integrations, API capabilities, platform extensibility
+   - Map indirect competitors and substitutes: alternative solutions, DIY approaches, adjacent products expanding into your space
+   - Assess competitive dynamics: market share distribution, category leaders vs. challengers vs. niche players, consolidation trends, pricing pressure
 
-**SECTION 2: GAP ANALYSIS & POSITIONING OPPORTUNITIES**
+2. **Step 2 -- Gap Analysis & White Space**
+   - Feature/capability gaps: what competitors do well that you don't; what you do uniquely well; underserved needs in {{industry}}; innovation opportunities to leapfrog
+   - Market white space: underserved segments of {{target_personas}}; geographic expansion opportunities; vertical-specific solution gaps; price/value positioning gaps
+   - Messaging differentiation: angles competitors are not taking; proof points that set you apart; how {{value_propositions}} can be communicated more compellingly
 
-**Feature/Capability Gaps:**
-• What do {{competitors}} do well that you don't?
-• What do you do uniquely well (your {{unique_differentiators}})?
-• Underserved customer needs in {{industry}}
-• Innovation opportunities to leapfrog competition
+3. **Step 3 -- Positioning Strategy**
+   - Build positioning framework using For/Who/Is a/That/Unlike/We template
+   - Develop 3-5 win themes that emphasize strengths (e.g., "Purpose-built for {{industry}}", "Fastest time-to-value", "Superior customer success")
+   - Create competitive positioning matrix: plot competitors on 2x2 grids using dimensions most relevant to buyers
 
-**Market White Space:**
-• Underserved segments of {{target_personas}}
-• Geographic expansion opportunities in {{geographic_markets}}
-• Vertical-specific solutions in {{industry}}
-• Price/value positioning gaps
+4. **Step 4 -- Battle Cards**
+   - For each major competitor, produce a battle card containing:
+     - One-line competitor summary
+     - Competitive comparison table (features mapped to buyer outcomes)
+     - Your strengths vs. their weaknesses (with evidence)
+     - Their strengths vs. your weaknesses (with honest mitigation)
+     - Objection handling: "Why not [Competitor]?" with scripted responses
+     - Landmine questions: questions for reps to ask that expose competitor gaps
+     - Customer proof points: win stories of choosing you over them
+   - Create a "status quo / do nothing" battle card for deals stalling against inaction
 
-**Messaging Differentiation:**
-• How can {{value_propositions}} be communicated more compellingly?
-• Angles competitors aren't taking
-• Proof points and customer stories that set you apart
-• {{brand_voice}} that resonates differently
+5. **Step 5 -- Competitive Response Playbooks**
+   - **Defensive strategies:** protect existing customers from displacement; proactive roadmap communication; customer success programs to increase switching costs; renewal and expansion plays
+   - **Offensive strategies:** displacement campaigns targeting competitor customers; trade-in/migration incentives; head-to-head comparison content (landing pages, ads); outbound plays focused on dissatisfied competitor customers
+   - **Pricing responses:** when and how to discount against specific competitors; value justification scripts; TCO analysis templates
 
-**SECTION 3: COMPETITIVE POSITIONING STRATEGY**
+6. **Step 6 -- Go-to-Market Implications**
+   - Product roadmap influence: must-have parity features, breakthrough capabilities, integration priorities
+   - Marketing and sales enablement: competitive content plan (comparison pages, battle cards, objection handlers); sales training curriculum; differentiated messaging across {{primary_channels}}
+   - Pricing and packaging: optimize {{product_pricing_model}} based on landscape; value-based pricing tied to {{lifetime_value}}; packaging that highlights {{unique_differentiators}}
 
-**Positioning Framework:**
-• **For** [{{target_personas}}]
-• **Who** [have {{pain_points}}]
-• **{{company_name}}** is a [category]
-• **That** [delivers {{value_propositions}}]
-• **Unlike** [{{competitors}}]
-• **We** [{{unique_differentiators}}]
+7. **Step 7 -- Ongoing Intelligence Program**
+   - Set up monitoring: alerts for competitor mentions, reviews, funding news, product updates, job postings (signals of strategic direction)
+   - Win/loss analysis process: interview framework for closed-won and closed-lost deals; quarterly trend analysis; feedback loop to product and marketing
+   - Reporting cadence: bi-weekly competitive snapshot; quarterly deep-dive analysis; annual strategic assessment
+   - Customer interview program to continuously validate buying criteria
 
-**Win Themes:**
-Develop 3-5 core win themes that emphasize your strengths:
-• Theme 1: [e.g., "Purpose-built for {{industry}}"]
-• Theme 2: [e.g., "Fastest time-to-value"]
-• Theme 3: [e.g., "Superior customer success"]
+## Output Format
+Deliver as a structured document with these sections:
 
-**Battle Cards:**
-Create battle cards with:
-• Competitive comparison table
-• Objection handling ("Why not [Competitor]?")
-• Landmine questions to disqualify competitors
-• Customer proof points of wins
+| Section | Contents |
+|---|---|
+| Competitive Landscape | Per-competitor analysis (product, pricing, GTM, perception, recent moves); indirect competitors; market dynamics |
+| Gap Analysis & White Space | Feature gaps, market white space, messaging differentiation opportunities |
+| Positioning Strategy | Positioning statement, 3-5 win themes, competitive positioning matrix |
+| Battle Cards | One battle card per major competitor plus status-quo card, each with comparison table, objection handling, landmines, proof points |
+| Response Playbooks | Defensive and offensive plays, pricing response guidelines |
+| GTM Implications | Product roadmap input, enablement plan, pricing/packaging recommendations |
+| Intelligence Program | Monitoring setup, win/loss process, reporting cadence |
 
-**SECTION 4: COMPETITIVE RESPONSE TACTICS**
+**Length:** 3,000-5,000 words
+**Tone:** Analytical and direct -- written for sales reps to use in deals and leadership to use in strategy
+**Anti-patterns:** Do not produce academic market reports with no actionable takeaways; do not make unsubstantiated competitive claims; do not ignore the "do nothing" competitor
 
-**Defensive Strategies:**
-• Protect existing customers from competitive displacement
-• Proactive communication of product roadmap and vision
-• Customer success focus to increase switching costs
-• Renewal and expansion programs
+## Success Metrics
+- **Primary:** Competitive win rate improvement (measured quarterly)
+- **Leading indicators:** Battle card adoption by sales team; reduction in "lost to competitor" deals without documented response; increase in competitive displacement pipeline
+- **Guardrails:** If win themes overlap with competitor messaging, revisit differentiation; if battle cards are not used by reps within 30 days, simplify format
 
-**Offensive Strategies:**
-• Competitive displacement campaigns targeting {{competitors}}' customers
-• Trade-in or migration incentives
-• Head-to-head comparison content (landing pages, ads)
-• Outbound sales plays focused on dissatisfied competitor customers
+## Constraints
+- All competitive claims must be sourced from publicly available information (reviews, documentation, pricing pages, press releases, job postings)
+- Battle cards must fit on a single page equivalent when printed -- concise and scannable
+- Win/loss analysis recommendations must be executable with current team resources
+- Refresh cadence must be realistic for {{stage}} company size
 
-**Monitoring & Intelligence Gathering:**
-• Set up alerts for competitor mentions, reviews, funding news
-• Win/loss analysis process with sales team
-• Customer interview program to understand buying criteria
-• Regular competitive teardowns (quarterly)
+## Examples
+### Skeleton: B2B SaaS Project Management Tool
 
-**SECTION 5: GO-TO-MARKET IMPLICATIONS**
+**Competitor Battle Card -- Rival PM:**
+| Dimension | {{company_name}} | Rival PM |
+|---|---|---|
+| Time-to-value | 2-day setup, no IT required | 4-6 week implementation with consultant |
+| Pricing | $15/user/mo, transparent | Custom quotes only, avg 2.5x higher |
+| Integrations | 200+ native, open API | 50 integrations, closed ecosystem |
+| Best for | Mid-market teams wanting speed | Enterprise with dedicated PM office |
 
-**Product Roadmap Influence:**
-• Must-have features to achieve parity
-• Breakthrough capabilities to leapfrog
-• Integration priorities based on competitive stack
+**Objection: "Rival PM has more features"**
+Response: "Rival PM does have a broader feature set, and for organizations with a dedicated PMO that needs advanced resource planning, that breadth matters. For teams like yours that need fast adoption and immediate productivity gains, our customers find that 90% of Rival PM features go unused. [Customer X] switched from Rival PM and saw team adoption jump from 30% to 85% in the first month."
 
-**Marketing & Sales Enablement:**
-• Competitive content: comparison pages, battle cards, objection handlers
-• Sales training on competitive positioning
-• Differentiated messaging across {{primary_channels}}
+**Landmine question:** "How long did your last tool implementation take, and what percentage of your team actually uses it daily?"
 
-**Pricing & Packaging:**
-• Optimize {{product_pricing_model}} based on competitive landscape
-• Value-based pricing tied to {{lifetime_value}} delivery
-• Packaging that highlights {{unique_differentiators}}
-
-🎯 **DELIVERABLES**
-✅ Detailed competitive analysis for {{competitors}}
-✅ Market gap analysis and white space opportunities
-✅ Differentiated positioning framework
-✅ Win themes and battle cards
-✅ Competitive response playbooks (defensive and offensive)
-✅ Ongoing intelligence gathering process
-
----
-
-## Category: Content
-
----
-
-*Skill from GTM AI Platform. Replace `{{variables}}` with your context before running.*
+## Change Log
+- v2.0 (2026-03-24): Rewritten to standardized template; merged competitive-intelligence-framework content including landscape mapping methodology, digital marketing audit dimensions, technology ecosystem analysis, and reporting cadence framework
