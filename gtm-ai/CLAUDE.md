@@ -6,10 +6,10 @@ This file is read automatically by Claude Code at the start of every session. It
 
 ## What This Project Is
 
-This is the GTM AI Skills library — a collection of 86 AI skills for Go-to-Market teams. Skills live at `skills/[skill-id]/SKILL.md`.
+This is the GTM AI Skills library — a collection of 85 AI skills for Go-to-Market teams. Skills live at `skills/[skill-id]/SKILL.md`.
 
 - **Hand-crafted skills (15):** Full process docs, critical rules, output formats, and worked examples
-- **Platform library skills (71):** Comprehensive templates covering all major GTM motions
+- **Platform library skills (70):** Comprehensive templates covering all major GTM motions
 
 All skills follow the [agentskills.io](https://agentskills.io) open standard.
 
@@ -91,7 +91,7 @@ gtm-ai/
 ├── AGENTS.md              ← Instructions for coding agents working on this repo
 ├── CONTRIBUTING.md        ← How to contribute skills
 ├── SKILL_TEMPLATE.md      ← Blank skill template
-├── VARIABLES_REFERENCE.md ← All {{variables}} documented
+├── VARIABLES_REFERENCE.md ← All {{variables}} and their descriptions
 ├── LICENSE                ← MIT
 └── skills/
     ├── _index.md          ← Master skill catalog

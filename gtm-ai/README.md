@@ -6,7 +6,7 @@ Stop re-explaining your GTM context to AI every session. Write a skill once. Reu
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Agent Skills Compatible](https://img.shields.io/badge/Agent%20Skills-Compatible-green)](https://agentskills.io)
-[![Skills: 86](https://img.shields.io/badge/Skills-86-orange)](skills/_index.md)
+[![Skills: 85](https://img.shields.io/badge/Skills-85-orange)](skills/_index.md)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 ---
@@ -52,7 +52,7 @@ your-project/
 
 1. Clone this repo or download individual skill folders
 2. Copy the skill folder(s) into `.claude/skills/` in your project
-3. Copy [CLAUDE.md](CLAUDE.md) to your project root and fill in [CONTEXT_TEMPLATE.md](CONTEXT_TEMPLATE.md)
+3. Copy [CLAUDE.md](CLAUDE.md) to your project root; fill in [CONTEXT_TEMPLATE.md](CONTEXT_TEMPLATE.md) and save it as `CONTEXT.md`
 4. Type `/skill-name` to invoke, or Claude will auto-load when relevant
 
 ### Claude Desktop / Cowork
@@ -69,19 +69,55 @@ your-project/
 
 ### Variables
 
-Most platform skills use `{{variables}}` as placeholders for your context. See [VARIABLES_REFERENCE.md](VARIABLES_REFERENCE.md) for the full list and [CONTEXT_TEMPLATE.md](CONTEXT_TEMPLATE.md) for a fill-in-the-blank context block.
+Most platform skills use `{{variables}}` as placeholders for your context. See [VARIABLES_REFERENCE.md](VARIABLES_REFERENCE.md) for the full list of variables and [CONTEXT_TEMPLATE.md](CONTEXT_TEMPLATE.md) to fill in your company context.
+
+---
+
+## Quick Start
+
+Here's what it looks like end to end, using the `gtm-weekly-update` skill as an example:
+
+**1. Fill in your context** (`CONTEXT.md`):
+```
+company_name: Acme Corp
+product_description: B2B SaaS platform for revenue operations teams
+target_personas: VP of Revenue Operations, CRO, Head of Sales
+key_goals: $50M pipeline this quarter, 20 new logos
+primary_channels: LinkedIn Ads, outbound BDRs, email nurture
+```
+
+**2. Invoke the skill** in Claude Code:
+```
+/gtm-weekly-update
+```
+
+**3. Paste in your raw team inputs** when Claude asks — status bullets, pipeline numbers, blockers, wins.
+
+**4. Get back a formatted weekly update** ready to send:
+```
+### Top 3 Headlines
+1. Pipeline up 12% WoW — Q3 on track at 87% of target
+2. New enterprise logo closed (Acme Inc, $240K ACV)
+3. BDR team hit 110% of meeting quota for second straight week
+
+### Program — What Moved
+| Initiative | Status | Owner |
+| ...        | ...    | ...   |
+```
+
+That's the pattern for every skill: load context once, invoke skill, get consistent output.
 
 ---
 
 ## Skill Library
 
-**86 skills total.** All skills live at `skills/[skill-id]/SKILL.md`.
+**85 skills total.** All skills live at `skills/[skill-id]/SKILL.md`.
 
 ---
 
 ### ✍️ Hand-Crafted Skills (15)
 
-Deep, opinionated skills with Identity & Operating Context, Critical Rules, step-by-step Process, and concrete Output Format. These encode real GTM practice, not just templates.
+Deep, opinionated skills with Identity & Operating Context, Critical Rules, step-by-step Process, and concrete Output Format. These encode real GTM practice, not just templates. **Reach for these when you want a workflow that tells the AI exactly how to think, what to avoid, and what "done" looks like.**
 
 | Skill | Description |
 |-------|-------------|
@@ -103,9 +139,9 @@ Deep, opinionated skills with Identity & Operating Context, Critical Rules, step
 
 ---
 
-### 🗂️ Platform Library Skills (71)
+### 🗂️ Platform Library Skills (70)
 
-Comprehensive templates covering all major GTM motions. Replace `{{variables}}` with your context before running.
+Comprehensive templates covering all major GTM motions. Replace `{{variables}}` with your context before running. **Reach for these when you need broad coverage of a GTM area and want a solid starting point to adapt to your context.**
 
 | Skill | Description |
 |-------|-------------|
