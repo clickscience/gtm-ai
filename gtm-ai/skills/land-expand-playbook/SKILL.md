@@ -8,6 +8,8 @@ metadata:
   version: "2.0"
   category: Sales Enablement
   status: active
+  prerequisites:
+    - icp-definition-refinement
 ---
 
 # Land & Expand Strategy Playbook

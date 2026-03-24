@@ -12,6 +12,9 @@ metadata:
   version: "3.0"
   category: sales-enablement
   status: active
+  prerequisites:
+    - icp-definition-refinement
+    - persona-brief
 ---
 
 # BDR Outbound Strategy — System & Coaching

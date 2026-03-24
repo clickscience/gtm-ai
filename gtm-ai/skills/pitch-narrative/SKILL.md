@@ -12,6 +12,8 @@ metadata:
   version: "1.0"
   category: content
   status: active
+  prerequisites:
+    - competitive-intelligence
 ---
 
 # Pitch Narrative Generator (5-Act / 8-Beat Framework)

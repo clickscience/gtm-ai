@@ -8,6 +8,9 @@ metadata:
   version: "2.0"
   category: Campaigns
   status: active
+  prerequisites:
+    - icp-definition-refinement
+    - competitive-intelligence
 ---
 
 # In-Market Account Takeover Campaign
