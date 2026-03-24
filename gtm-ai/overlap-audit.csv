@@ -1,0 +1,24 @@
+Skill A (Keep),Skill B (Deprecate),Overlap %,Recommendation,Rationale,Action Items
+email-nurture-sequence,lead-nurture-sequence,80%,Merge,Both build multi-touch email sequences by funnel stage. lead-nurture is a less-opinionated version of the same workflow.,Absorb re-engagement sequence and personalization rules into email-nurture-sequence
+competitive-battlecard,sales-battlecard-generator,85%,Merge,Both produce competitive battlecards with positioning objections and proof points. sales-battlecard-generator adds pricing guidance.,Absorb pricing/negotiation guidance and discount authority section
+competitive-intelligence,competitive-intelligence-framework,75%,Merge,Both analyze competitive landscape. Framework is a lighter CI methodology; intelligence is more comprehensive.,Absorb competitive landscape mapping methodology and win/loss program structure
+brand-messaging-framework,brand-messaging-guide,80%,Merge,Both build messaging architectures with pillars voice and tone. Guide is more verbose but same structure.,Absorb persona-specific messaging and channel-specific messaging templates
+product-launch-blueprint,product-launch-strategy,75%,Merge,Both cover pre-launch/launch/post-launch. Blueprint is more detailed (9 sections vs 3). Strategy adds beta focus.,Absorb beta program strategy and audience building tactics
+video-content-strategy,video-marketing-strategy,80%,Merge,Both plan video content across platforms. Nearly identical scope — one emphasizes YouTube the other is broader.,Absorb production guidelines and format-specific distribution strategy
+abm-program-playbook,account-based-marketing,70%,Merge,Both design ABM campaigns. account-based-marketing is a simpler version of abm-program-playbook.,Absorb any unique account selection criteria and campaign tier structure
+linkedin-ads-strategy-execution,linkedin-ads-strategy,75%,Merge,Hand-crafted version is comprehensive; platform version is a subset.,Absorb any unique targeting angles or budget allocation frameworks
+icp-definition-refinement,icp-persona-development,70%,Merge,Both define ICP with firmographics and personas. Refinement focuses on data signals; development on personas.,Combine data signal scoring with persona development methodology
+N/A,healthcare-compliance-campaign,N/A,Remove,Too narrowly scoped for general-purpose library. Use campaign-brief-generator and customize for healthcare.,Delete SKILL.md and create DEPRECATED.md
+N/A,manufacturing-digital-transformation,N/A,Remove,Too narrowly scoped for general-purpose library. Industry-specific positioning can use product-positioning-framework.,Delete SKILL.md and create DEPRECATED.md
+N/A,professional-services-thought-leadership,N/A,Remove,Too narrowly scoped for general-purpose library. Use content-brief or content-marketing-engine.,Delete SKILL.md and create DEPRECATED.md
+N/A,retail-holiday-campaign,N/A,Remove,Too narrowly scoped for general-purpose library. Use campaign-brief-generator and customize for retail.,Delete SKILL.md and create DEPRECATED.md
+N/A,startup-series-a-announcement,N/A,Remove,Too narrowly scoped for general-purpose library. Use campaign-brief-generator for announcement campaigns.,Delete SKILL.md and create DEPRECATED.md
+N/A,tech-product-beta-launch,N/A,Remove,Too narrowly scoped for general-purpose library. Use product-launch-blueprint for beta launches.,Delete SKILL.md and create DEPRECATED.md
+persona-brief,icp-definition-refinement,40%,Keep Separate,persona-brief is buyer persona for sales enablement; ICP is account-level targeting for marketing strategy,No action — materially different GTM functions
+sales-enablement-playbook,sales-enablement-kit,35%,Keep Separate,Playbook is strategy and process design; kit is collateral and asset creation,No action — strategy vs execution artifacts
+demand-generation-campaign,demand-generation-playbook,40%,Keep Separate,Campaign is a single campaign execution; playbook is a full demand gen system,No action — tactical vs strategic scope
+content-calendar-planner,content-marketing-engine,30%,Keep Separate,Calendar is editorial planning and scheduling; engine is full content system with production,No action — planning tool vs operating system
+sales-playbook,sales-discovery-call,25%,Keep Separate,Playbook covers end-to-end sales process; discovery is one specific stage,No action — broad vs focused scope
+customer-retention-strategy,customer-cohort-analysis,30%,Keep Separate,Strategy is program design for reducing churn; analysis is data methodology for understanding cohorts,No action — program vs analytical framework
+event-marketing-strategy,global-demand-generation-event-strategy,35%,Keep Separate,Single-event playbook vs multi-format global event program,No action — different scale and complexity
+proposal-rfp-system,proposal-roi-calculator,25%,Keep Separate,System is proposal process and templates; calculator is financial justification and ROI modeling,No action — process vs financial tool
